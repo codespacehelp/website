@@ -22,7 +22,7 @@ body {
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 0.9rem;
   font-weight: 400;
-  background: #eee;
+  background: #1f1f20;
   color: #4d4e53;
   text-align: left;
 }
@@ -42,6 +42,10 @@ h1 {
   font-weight: 400;
   line-height: 1.5;
   color: #467bfa;
+}
+
+main {
+  background: #eee;
 }
 
 .video-container {
