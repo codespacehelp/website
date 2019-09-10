@@ -14,10 +14,9 @@ We'll use the free and open-source 3D application [Blender](https://www.blender.
 
 The trick is to generate a plane with lots of points, then use the [displace modifier](https://docs.blender.org/manual/en/latest/modeling/modifiers/deform/displace.html) to change the position of the points based on the brightness of each pixel.
 
- <video width="100%" controls>
-    <source src="/media/posts/2015-02-11-3d-terrain-from-image/blender-displace-modifier.mp4" type="video/mp4" />
-Your browser does not support the video tag. Try using <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a> or <a href="https://www.google.com/chrome/">Chrome</a>.
-        </video>
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/S7Lyr1cBSNk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 # Resources
 
