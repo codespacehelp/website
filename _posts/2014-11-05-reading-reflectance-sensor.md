@@ -7,7 +7,7 @@ categories: guides
 ### Requirements
 
 *   **Arduino**: is an open-source physical computing platform based on a microcontroller and a development environment. The board can be bought at several shops, the environment can be downloaded [here.](http://arduino.cc/en/Main/Software) We recommend reading some of the [documentation](http://arduino.cc/en/Guide/HomePage) on their website.
-    Arduino is developed for artists, students and enthousiast to make projects in- and outside the computer accessible: ![](/media/posts/2014-11-05-reading-reflectance-sensor/maudArduino.png)
+    Arduino is developed for artists, students and enthousiast to make projects in- and outside the computer accessible: ![](/media/posts/2014-11-05-reading-reflectance-sensor/maud-arduino.png)
 *   **Reflectance sensor**: available at several shops. We used [this one](http://www.pololu.com/product/959). It comes with a [library for Arduino](https://github.com/pololu/qtr-sensors-arduino) which can also be downloaded.
 *   **Processing**: is an open-source programming platform which makes it easy to access the data from the sensor and then to use it as audio parameter. Processing comes with a few pre-installed libraries: we will use Serial and Minim. Processing can be downloaded [here](https://www.processing.org/download/). Information on the used libraries can be found [here](https://www.processing.org/reference/libraries/)
 *   **Pure Data**: an alternative for Processing. Pure Data (or Pd) is an open-source real-time graphical programming environment for audio, video, and graphical processing. PD can be dowloaded [here](http://puredata.info/). PD is a modular environment where sketches are made by connecting nodes to each other. **Johannes Kreidler** wrote an excellent book ('Loadbang - Programming music in pure data') on music in PD covering all aspects of (electronic) music: audio, audio synthesis, wave shaping, sampling ..
@@ -40,7 +40,7 @@ From the [specifics](http://www.pololu.com/product/959) we can see that the oper
 
 The library comes with a few code examples for a bar of eight modules. Following code was derived from these and reads one sensor on port A0\. The library also contains calibration functions for finetuning further in the process.
 
-```java
+```c
 #include <QTRSensors.h>
 
 QTRSensorsAnalog qtra((unsigned char[]) {0},1);
@@ -64,7 +64,7 @@ void loop()
 
 The Processing sketch uses two core libraries: Serial and Minim. Serial is the library which will be responsible for listing to the serial port / call for the sensor value. Minim is an audioprocessing library and we will use it to create a simple waveshape that can be manipulated over amplitude and frequency.
 
-```java
+```c
 import processing.serial.*; // import the serial and minim libs.
 import ddf.minim.*;
 import ddf.minim.ugens.*;
