@@ -27,13 +27,18 @@ body {
   text-align: left;
 }
 
-h1, h2, h3, code, .header__title, .form__button {
+h1,
+h2,
+h3,
+code,
+.header__title,
+.form__button {
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
     monospace;
 }
 
 h1 {
-  font-size: 2.0rem;
+  font-size: 2rem;
   font-weight: 400;
   line-height: 1.5;
   color: #467bfa;
@@ -44,9 +49,10 @@ h1 {
 .header {
   background: #467bfa;
   color: white;
-  padding: 20px 40px;
   position: relative;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header__title {
@@ -74,6 +80,15 @@ h1 {
 }
 
 @media screen and (max-width: 550px) {
+  .header {
+    padding: 5px 15px;
+  }
+
+  .header__title {
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+  }
+
   .header__nav {
     display: block;
     position: fixed;
@@ -97,28 +112,32 @@ h1 {
   }
 
   .header__hamburger {
-    float: right;
-    position: relative;
-    height: 22px;
+    display: block;
+    width: 36px;
+    height: 28px;
+    /*transform: translate(-50%, -50%);*/
+    z-index: 999;
   }
 
-  .header__hamburger > div {
-    position: absolute;
-    width: 22px;
-    height: 3px;
-    background: white;
+  .header__hamburger:before,
+  .header__hamburger:after {
+    background-color: #fff;
+    content: "";
+    display: block;
+    height: 4px;
+    transition: all 200ms ease-in-out;
   }
 
-  .header__top {
-    top: 0;
+  .header__hamburger:before {
+    box-shadow: 0 10px 0 #fff;
+    margin-bottom: 16px;
   }
-
-  .header__middle {
-    top: 50%;
+  .header__hamburger:hover:before {
+    box-shadow: 0 0 0 #fff;
+    transform: translateY(10px) rotate(45deg);
   }
-
-  .header__bottom {
-    top: 100%;
+  .header__hamburger:hover:after {
+    transform: translateY(-10px) rotate(-45deg);
   }
 }
 
@@ -126,10 +145,7 @@ h1 {
   .header {
     display: flex;
     align-items: center;
-  }
-
-  .header__title {
-    flex: 1;
+    padding: 1rem 1rem;
   }
 
   .header__hamburger {
