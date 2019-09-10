@@ -1,0 +1,32 @@
+---
+layout: default
+title: Reservaties
+---
+<section>
+  <div class="inner">
+    <h1>Reservaties</h1>
+    <p>Om je zo goed mogelijk te helpen vragen we je om op voorhand te <strong>reserveren</strong>.</p>
+    <form name="reserve" method="POST" data-netlify="true">
+    <div class="form__row"><label><span class="form__label">Naam</span><input class="form__field" type="text" name="name" /></label></div>
+    <div class="form__row"><label><span class="form__label">Email adres</span><input class="form__field" type="email" name="email" /></label></div>
+    <div class="form__row"><label><span class="form__label">Afspreken op</span><span class="form__help">Steeds op woensdagvoormiddag tussen 10-13 in het atelierhuis, eerste verdieping.</span><select name="date">
+      <option value="2019-09-25">25 september '19</option>
+      <option value="2019-10-02">2 oktober '19</option>
+      <option value="2019-10-09">9 oktober '19</option>
+      <option value="2019-10-16">16 oktober '19</option>
+      <option value="2019-10-16">16 oktober '19</option>
+      <option value="2019-10-23">23 oktober '19</option>
+      <option value="2019-11-13">13 november '19</option>
+      <option value="2019-11-20">20 november '19</option>
+      <option value="2019-11-27">27 november '19</option>
+      <option value="2019-12-04">4 december '19</option>
+      <option value="2019-12-11">11 december '19</option>
+      <option value="2019-12-18">18 december '19</option>
+    </select></label></div>
+    <div class="form__row"><label><span class="form__label">Jouw vraag</span><span class="form__help">Je kan hierin al kort uitleggen wat je wil doen.</span><textarea class="form__field" name="question"></textarea></label></div>
+    <div class="form__row"><button class="form__button" type="submit">Reserveren</button></div>
+  </p>
+</form>
+
+  </div>
+</section>

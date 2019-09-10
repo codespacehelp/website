@@ -1,0 +1,40 @@
+---
+layout: base
+---
+<header class="header">
+  <span class="header__title"><a href="/">Code Studio</a></span>
+  <nav class="header__nav">
+    <a href="/">Home</a>
+    <a href="/reservations">Reservations</a>
+    <a href="/guides">Guides</a>
+  </nav>
+  <a href="#" class="header__hamburger">
+      <div class="header__top"></div>
+      <div class="header__middle"></div>
+      <div class="header__bottom"></div>
+  </a>
+</header>
+
+<main>
+  {{ content }}
+</main>
+
+<footer>
+  <div class="footer__left">
+    Code Studio is een initatief van <a href="https://www.sintlucasantwerpen.be/">Sint Lucas Antwerpen</a>.
+  </div>
+  <div class="footer__right">
+    Contacteer Ons: frederik.debleser@kdg.be of lieven.menschaert@kdg.be
+  </div>
+</footer>
+<script>
+  document.querySelector('.header__hamburger').addEventListener('click', (e) => {
+    document.body.classList.toggle('header--open');
+  });
+
+  Array.from(document.querySelectorAll('.header__nav a')).forEach(l => l.addEventListener('click', (e) => {
+    document.body.classList.remove('header--open');
+  }));
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div class="page-header">
+  <h1>{{ page.title }}</h1>
+</div>
+<div class="page">
+  {{ content }}
+</div>
+{% if page.background %}
+<style>
+  .header__bar {
+    background-color: #{{ page.background }};
+  }
+  .page-header {
+    background-color: #{{ page.background }};
+  }
+</style>
+{% endif %}

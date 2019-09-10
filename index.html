@@ -1,0 +1,37 @@
+---
+id: home
+title: Code Studio
+layout: default
+---
+<section class="intro">
+    <div class="inner grid">
+        <h1>Code Studio helpt Sint Lucas studenten met vragen over het digitale medium.</h1>
+        <p>Code Studio is een intiatief waar studenten naar toe kunnen komen met vragen over digitale media. Vragen zoals:</p>
+        <ul>
+            <li>Hoe maak ik een portfolio?</li>
+            <li>Hoe maak ik een installatie die reageert op geluid?</li>
+            <li>Hoe visualiseer ik Twitter-data?</li>
+        </ul>
+        <p>Code Studio is voor studenten uit <strong>alle jaren en alle richtingen</strong>; van eerstejaars grafische vormgevers die help willen met het maken van een boekje tot masterstudenten vrije kunsten die een interactieve installatie willen bouwen. We helpen studenten in het hele proces, van de conceptuele fase, waar we kunnen helpen met bepalen wat haalbaar is, tot de uitwerking en de presentatie.</p>
+        <p>Code Studio wordt wekelijks op <strong>woensdagvoormiddag (10-13u)</strong> georganiseerd op Sint Lucas Antwerpen in het Atelierhuis (eerste verdieping).</p>
+        <div class="cta">
+          <a href="/reservations" class="cta__primary">Maak een reservatie</a>
+        </div>
+    </div>
+</section>
+
+<section class="guides light-on-dark">
+  <div class="inner grid">
+  <h1>Guides</h1>
+  <div class="thumb-list">
+    {% for post in site.posts %}
+    <div class="thumb post">
+      <a href="{{ post.url }}">
+        <!-- <img src="/media{{ post.id }}/{{post.bigshot}}" title="{{ post.title }}" class="img img-responsive"> -->
+        <p class="caption">{{ post.title }}</p>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+  </div>
+</section>
