@@ -7,7 +7,6 @@ This website uses [Jekyll](https://jekyllrb.com/) to transform it into a static 
 Installing on Mac
 -----------------
 
-    brew install ruby libxml2
     sudo gem install bundler jekyll
     jekyll serve
 
