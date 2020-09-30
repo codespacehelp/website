@@ -3,43 +3,93 @@ id: home
 title: Code Studio
 layout: default
 ---
+
 <section class="intro">
-    <div class="inner grid">
-        <h1>Code Studio helpt Sint Lucas studenten met vragen over het digitale medium.</h1>
-        <p>Code Studio is een intiatief waar studenten naar toe kunnen komen met vragen over digitale media. Vragen zoals:</p>
-        <ul>
-            <li>Hoe maak ik een portfolio?</li>
-            <li>Hoe maak ik een installatie die reageert op geluid?</li>
-            <li>Hoe visualiseer ik Twitter-data?</li>
-        </ul>
-        <p>Code Studio biedt oplossingen in tal van domeinen:</p>
-        <ul>
-          <li><strong>VR</strong>: 3D painting, 360 video serious games</li>
-          <li><strong>Digital fabrication</strong>: laser cutting, 3D printing</li>
-          <li><strong>Physical computing</strong>: drawing robots, IOT</li>
-          <li><strong>Web</strong>: interactive media, portfolio</li>
-          <li><strong>AI</strong>: image classification, text generation, image generation</li>
-        </ul>
-        <p>Code Studio is voor studenten uit <strong>alle jaren en alle richtingen</strong>; van eerstejaars grafische vormgevers die help willen met het maken van een boekje tot masterstudenten vrije kunsten die een interactieve installatie willen bouwen. We helpen studenten in het hele proces, van de conceptuele fase, waar we kunnen helpen met bepalen wat haalbaar is, tot de uitwerking en de presentatie.</p>
-        <p>Code Studio wordt wekelijks op <strong>woensdagvoormiddag (10-13u)</strong> georganiseerd op Sint Lucas Antwerpen in het Atelierhuis (eerste verdieping).</p>
-        <div class="cta">
-          <a href="/reservations" class="cta__primary">Maak een reservatie</a>
-        </div>
+  <div class="inner grid">
+    <h1>
+      Code Studio helpt studenten van
+      <a href="https://www.sintlucasantwerpen.be/" target="_blank"
+        >Sint Lucas Antwerpen</a
+      >
+      met vragen over het digitale medium.
+    </h1>
+
+    <p>
+      <strong>Vragen zoals:</strong>
+    </p>
+    <ul>
+      <li>Hoe maak ik een portfolio?</li>
+      <li>Hoe maak ik een installatie die reageert op geluid?</li>
+      <li>Hoe visualiseer ik Twitter-data?</li>
+    </ul>
+    <p>Code Studio biedt oplossingen in tal van domeinen:</p>
+    <ul>
+      <li><strong>VR</strong>: 3D painting, 360 video serious games</li>
+      <li><strong>Digital fabrication</strong>: laser cutting, 3D printing</li>
+      <li><strong>Physical computing</strong>: drawing robots, IOT</li>
+      <li><strong>Web</strong>: interactive media, portfolio</li>
+      <li>
+        <strong>AI</strong>: image classification, text generation, image
+        generation
+      </li>
+    </ul>
+    <p>
+      Code Studio is voor studenten uit
+      <strong>alle jaren en alle richtingen</strong>; van eerstejaars grafische
+      vormgevers die help willen met het maken van een boekje tot
+      masterstudenten vrije kunsten die een interactieve installatie willen
+      bouwen. We helpen studenten in het hele proces, van de conceptuele fase,
+      waar we kunnen helpen met bepalen wat haalbaar is, tot de uitwerking en de
+      presentatie.
+    </p>
+    <p>
+      Code Studio wordt dit academiejaar door de Corona-maatregelen
+      <strong>online georganiseerd</strong>.
+    </p>
+    <div class="cta">
+      <a href="/reservations" class="cta__primary">Maak een reservatie</a>
     </div>
+  </div>
 </section>
 
-<section class="guides light-on-dark">
+<section class="workshops light-on-dark">
   <div class="inner grid">
-  <h1>Guides</h1>
-  <div class="thumb-list">
-    {% for post in site.posts %}
-    <div class="thumb post">
-      <a href="{{ post.url }}">
-        <!-- <img src="/media{{ post.id }}/{{post.bigshot}}" title="{{ post.title }}" class="img img-responsive"> -->
-        <p class="caption">{{ post.title }}</p>
-      </a>
-    </div>
-    {% endfor %}
+    <h1>Workshops</h1>
+    <p>Tijdens academiejaar 2020-2021 organiseren we een aantal workshops:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Datum</th>
+          <th>Titel</th>
+          <th>Summary</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for workshop in site.workshops %}
+        <tr>
+          <td>{{ workshop.workshop_date | date_to_string }}</td>
+          <td><a href="{{ workshop.url }}">{{ workshop.title }}</a></td>
+          <td>{{ workshop.summary }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </div>
+</section>
+
+<section class="guides">
+  <div class="inner grid">
+    <h1>Guides</h1>
+    <div class="thumb-list">
+      {% for post in site.posts %}
+      <div class="thumb post">
+        <a href="{{ post.url }}">
+          <!-- <img src="/media{{ post.id }}/{{post.bigshot}}" title="{{ post.title }}" class="img img-responsive"> -->
+          <p class="caption">{{ post.title }}</p>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
   </div>
 </section>
