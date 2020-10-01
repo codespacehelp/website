@@ -5,6 +5,21 @@ layout: default
 <div class="page-header">
   <h1>{{ page.title }}</h1>
   <h3>Workshop — {{ page.workshop_date | date_to_string }}</h3>
-  <p><strong>Duration: {{ page.duration }}</strong></p>
+  <p><strong>Room: {{ page.room }} — Duration: {{ page.duration }}</strong></p>
 </div>
-<div class="page">{{ content }}</div>
+<div class="page">
+
+  {{ content }}
+
+  <h1>Reservation</h1>
+  <p>To ensure enough room for every student, we ask that you reserve your spot in the workshop by registering. Email frederik.debleser@kdg.be if you want to change your reservation.</p>
+  <form name="reserve" method="POST" data-netlify="true">
+  <div class="form__row"><label><span class="form__label">Naam</span><input class="form__field" type="text" name="name" /></label></div>
+  <div class="form__row"><label><span class="form__label">Email adres</span><input class="form__field" type="email" name="email" /></label></div>
+  <input type="hidden" name="workshop" value="page.title" />
+  <div class="form__row"><label><span class="form__label">Remarks</span><span class="form__help">Any remarks?</span><textarea class="form__field" name="question"></textarea></label></div>
+  <div class="form__row"><button class="form__button" type="submit">Reserveren</button></div>
+  </p>
+
+</div>
+

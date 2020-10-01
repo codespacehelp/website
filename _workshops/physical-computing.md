@@ -1,9 +1,10 @@
 ---
 title: Physical Computing
-summary: Connecting to hardware
+summary: Get away from the screen and onto hardware devices.
 layout: workshop
 workshop_date: 2020-11-18
 duration: 3 hours
+room: K.02.04
 ---
 
 Using physical computing allows you to communicate with the world around you through hardware. Sensors can measure human input, meteorological information or changes in electronic signals coming from changes in energy in the form of light, sound or heat.

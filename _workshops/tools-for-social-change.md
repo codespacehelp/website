@@ -1,9 +1,10 @@
 ---
 title: Tools for Social Change
-summary: Organize and broadcast your message online
+summary: Organize and broadcast your message online.
 layout: workshop
 workshop_date: 2020-12-09
 duration: 3 hours
+room: K.02.04
 ---
 
 Learn how to organize and broadcast your message online. Spread your message through social media, and learn what professionals use to broadcast and amplify their messages. Learn to organize online communities using collaborative tools like Notion, Miro, and communication tools like Signal.

@@ -1,9 +1,10 @@
 ---
 title: Synthesizing Sounds
-summary: Work with generative sound
+summary: Explore sound in new and exciting ways.
 layout: workshop
 workshop_date: 2020-10-21
 duration: 3 hours
+room: K.02.04
 ---
 
 For all music (and noise) lovers! Find out what it means to get entangled into the world of digital sound. The workshop is an introduction into the field, explaining fundamental principles of digital signal processing. Students with or without a musical background can enroll to see how to produce and manipulate sound on a computer. We will learn about periodic waves, aperiodic noise, pitches described in Hertz, synthesis procedures, filtering, effects and software which can make all of this happen.

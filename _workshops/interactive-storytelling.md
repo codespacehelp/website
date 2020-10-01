@@ -1,9 +1,10 @@
 ---
 title: Interactive Storytelling
-summary: Linking text and images on the web
+summary: Creating stories by linking text and images on the web.
 layout: workshop
 workshop_date: 2020-10-28
 duration: 3 hours
+room: K.02.04
 ---
 
 Imagine you want to tell an interactive story. Perhaps an illustrated, interactive storybook where a visitor's choices have consequences. You know how to make illustrations but you don't have a clue on how to link worlds together and animate them. Without that, you've no choice but to create static pages in a book.

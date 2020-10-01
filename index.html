@@ -62,6 +62,7 @@ layout: default
         <tr>
           <th>Datum</th>
           <th>Titel</th>
+          <th>Lokaal</th>
           <th>Summary</th>
         </tr>
       </thead>
@@ -70,6 +71,7 @@ layout: default
         <tr>
           <td>{{ workshop.workshop_date | date_to_string }}</td>
           <td><a href="{{ workshop.url }}">{{ workshop.title }}</a></td>
+          <td>{{ workshop.room }}</td>
           <td>{{ workshop.summary }}</td>
         </tr>
         {% endfor %}
