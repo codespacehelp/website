@@ -7,22 +7,22 @@ layout: default
 <section class="intro">
   <div class="inner grid">
     <h1>
-      Code Studio helpt studenten van
+      Code Studio helps students at
       <a href="https://www.sintlucasantwerpen.be/" target="_blank"
-        >Sint Lucas Antwerpen</a
+        >Sint Lucas Antwerp</a
       >
-      met vragen over het digitale medium.
+      with their questions about the digital medium.
     </h1>
 
     <p>
-      <strong>Vragen zoals:</strong>
+      <strong>Questions like:</strong>
     </p>
     <ul>
-      <li>Hoe maak ik een portfolio?</li>
-      <li>Hoe maak ik een installatie die reageert op geluid?</li>
-      <li>Hoe visualiseer ik Twitter-data?</li>
+      <li>How do I make a portfolio website?</li>
+      <li>How do I make an installaction that reacts to sound?</li>
+      <li>How do I make an interactive world in virtual reality?</li>
     </ul>
-    <p>Code Studio biedt oplossingen in tal van domeinen:</p>
+    <p>Code Studio can support you in many domains:</p>
     <ul>
       <li><strong>VR</strong>: 3D painting, 360 video serious games</li>
       <li><strong>Digital fabrication</strong>: laser cutting, 3D printing</li>
@@ -34,20 +34,18 @@ layout: default
       </li>
     </ul>
     <p>
-      Code Studio is voor studenten uit
-      <strong>alle jaren en alle richtingen</strong>; van eerstejaars grafische
-      vormgevers die help willen met het maken van een boekje tot
-      masterstudenten vrije kunsten die een interactieve installatie willen
-      bouwen. We helpen studenten in het hele proces, van de conceptuele fase,
-      waar we kunnen helpen met bepalen wat haalbaar is, tot de uitwerking en de
-      presentatie.
+      Are you a bachelor or (pre)master student at Sint Lucas? We can help you
+      with the whole process: from helping you figure out what's possible and
+      attainable to the technical implementation, to the final presentation.
     </p>
     <p>
-      Code Studio wordt dit academiejaar door de Corona-maatregelen
-      <strong>online georganiseerd</strong>.
+      <strong
+        >Because of Corona restrictions, we help students on demand, preferably
+        online:</strong
+      >
     </p>
     <div class="cta">
-      <a href="/reservations" class="cta__primary">Maak een reservatie</a>
+      <a href="/reservations" class="cta__primary">Make a reservation</a>
     </div>
   </div>
 </section>
@@ -55,28 +53,33 @@ layout: default
 <section class="workshops light-on-dark">
   <div class="inner grid">
     <h1>Workshops</h1>
-    <p>Tijdens academiejaar 2020-2021 organiseren we een aantal workshops:</p>
+    <p>
+      <strong>NEW</strong> In 2020-2021 we are organizing introduction
+      workshops, open to all students from Sint Lucas Antwerp:
+    </p>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Datum</th>
-          <th>Titel</th>
-          <th>Lokaal</th>
-          <th>Summary</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for workshop in site.workshops %}
-        <tr>
-          <td>{{ workshop.workshop_date | date_to_string }}</td>
-          <td><a href="{{ workshop.url }}">{{ workshop.title }}</a></td>
-          <td>{{ workshop.room }}</td>
-          <td>{{ workshop.summary }}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+    <div class="responsive-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Datum</th>
+            <th>Titel</th>
+            <th>Lokaal</th>
+            <th>Summary</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for workshop in site.workshops %}
+          <tr>
+            <td>{{ workshop.workshop_date | date_to_string }}</td>
+            <td><a href="{{ workshop.url }}">{{ workshop.title }}</a></td>
+            <td>{{ workshop.room }}</td>
+            <td>{{ workshop.summary }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>
 
