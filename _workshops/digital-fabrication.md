@@ -13,4 +13,4 @@ Tired of printed media? Looking for a way to produce objects rather than a poste
 
 - Understand different fabrication machines
 - Create appropriate files for several machines
-  -Use dangerous machines with care.
+- Use dangerous machines with care.

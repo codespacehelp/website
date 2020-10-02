@@ -9,7 +9,7 @@ room: K.02.04
 
 Learn how to organize and broadcast your message online. Spread your message through social media, and learn what professionals use to broadcast and amplify their messages. Learn to organize online communities using collaborative tools like Notion, Miro, and communication tools like Signal.
 
-This workshop is organized with Robin Van Besien, coordinator for the master in the socio-political context.
+This workshop is organized with **Robin Vanbesien**, coordinator for the master in the socio-political context.
 
 ## Goals
 

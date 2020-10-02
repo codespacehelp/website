@@ -24,7 +24,7 @@ Students need to have an account for the [MakeCode / micro:bit](https://makecode
 
 We will make a few simple project using a [BBC micro:bit](https://www.microbit.org/) - a microcontroller that can be programmed with a visual programming language.
 
-##Next Steps
+## Next Steps
 
 - [Frederik Vandenbosch](https://www.youtube.com/channel/UCQ45WW31610DQ3Vn7f4mpNw) has an amazing YouTube channel showing how he builds crazy machines and hacks.
   Have a look at [syntax programming for the same micro:bit](https://microbit-micropython.readthedocs.io/en/v1.0.1/microbit_micropython_api.html).
