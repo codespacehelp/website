@@ -25,6 +25,7 @@ body {
   background: #1f1f20;
   color: #4d4e53;
   text-align: left;
+  overflow-x: hidden;
 }
 
 h1,
@@ -337,13 +338,13 @@ table small {
 .page-header {
   max-width: 800px;
   margin: 0 auto;
-  padding: 0.1rem 0;
+  padding: 0.1rem 1rem;
 }
 
 .page {
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 0 2rem 0;
+  padding: 0 1rem 2rem 1rem;
 }
 
 .guides__list li {
@@ -410,6 +411,10 @@ footer {
 
 footer a {
   color: #eee;
+}
+
+.footer__left {
+  margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 550px) {
