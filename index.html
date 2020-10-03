@@ -63,6 +63,7 @@ layout: default
         <thead>
           <tr>
             <th>Date</th>
+            <th>Time</th>
             <th>Title</th>
             <th>Room</th>
             <th>Summary</th>
@@ -72,6 +73,7 @@ layout: default
           {% for workshop in site.workshops %}
           <tr>
             <td>{{ workshop.workshop_date | date_to_string }}</td>
+            <td>9:30-13:00</td>
             <td><a href="{{ workshop.url }}">{{ workshop.title }}</a></td>
             <td>{{ workshop.room }}</td>
             <td>{{ workshop.summary }}</td>
