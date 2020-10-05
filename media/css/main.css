@@ -69,7 +69,7 @@ main {
 
 .two-column {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(1fr, 400px));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .responsive-table {
