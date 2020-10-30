@@ -11,6 +11,10 @@ Imagine you want to tell an interactive story. Perhaps an illustrated, interacti
 Hypermedia conjures visions of cyberspace, but it's just a fancy way of connecting text or images together. And using the web, it's really easy to create interactive, animated virtual books. Weave complex stories, allow visitors to drift off and get lost in your web of imagination.
 Through this workshop we'll build a choose-your-own-adventure style story using simple techniques that you can use for your own stories. Even with zero coding experience.
 
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HWQRGdqcBaw"></iframe>
+</div>
+
 ## Goals
 
 - Understand the original potential of the web, hypertext and hypermedia through examples.
