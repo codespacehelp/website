@@ -14,6 +14,11 @@ room: Online
 
 This workshop shows the idea and tactics of generative design. The principle itself can be used in a variety of tools. We will use the in-house developed - and well fit - tool [NodeBox Live](https://nodebox.live/) to find out the fundamentals.
 
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/l0qv5NXjLZw"></iframe>
+</div>
+
 ## Goals
 
 - Get a brief history and background of generative design.
