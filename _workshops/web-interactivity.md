@@ -9,6 +9,10 @@ room: K.02.04
 
 You know how to make (simple) websites. But you've visited sites that are more like **experiences**: they're interactive, they use fancy animation, they have flashy animations. How do they do that? And how can **you** do that? Maybe you've been put off by JavaScript in the past, but we'll show that they're actually two ways to learn: through adapting examples, or by taking the "fundamental" route, going deep into programming. This course focuses on the former, getting the job done. You'll learn what JavaScript can do and how to take existing code and bend it to your will. After this course you'll know how to integrate any kind of existing code into your own website.
 
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/AZQrTeOYqMo"></iframe>
+</div>
+
 ## Goals
 
 - You'll learn how to take an existing JavaScript library (e.g. a gallery plugin) and integrate it.
