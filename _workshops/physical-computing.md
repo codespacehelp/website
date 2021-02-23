@@ -2,7 +2,7 @@
 title: Physical Computing
 summary: Get away from the screen and onto hardware devices.
 layout: workshop
-workshop_date: 2020-11-18
+workshop_date: 2021-03-24
 duration: 3 hours
 room: K.02.04
 ---

@@ -1,10 +1,11 @@
 ---
 title: Web Interactivity
-summary: Learn animation with JavaScript
+summary: Learn animation with JavaScript.
 layout: workshop
 workshop_date: 2020-12-02
 duration: 3 hours
 room: K.02.04
+youtube_url: https://www.youtube.com/watch?v=AZQrTeOYqMo
 ---
 
 You know how to make (simple) websites. But you've visited sites that are more like **experiences**: they're interactive, they use fancy animation, they have flashy animations. How do they do that? And how can **you** do that? Maybe you've been put off by JavaScript in the past, but we'll show that they're actually two ways to learn: through adapting examples, or by taking the "fundamental" route, going deep into programming. This course focuses on the former, getting the job done. You'll learn what JavaScript can do and how to take existing code and bend it to your will. After this course you'll know how to integrate any kind of existing code into your own website.

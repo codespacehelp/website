@@ -67,6 +67,7 @@ layout: default
             <th>Title</th>
             <th>Location</th>
             <th>Summary</th>
+            <th>Video</th>
           </tr>
         </thead>
         <tbody>
@@ -77,6 +78,24 @@ layout: default
             <td><a href="{{ workshop.url }}">{{ workshop.title }}</a></td>
             <td>{{ workshop.room }}</td>
             <td>{{ workshop.summary }}</td>
+            <td
+              style="
+                min-width: 50px;
+                padding: 0.2rem 0.5rem;
+                text-align: center;
+              "
+            >
+              {% if workshop.youtube_url %}<a
+                href="{{ workshop.youtube_url }}"
+                target="_blank"
+                ><img
+                  src="/media/img/youtube.svg"
+                  width="20"
+                  height="20"
+                  style="filter: invert()"
+              /></a>
+              {% endif %}
+            </td>
           </tr>
           {% endfor %}
         </tbody>

@@ -5,6 +5,7 @@ layout: workshop
 workshop_date: 2020-11-25
 duration: 3 hours
 room: Online
+youtube_url: https://www.youtube.com/watch?v=2GkxHwqt5tI
 ---
 Games are everywhere in our lives. From the immensely popular games like [Fortnite](https://www.epicgames.com/fortnite/en-US/home) to emotional experiences like [The Last of Us](https://www.playstation.com/en-us/games/the-last-of-us-part-ii-ps4/) or [Papers, Please](https://papersplea.se), games are a wide and expressive genre. Getting into games is not always easy if you don't know what tools to use or how to get your images moving. In this workshop we'll dive into the basics of game design: how we can structure our thoughts through a game design process, what a core game loop looks like, how to get your images and other assets into Unity and how to build worlds and interactions that make up a game. With this knowledge you'll be able to make small games that run on smartphones, desktop and the web.
 

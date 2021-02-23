@@ -5,6 +5,7 @@ layout: workshop
 workshop_date: 2020-11-18
 duration: 3 hours
 room: Online
+youtube_url: https://www.youtube.com/watch?v=l0qv5NXjLZw
 ---
 “Generative design approach works in imitation of Nature, performing ideas as codes, able to generate endless variations “ — [Celestino Soddu](http://www.generativedesign.com/)
 
