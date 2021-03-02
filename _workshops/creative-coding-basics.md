@@ -2,7 +2,7 @@
 title: Creative Coding - Basics
 summary: Start with generative design.
 layout: workshop
-workshop_date: 2021-03-09
+workshop_date: 2021-03-10
 duration: 3 hours
 room: K.02.04
 ---
