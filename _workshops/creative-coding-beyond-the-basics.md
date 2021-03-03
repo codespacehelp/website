@@ -7,6 +7,8 @@ duration: 3 hours
 room: K.02.04
 ---
 
+![Creative Coding Examples](/media/img/creative-coding-advanced.jpg)
+
 This course is for everyone who wants to continue their journey with creative coding. To get better, you'll need to understand concepts like lists and objects, and how they apply to creative coding.
 
 Again this will be a very hands-on, visual introduction to coding; we'll create a number of small practical apps that demonstrate why we need lists and objects: a fun typing game; a moodboard maker that talks to [Unsplash](https://unsplash.org/) to get images; a drawing app that can animate our squiggles.
