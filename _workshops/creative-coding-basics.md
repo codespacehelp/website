@@ -5,11 +5,16 @@ layout: workshop
 workshop_date: 2021-03-10
 duration: 3 hours
 room: K.02.04
+youtube_url: https://www.youtube.com/watch?v=HNrEEwDLiPs
 ---
 
 ![Creative Coding Examples](/media/img/creative-coding-basics.jpg)
 
 Dip your toes in the ocean of possibilities with creative coding in this workshop. Whether you've never programmed before, or have programmed and need a refresher, this creative coding workshop is for you. We'll teach you the basics of programming with a very visual approach, focused on creating creative results.
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HWQRGdqcBaw"></iframe>
+</div>
 
 Step by step we'll introduce programming concepts like loops, conditions, variables and functions. We'll look at using coding to generate images, animations and interactivity. We'll mostly use [p5.js](https://p5js.org/) as our coding tool.
 
