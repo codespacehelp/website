@@ -5,10 +5,15 @@ layout: workshop
 workshop_date: 2021-03-24
 duration: 3 hours
 room: K.02.04
+youtube_url: https://www.youtube.com/watch?v=0boh8uHF7UI
 ---
 
 Using physical computing allows you to communicate with the world around you through hardware. Sensors can measure human input, meteorological information or changes in electronic signals coming from changes in energy in the form of light, sound or heat.
 The workshop will be an introduction in how to interpret these signals from sensors and convert that data by means of small computers, microcontrollers. Finally we will find out how to establish communication between them and other computers.
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0boh8uHF7UI"></iframe>
+</div>
 
 ## Goals
 
