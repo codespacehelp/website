@@ -1,20 +1,21 @@
 ---
 id: home
-title: Code Studio
+title: Code Space
 layout: default
 ---
+
 <section class="guides">
   <div class="inner grid">
-  <h1>Guides</h1>
-  <div class="thumb-list">
-    {% for post in site.posts %}
-    <div class="thumb post">
-      <a href="{{ post.url }}">
-        <!-- <img src="/media{{ post.id }}/{{post.bigshot}}" title="{{ post.title }}" class="img img-responsive"> -->
-        <p class="caption">{{ post.title }}</p>
-      </a>
+    <h1>Guides</h1>
+    <div class="thumb-list">
+      {% for post in site.posts %}
+      <div class="thumb post">
+        <a href="{{ post.url }}">
+          <!-- <img src="/media{{ post.id }}/{{post.bigshot}}" title="{{ post.title }}" class="img img-responsive"> -->
+          <p class="caption">{{ post.title }}</p>
+        </a>
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
-  </div>
   </div>
 </section>

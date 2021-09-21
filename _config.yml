@@ -1,10 +1,10 @@
-title: Code Studio
+title: Code Space
 email: frederik.debleser@kdg.be
 description: >- # this means to ignore newlines until "baseurl:"
   Digitale Werkplaats van Sint Lucas Antwerpen voor studenten
   met vragen over technologie, het web, video, audio en digitale fabricatie.
-baseurl: '' # the subpath of your site, e.g. /blog
-url: 'https://www.codestudio.be/' # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.codestudio.be/" # the base hostname & protocol for your site, e.g. http://example.com
 
 collections:
   workshops:
