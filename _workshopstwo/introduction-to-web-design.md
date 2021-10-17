@@ -2,7 +2,7 @@
 title: Introduction to Web Design
 summary: Create your own website from scratch.
 layout: workshop
-workshop_date: 2020-10-27
+workshop_date: 2021-10-27
 duration: 3 hours
 room: K.02.04
 youtube_url:
