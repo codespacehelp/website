@@ -11,6 +11,10 @@ collections:
     output: true
     permalink: /:collection/:name
     sort_by: workshop_date
+  workshopstwo:
+    output: true
+    permalink: /:collection/:name
+    sort_by: workshop_date
 
 exclude:
   - README.md

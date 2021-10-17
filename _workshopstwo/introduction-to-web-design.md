@@ -5,7 +5,7 @@ layout: workshop
 workshop_date: 2020-10-27
 duration: 3 hours
 room: K.02.04
-youtube_url: https://www.youtube.com/watch?v=cmdcECj7_V0
+youtube_url:
 ---
 
 No matter what field you're working in, making a simple website is now considered a basic skill. If you've never built a website from scratch, this is the course for you. At the end of this course you'll have created your own site, guaranteed. If you think coding a website is too difficult this is definitely the course for you! Forget the theory or complex codes: if you can locate the "greater than" and "smaller than" keys on your keyboards you can make a website.
@@ -16,12 +16,12 @@ No matter what field you're working in, making a simple website is now considere
 
 ## Goals
 
-- Understand the basic languages of the web: HTML and CSS.
+- Understand the basic languages of the web: HTML, CSS and JavaScript.
 - Create a web page with custom colors and fonts.
 - Link pages together using hyperlinks.
-- Create simple grid layouts using CSS Grid and flexbox.
+- Create simple grid layouts using CSS Grid.
 - Understand responsive layouts and mobile-first design.
-- Upload your website to [Netlify](https://netlify.com/) and share it with your friends.
+- Upload your website to [Netlify](https://netlify.com/).
 
 ## Requirements
 
@@ -31,7 +31,7 @@ No matter what field you're working in, making a simple website is now considere
 
 ## Project
 
-We'll make a simple, single-page site that contains text, images and videos. We'll look at the  design features of the web, like setting colors and fonts, and layouts like image galleries. You can use these techniques to turn it into your own portfolio website if you'd like.
+We'll make a simple, single-page site that contains text, images and videos. We'll look at the design features of the web, like setting colors and fonts, and layouts like image galleries. You can use these techniques to turn it into your own portfolio website if you'd like.
 
 ## Next Steps
 

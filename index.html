@@ -54,7 +54,49 @@ layout: default
   <div class="inner grid">
     <h1>Workshops</h1>
     <h2>2021-2022</h2>
-    <p>Workshops for the new academic year will be announced soon.</p>
+    <div class="responsive-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Title</th>
+            <th>Location</th>
+            <th>Summary</th>
+            <th>Video</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for workshop in site.workshopstwo %}
+          <tr>
+            <td>{{ workshop.workshop_date | date_to_string }}</td>
+            <td>9:30-13:00</td>
+            <td><a href="{{ workshop.url }}">{{ workshop.title }}</a></td>
+            <td>{{ workshop.room }}</td>
+            <td>{{ workshop.summary }}</td>
+            <td
+              style="
+                min-width: 50px;
+                padding: 0.2rem 0.5rem;
+                text-align: center;
+              "
+            >
+              {% if workshop.youtube_url %}<a
+                href="{{ workshop.youtube_url }}"
+                target="_blank"
+                ><img
+                  src="/media/img/youtube.svg"
+                  width="20"
+                  height="20"
+                  style="filter: invert()"
+              /></a>
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
 
     <h2>2020-2021</h2>
 
