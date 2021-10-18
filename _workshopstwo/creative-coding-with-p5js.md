@@ -5,7 +5,7 @@ layout: workshop
 workshop_date: 2021-11-24
 duration: 3 hours
 room: K.02.04
-youtube_url: https://www.youtube.com/watch?v=HNrEEwDLiPs
+youtube_url: 
 ---
 
 ![Creative Coding Examples](/media/img/creative-coding-basics.jpg)
