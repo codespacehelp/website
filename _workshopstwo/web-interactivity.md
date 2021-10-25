@@ -3,6 +3,7 @@ title: Web Interactivity
 summary: Learn to create interaction with JavaScript.
 layout: workshop
 workshop_date: 2021-11-10
+workshop_time: 14:00 - 17:00
 duration: 3 hours
 room: K.02.04
 youtube_url: 

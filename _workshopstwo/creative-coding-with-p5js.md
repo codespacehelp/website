@@ -3,6 +3,7 @@ title: Creative Coding with p5js
 summary: Start with generative design.
 layout: workshop
 workshop_date: 2021-11-24
+workshop_time: 14:00 - 17:00
 duration: 3 hours
 room: K.02.04
 youtube_url: 

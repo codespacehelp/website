@@ -3,6 +3,7 @@ title: Interactive spaces with Touch Designer
 summary: We'll design our own interactive installation with a depth camera. 
 layout: workshop
 workshop_date: 2021-12-01
+workshop_time: 14:00 - 17:00
 duration: 3 hours
 room: K.02.04
 ---
