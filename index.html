@@ -53,6 +53,7 @@ layout: default
 <section class="workshops light-on-dark">
   <div class="inner grid">
     <h1>Workshops</h1>
+
     <h2>2021-2022</h2>
     <div class="responsive-table">
       <table>
@@ -67,10 +68,11 @@ layout: default
           </tr>
         </thead>
         <tbody>
-          {% for workshop in site.workshopstwo %}
+          {% assign filtered_workshops = site.workshops | where:"academic_year","21-22" %}
+          {% for workshop in filtered_workshops %}
           <tr>
             <td>{{ workshop.workshop_date | date_to_string }}</td>
-            <td>14:00-17:00</td>
+            <td>{{ workshop.workshop_time }}</td>
             <td><a href="{{ workshop.url }}">{{ workshop.title }}</a></td>
             <td>{{ workshop.room }}</td>
             <td>{{ workshop.summary }}</td>
@@ -97,9 +99,8 @@ layout: default
         </tbody>
       </table>
     </div>
-
+    
     <h2>2020-2021</h2>
-
     <div class="responsive-table">
       <table>
         <thead>
@@ -113,10 +114,11 @@ layout: default
           </tr>
         </thead>
         <tbody>
-          {% for workshop in site.workshops %}
+          {% assign workshops_20_21 = site.workshops | where:"academic_year","20-21" %}
+          {% for workshop in workshops_20_21 %}
           <tr>
             <td>{{ workshop.workshop_date | date_to_string }}</td>
-            <td>9:30-13:00</td>
+            <td>{{ workshop.workshop_time }}</td>
             <td><a href="{{ workshop.url }}">{{ workshop.title }}</a></td>
             <td>{{ workshop.room }}</td>
             <td>{{ workshop.summary }}</td>

@@ -2,8 +2,9 @@
 title: Interactive Storytelling
 summary: Creating stories by linking text and images on the web.
 layout: workshop
+academic_year: 20-21
 workshop_date: 2020-10-28
-duration: 3 hours
+workshop_time: 9:30-13:00
 room: K.02.04
 youtube_url: https://www.youtube.com/watch?v=HWQRGdqcBaw
 ---

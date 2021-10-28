@@ -2,11 +2,13 @@
 title: Game Design with Unity
 summary: Make your own games.
 layout: workshop
+academic_year: 20-21
 workshop_date: 2020-11-25
-duration: 3 hours
+workshop_time: 9:30-13:00
 room: Online
 youtube_url: https://www.youtube.com/watch?v=2GkxHwqt5tI
 ---
+
 Games are everywhere in our lives. From the immensely popular games like [Fortnite](https://www.epicgames.com/fortnite/en-US/home) to emotional experiences like [The Last of Us](https://www.playstation.com/en-us/games/the-last-of-us-part-ii-ps4/) or [Papers, Please](https://papersplea.se), games are a wide and expressive genre. Getting into games is not always easy if you don't know what tools to use or how to get your images moving. In this workshop we'll dive into the basics of game design: how we can structure our thoughts through a game design process, what a core game loop looks like, how to get your images and other assets into Unity and how to build worlds and interactions that make up a game. With this knowledge you'll be able to make small games that run on smartphones, desktop and the web.
 
 <div class="embed-responsive embed-responsive-16by9">
@@ -41,4 +43,3 @@ We'll make a simple, low-poly exploration game with existing assets that we down
 - Visit [Unity Learn](https://unity.com/learn) to hone your skills in the Unity editor.
 - There are a ton of YouTube channels that talk about game design. Some of my favourites are [Game Maker's Toolkit](https://www.youtube.com/user/McBacon1337), [GDC](https://www.youtube.com/channel/UC0JB7TSe49lg56u6qH8y_MQ), [Sebastian Lague](https://www.youtube.com/user/Cercopithecan), [Makin' Stuff Look Good](https://www.youtube.com/channel/UCEklP9iLcpExB8vp_fWQseg).
 - If you're into 3D modeling, check out [Blender Guru](https://www.youtube.com/user/AndrewPPrice), [CGBoost](https://cgboost.com), or my favourite: [Ian Hubert's Lazy Tutorials](https://www.youtube.com/playlist?list=PL4Dq5VyfewIxxjzS34k2NES_PuDUIjRcY).
-

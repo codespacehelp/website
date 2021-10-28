@@ -2,8 +2,9 @@
 title: Synthesizing Sounds
 summary: Explore sound in new and exciting ways.
 layout: workshop
+academic_year: 20-21
 workshop_date: 2020-10-21
-duration: 3 hours
+workshop_time: 9:30-13:00
 room: K.02.04
 ---
 

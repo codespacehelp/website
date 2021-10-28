@@ -1,11 +1,11 @@
 ---
 title: Interactive spaces with Touch Designer
-summary: We'll design our own interactive installation with a depth camera. 
+summary: We'll design our own interactive installation with a depth camera.
 layout: workshop
+academic_year: 21-22
 workshop_date: 2021-12-01
 workshop_time: 14:00 - 17:00
-duration: 3 hours
-room: K.02.04
+room: K.03.08
 ---
 
 TouchDesigner is a visual environment to create stunning real time, interactive projects and installations. We invited our resident expert Nathan Van Esbroeck to give a workshop on Touch Designer and show examples of the work he created with the software. We'll design our own interactive installation with a depth camera. The best part: you can do all this without writing a single line of code.
@@ -19,7 +19,6 @@ TouchDesigner is a visual environment to create stunning real time, interactive 
 ## Requirements
 
 This course is for beginners and intermediate students who have no, or very limited, experience with Touch Designer. Please download and install [Touch Designer](https://derivative.ca/download) first.
-
 
 ## Next Steps
 

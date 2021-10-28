@@ -2,8 +2,9 @@
 title: Creative Coding - Beyond the Basics
 summary: Improve your basic coding skills.
 layout: workshop
+academic_year: 20-21
 workshop_date: 2021-03-17
-duration: 3 hours
+workshop_time: 9:30-13:00
 room: K.02.04
 youtube_url: https://www.youtube.com/watch?v=n6eH-kWBky4
 ---

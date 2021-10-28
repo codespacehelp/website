@@ -2,8 +2,9 @@
 title: Introduction to Web Design
 summary: Create your own website from scratch.
 layout: workshop
-workshop_date: 2020-10-07
-duration: 3 hours
+academic_year: 21-22
+workshop_date: 2021-10-27
+workshop_time: 14:00 - 17:00
 room: K.02.04
 youtube_url: https://www.youtube.com/watch?v=cmdcECj7_V0
 ---
@@ -16,12 +17,12 @@ No matter what field you're working in, making a simple website is now considere
 
 ## Goals
 
-- Understand the basic languages of the web: HTML and CSS.
+- Understand the basic languages of the web: HTML, CSS and JavaScript.
 - Create a web page with custom colors and fonts.
 - Link pages together using hyperlinks.
-- Create simple grid layouts using CSS Grid and flexbox.
+- Create simple grid layouts using CSS Grid.
 - Understand responsive layouts and mobile-first design.
-- Upload your website to [Netlify](https://netlify.com/) and share it with your friends.
+- Upload your website to [Netlify](https://netlify.com/).
 
 ## Requirements
 
@@ -31,7 +32,7 @@ No matter what field you're working in, making a simple website is now considere
 
 ## Project
 
-We'll make a simple, single-page site that contains text, images and videos. We'll look at the  design features of the web, like setting colors and fonts, and layouts like image galleries. You can use these techniques to turn it into your own portfolio website if you'd like.
+We'll make a simple, single-page site that contains text, images and videos. We'll look at the design features of the web, like setting colors and fonts, and layouts like image galleries. You can use these techniques to turn it into your own portfolio website if you'd like.
 
 ## Next Steps
 

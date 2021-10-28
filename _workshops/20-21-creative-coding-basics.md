@@ -1,12 +1,12 @@
 ---
-title: Creative Coding with p5js
+title: Creative Coding - Basics
 summary: Start with generative design.
 layout: workshop
-workshop_date: 2021-11-24
-workshop_time: 14:00 - 17:00
-duration: 3 hours
+academic_year: 20-21
+workshop_date: 2021-03-10
+workshop_time: 9:30-13:00
 room: K.02.04
-youtube_url: 
+youtube_url: https://www.youtube.com/watch?v=HNrEEwDLiPs
 ---
 
 ![Creative Coding Examples](/media/img/creative-coding-basics.jpg)
@@ -25,12 +25,11 @@ Throughout this course we'll use the web as our "creative canvas", allowing our 
 
 - Learn on how to use the web as a creative canvas for generative drawing, animation and interactivity.
 - Learn the basics of programming needed for creative coding: loops, variables, conditions.
-- Learn how to import data from online api’s to work with realtime data.
 - Learn how to upload and share your work by putting it online.
 
 ## Requirements
 
-This course is for beginners who are new to programming and web design. Please install [Visual Studio Code](https://code.visualstudio.com/) and [Chrome](https://google.com/chrome) or [Firefox](https://www.mozilla.org/firefox).
+This course is for beginners who are new to programming and web design. Please install [Visual Studio Code]( and Chrome or Firefox.
 
 ## Project
 
