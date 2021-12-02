@@ -11,9 +11,13 @@ youtube_url: https://www.youtube.com/watch?v=QBS2t__b_gA
 
 TouchDesigner is a visual environment to create stunning real time, interactive projects and installations. We invited our resident expert Nathan Van Esbroeck to give a workshop on Touch Designer and show examples of the work he created with the software. We'll design our own interactive installation with a depth camera. The best part: you can do all this without writing a single line of code.
 
+**Workshop is in Dutch**
+
 <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QBS2t__b_gA"></iframe>
 </div>
+
+<a href="https://codespace.help/media/workshops/21-22-interactive-spaces-with-touch-designer/ExampleFile.toe">Example File</a>
 
 ## Goals
 
