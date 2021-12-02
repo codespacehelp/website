@@ -6,9 +6,14 @@ academic_year: 21-22
 workshop_date: 2021-12-01
 workshop_time: 14:00 - 17:00
 room: K.03.08
+youtube_url: https://www.youtube.com/watch?v=QBS2t__b_gA
 ---
 
 TouchDesigner is a visual environment to create stunning real time, interactive projects and installations. We invited our resident expert Nathan Van Esbroeck to give a workshop on Touch Designer and show examples of the work he created with the software. We'll design our own interactive installation with a depth camera. The best part: you can do all this without writing a single line of code.
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QBS2t__b_gA"></iframe>
+</div>
 
 ## Goals
 
