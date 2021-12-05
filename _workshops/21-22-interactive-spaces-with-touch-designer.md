@@ -19,7 +19,7 @@ Lecturer: Nathan van Esbroeck ([Studio Babayaga](http://studio.babayaga.be))
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QBS2t__b_gA"></iframe>
 </div>
 
-<!-- <a href="https://codespace.help/media/workshops/21-22-interactive-spaces-with-touch-designer/ExampleFile.toe">Example File</a> -->
+<a href="https://codespace.help/media/workshops/21-22-interactive-spaces-with-touch-designer/ExampleFile.toe">Example File</a>
 
 ## Goals
 
