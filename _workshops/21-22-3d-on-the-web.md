@@ -2,7 +2,7 @@
 title: 3D on the web with Three.js
 summary: Learn 3D modeling and animation.
 layout: workshop
-academic_year: 20-21
+academic_year: 21-22
 workshop_date: 2022-03-09
 workshop_time: 14:00-17:00
 room: K.03.08

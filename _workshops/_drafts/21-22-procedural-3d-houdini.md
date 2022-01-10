@@ -2,7 +2,7 @@
 title: Procedural 3D with Houdini
 summary: Build entire worlds using nodes.
 layout: workshop
-academic_year: 20-21
+academic_year: 21-22
 workshop_date: 2022-01-28
 workshop_time: 09:30-13:00
 room: K.03.08
