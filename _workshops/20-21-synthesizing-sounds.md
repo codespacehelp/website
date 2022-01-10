@@ -6,6 +6,7 @@ academic_year: 20-21
 workshop_date: 2020-10-21
 workshop_time: 9:30-13:00
 room: K.02.04
+done: true
 ---
 
 For all music (and noise) lovers! Find out what it means to get entangled into the world of digital sound. The workshop is an introduction into the field, explaining fundamental principles of digital signal processing. Students with or without a musical background can enroll to see how to produce and manipulate sound on a computer. We will learn about periodic waves, aperiodic noise, pitches described in Hertz, synthesis procedures, filtering, effects and software which can make all of this happen.

@@ -6,6 +6,7 @@ academic_year: 20-21
 workshop_date: 2021-03-10
 workshop_time: 9:30-13:00
 room: K.02.04
+done: true
 youtube_url: https://www.youtube.com/watch?v=HNrEEwDLiPs
 ---
 

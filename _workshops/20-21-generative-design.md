@@ -6,6 +6,7 @@ academic_year: 20-21
 workshop_date: 2020-11-18
 workshop_time: 9:30-13:00
 room: Online
+done: true
 youtube_url: https://www.youtube.com/watch?v=l0qv5NXjLZw
 ---
 

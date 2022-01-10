@@ -6,6 +6,7 @@ academic_year: 21-22
 workshop_date: 2021-11-24
 workshop_time: 14:00 - 17:00
 room: K.03.08
+done: true
 youtube_url:
 ---
 

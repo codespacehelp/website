@@ -6,6 +6,7 @@ academic_year: 21-22
 workshop_date: 2022-01-28
 workshop_time: 09:30-13:00
 room: K.03.08
+done: false
 ---
 
 Ever wanted to create entire cities or worlds in 3D? Using a procedural approach, you describe the rules of what your world should look like, and the software generates infinite variations to populate your world.

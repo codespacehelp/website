@@ -1,11 +1,12 @@
 ---
 title: 3D on the web with Three.js
-summary: Learn 3D modeling and animation.
+summary: Enter the metaverse.
 layout: workshop
 academic_year: 21-22
 workshop_date: 2022-03-09
 workshop_time: 14:00-17:00
 room: K.03.08
+done: false
 ---
 
 The web is no longer just a place for images and video but, thanks to WebGL and [Three.js](https://threejs.org/), can become a full-blown 3D metaverse. Even adding a little 3D to your website can make a big impact!

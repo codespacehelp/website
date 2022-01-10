@@ -1,11 +1,12 @@
 ---
 title: Animation on the Web
-summary: Breathe life into your projects!
+summary: Breathe life into your projects.
 layout: workshop
-academic_year: 20-21
+academic_year: 21-22
 workshop_date: 2022-03-30
 workshop_time: 14:00-17:00
 room: K.03.08
+done: false
 ---
 
 You know how to build static websites. Now breathe some life into them using animation! Get inspired by some of the best animation examples on the web and learn all about the techniques that power animation on the web.
