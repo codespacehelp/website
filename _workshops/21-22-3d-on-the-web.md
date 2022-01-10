@@ -21,7 +21,7 @@ We'll begin with a showcase of what is possible with 3D on the web. We'll then l
 
 ## Requirements
 
-This course is for students with a bit of background in HTML/CSS and a little to no background in JavaScript. If you need a refresher, you can watch a recording of our [web introduction course](https://codespace.help/workshops/21-22-introduction-to-web-design).
+This course is for students with a bit of background in HTML/CSS and a little to no background in JavaScript. If you need a refresher, you can watch a recording of our [web introduction course](https://codespace.help/workshops/20-21-introduction-to-web-design).
 
 ## Next Steps
 

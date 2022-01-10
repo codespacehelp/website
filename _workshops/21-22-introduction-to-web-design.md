@@ -7,10 +7,11 @@ workshop_date: 2022-02-09
 workshop_time: 14:00 - 17:00
 room: K.02.04
 done: false
-youtube_url: https://www.youtube.com/watch?v=cmdcECj7_V0
 ---
 
 No matter what field you're working in, making a simple website is now considered a basic skill. If you've never built a website from scratch, this is the course for you. At the end of this course you'll have created your own site, guaranteed. If you think coding a website is too difficult this is definitely the course for you! Forget the theory or complex codes: if you can locate the "greater than" and "smaller than" keys on your keyboards you can make a website.
+
+**Last year's course:**
 
 <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cmdcECj7_V0"></iframe>

@@ -27,7 +27,7 @@ Throughout this course we'll build:
 
 ## Requirements
 
-This course is for students with a bit of background in HTML/CSS. We will use JavaScript, but no prior experience is necessary. If you need a refresher, you can watch a recording of our [web introduction course](https://codespace.help/workshops/21-22-introduction-to-web-design).
+This course is for students with a bit of background in HTML/CSS. We will use JavaScript, but no prior experience is necessary. If you need a refresher, you can watch a recording of our [web introduction course](https://codespace.help/workshops/20-21-introduction-to-web-design).
 
 We'll also be using After Effects to demonstrate Lottie. If you don't have After Effects you can use pre-built animations from [Lottiefiles](https://lottiefiles.com/).
 
