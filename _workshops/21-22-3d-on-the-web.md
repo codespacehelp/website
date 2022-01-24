@@ -13,6 +13,10 @@ The web is no longer just a place for images and video but, thanks to WebGL and 
 
 We'll begin with a showcase of what is possible with 3D on the web. We'll then learn how to build a 3D-enabled website from scratch; working with models, lights, cameras; playing with animation and interactivity; learning about materials; and integrating it into a website.
 
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vVQmMD7lZMA"></iframe>
+</div>
+
 ## Goals
 
 - Understand the possibilities and limitations of 3D on the web.

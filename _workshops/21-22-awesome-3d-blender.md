@@ -13,6 +13,10 @@ done: false
 
 Even though it has improved it can be a bit tricky to get started with. This workshop is a starting point for people wanting to dive into Blender. It's aimed at total beginners, showing how to navigate the scene, create simple objects, and learn about lighting, rendering, animation and some more advanced features such as procedural geometry.
 
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QRqY_20ti9A"></iframe>
+</div>
+
 ## Goals
 
 - Understand the possibilities and limitations of Blender.

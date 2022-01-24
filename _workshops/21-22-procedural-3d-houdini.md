@@ -9,6 +9,10 @@ room: K.02.04
 done: false
 ---
 
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/76849619?h=7dd66541d9"></iframe>
+</div>
+
 Ever wanted to create entire cities or worlds in 3D? Using a procedural approach, you describe the rules of what your world should look like, and the software generates infinite variations to populate your world.
 
 This technique is used for effects in films and series, game design, motion graphics and much more! Houdini's procedural approach to 3D opens the door to new kinds of results and invites exploration. The app looks daunting but in this introduction we'll guide you through it gently.

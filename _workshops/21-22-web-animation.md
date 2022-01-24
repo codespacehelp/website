@@ -9,9 +9,13 @@ room: K.02.04
 done: false
 ---
 
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/s224PIF-WC0"></iframe>
+</div>
+
 You know how to build static websites. Now breathe some life into them using animation! Get inspired by some of the best animation examples on the web and learn all about the techniques that power animation on the web.
 
-Through a series of fun examples, we'll build up our toolbox of animation techniques; starting with simple hover techniques using CSS transitions and moving to keyframe animation using CSS animations. We'll tackle timelines using [GSAP], and lastly, we'll learn about [Lottie](https://airbnb.design/lottie/) which allows us to bring After Effects animations into the web.
+Through a series of fun examples, we'll build up our toolbox of animation techniques; starting with simple hover techniques using CSS transitions and moving to keyframe animation using CSS animations. We'll tackle timelines using [GSAP](https://greensock.com/gsap/), and lastly, we'll learn about [Lottie](https://airbnb.design/lottie/) which allows us to bring After Effects animations into the web.
 
 Throughout this course we'll build:
 
