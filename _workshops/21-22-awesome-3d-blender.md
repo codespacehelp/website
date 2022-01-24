@@ -5,7 +5,7 @@ layout: workshop
 academic_year: 21-22
 workshop_date: 2022-02-16
 workshop_time: 14:00-17:00
-room: K.03.08
+room: K.02.04
 done: false
 ---
 
