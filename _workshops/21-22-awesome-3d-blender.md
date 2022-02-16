@@ -17,6 +17,10 @@ Even though it has improved it can be a bit tricky to get started with. This wor
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QRqY_20ti9A"></iframe>
 </div>
 
+## Resources
+
+- [Dude Model](https://enigmeta.s3.amazonaws.com/code-space/21-22-blender-workshop/male_standing.blend)
+
 ## Goals
 
 - Understand the possibilities and limitations of Blender.
