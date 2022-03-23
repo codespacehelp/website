@@ -3,9 +3,9 @@ title: Animation on the Web
 summary: Breathe life into your projects.
 layout: workshop
 academic_year: 21-22
-workshop_date: 2022-03-30
-workshop_time: 14:00-17:00
-room: K.02.04
+workshop_date: Cancelled
+workshop_time: -
+room: -
 done: false
 ---
 
