@@ -6,10 +6,8 @@ academic_year: 21-22
 workshop_date: 2022-02-18
 workshop_time: 09:30-13:00
 room: K.02.04
-done: false
+done: true
 ---
-
-**[NEW DATE]**
 
 <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/590981158"></iframe>

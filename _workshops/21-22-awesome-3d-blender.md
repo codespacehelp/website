@@ -6,7 +6,7 @@ academic_year: 21-22
 workshop_date: 2022-02-16
 workshop_time: 14:00-17:00
 room: K.02.04
-done: false
+done: true
 ---
 
 [Blender](https://www.blender.org/) is an open-source application for creating 3D animation that is conquering the world: it's used in movies, animations, games, ... It's fast, has a built-in production quality renderer, and can be used to model traditionally, using virtual clay, as a 2D animation tool, or create complex environments using procedural geometry.
