@@ -37,3 +37,7 @@ Bring your own design (vector or bitmap) if you want to cut something. We expect
 
 - Watch an introduction on [laser cutting / engraving](https://www.youtube.com/watch?v=sdACSB8GH3Y).
 - Understand the [Beam Studio software](https://www.youtube.com/playlist?list=PL97IZXQ17KZ-E4Hz-AmUcVMxzaK7F1izy).
+
+## To ensure your spot:
+
+**Make a reservation below.** Indicate which date you want to follow (May 4 or May 12).
