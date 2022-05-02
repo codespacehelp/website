@@ -3,7 +3,7 @@ title: Laser Cutting
 summary: Introduction to using the BeamBox Pro
 layout: workshop
 academic_year: 21-22
-workshop_date: 2022-05-05
+workshop_date: 2022-05-04
 workshop_time: 14:00 - 17:00
 room: K.03.08
 done: false
