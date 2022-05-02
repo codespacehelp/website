@@ -7,7 +7,8 @@ This website uses [Jekyll](https://jekyllrb.com/) to transform it into a static 
 ## Installing on Mac
 
     sudo gem install bundler jekyll
-    jekyll serve
+    bundle install
+    bundle exec jekyll serve
 
 ## License
 
