@@ -6,7 +6,7 @@ academic_year: 21-22
 workshop_date: 2022-05-04
 workshop_time: 14:00 - 17:00
 room: K.03.08
-done: false
+done: true
 ---
 
 Sint Lucas / Code Space has a new acquisition: its own laser cutter! We could already use the [Fablab of the KdG in Hoboken](https://fablabkdg.be/), but now we have our own medium format laser cutter.

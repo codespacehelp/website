@@ -6,7 +6,7 @@ academic_year: 21-22
 workshop_date: Cancelled
 workshop_time: -
 room: -
-done: false
+done: true
 ---
 
 <div class="embed-responsive embed-responsive-16by9">
