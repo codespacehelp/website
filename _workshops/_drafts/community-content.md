@@ -5,7 +5,7 @@ layout: workshop
 workshop_date: 2020-12-16
 duration: 3 hours
 room: K.02.04
-done: false
+done: true
 ---
 
 Throughout history a lot of artwork has invited participation of the audience, from Gordon Matta-Clark [roasting a pig](https://www.nytimes.com/2007/02/21/dining/21soho.html) and serving it under the Brooklyn Bridge to the [Learning To Love You More](http://learningtoloveyoumore.com/hello/index.php) project by Miranda July and Harrell Fletcher. Digital projects are ripe for collaboration with the audience: they can invite realtime comments, or enable co-creation of digital art through a custom environment shaped by artists and designers. Knowing how to build a website is one thing; understanding how to set it up for online collaboration is another. And how do we handle inappropriate content and abuse?
