@@ -6,8 +6,7 @@ academic_year: 22-23
 workshop_date: 2022-12-07
 workshop_time: 14:00-17:00
 room: K.02.04
-done: true
-youtube_url: https://www.youtube.com/watch?v=0boh8uHF7UI
+done: false
 ---
 
 Using physical computing allows you to communicate with the world around you through hardware. Sensors can measure human input, meteorological information or changes in electronic signals coming from changes in energy in the form of light, sound or heat.
