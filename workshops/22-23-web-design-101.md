@@ -10,7 +10,7 @@ room: K.02.04
 done: false
 ---
 
-No matter what field you're working in, making a simple website is now considered a basic skill. If you've never built a website from scratch, this is the course for you. At the end of this course you'll have created your own site, guaranteed. If you think coding a website is too difficult this is definitely the course for you! Forget the theory or complex codes: if you can locate the "greater than" and "smaller than" keys on your keyboards you can make a website.
+No matter what field you’re working in, making a simple website is now considered a basic skill. If you’ve never built a website from scratch, this is the course for you. At the end of this course you’ll have created your own site, guaranteed. If you think coding a website is too difficult this is definitely the course for you! Forget the theory or complex codes: if you can locate the “greater than” and “smaller than” keys on your keyboards you can make a website.
 
 <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cmdcECj7_V0"></iframe>
@@ -18,12 +18,15 @@ No matter what field you're working in, making a simple website is now considere
 
 ## Goals
 
+- Understanding the basic structure of the internet.
+- Understanding the basic structures of pages and websites.
+- Getting to know the tools developers use (dev tools and IDE’s).
 - Understand the basic languages of the web: HTML and CSS.
+- Working with a code editor.
 - Create a web page with custom colors and fonts.
-- Link pages together using hyperlinks.
-- Create simple grid layouts using CSS Grid and flexbox.
-- Understand responsive layouts and mobile-first design.
-- Upload your website to [Netlify](https://netlify.com/) and share it with your friends.
+- Understand the importance of your dev setup and structuring your website folders.
+- Understanding the importance of a file system and managing to link pages to each other.
+- Uploading a website to the web so you can share it with others.
 
 ## Requirements
 

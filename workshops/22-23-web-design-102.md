@@ -10,4 +10,12 @@ room: K.02.04
 done: false
 ---
 
-**Description forthcoming**
+A crucial part of web development is knowing your way around styling and making the website appealing enough so people can stay long enough and enjoy the content you are sharing. In this part of the web design series we will take a detailed look at css and the box/grid models to help you make your websites look good and become responsive, which is a crucial part of web development.
+
+## Goals
+
+- Understanding the basics of CSS selectors and attributes.
+- Understanding the cascading nature of CSS.
+- Interacting with the DOM to style elements on the web pages.
+- Using media queries to make responsive mobile/desktop layouts.
+- Creating an identity and structuring our code using the BEM methodology.
