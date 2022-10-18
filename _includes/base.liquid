@@ -5,8 +5,13 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{ page.title }} | Code Space</title>
-  <meta name="author" content="Frederik De Bleser" />
+  {%- if title == "Code Space" %}
+    <title>Code Space</title>
+  {%- else %}
+    <title>{{ title }} | Code Space</title>
+  {%- endif %}
+  <meta name="author" content="Frederik De Bleser, Lieven Menschaert, Imane Benyecif" />
+  <meta name="description" content="Digital Workspace of Sint Lucas Antwerp with a focus on making technology accessible to all">
   <link rel="stylesheet" href="/static/css/main.css?{{site.time | date: '%s%N'}}" />
   <link rel="stylesheet" href="/static/css/syntax.css?{{site.time | date: '%s%N'}}" />
 </head>
