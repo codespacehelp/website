@@ -1,0 +1,42 @@
+<div class="responsive-table">
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Title</th>
+        <th>Location</th>
+        <th>Summary</th>
+        <th>Video</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for workshop in workshops %}
+        {% if workshop.data.done %}
+          <tr class="workshop-done">
+          {% else %}
+            <tr>
+            {% endif %}
+            <td>{{ workshop.data.workshop_date | date:"%Y-%m-%d" }}
+            </td>
+            <td>{{ workshop.data.workshop_time }}
+            </td>
+            <td>
+              <a href="{{ workshop.url }}">{{ workshop.data.title }}
+              </a>
+            </td>
+            <td>{{ workshop.data.room }}
+            </td>
+            <td>{{ workshop.data.summary }}
+            </td>
+            <td class="workshop-youtube-icon">
+              {% if workshop.data.youtube_url %}
+                <a href="{{ workshop.data.youtube_url }}" target="_blank"><img src="/static/img/youtube.svg" width="20" height="20" style="filter: invert()"/></a>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </tbody>
+  </table>
+</div>
