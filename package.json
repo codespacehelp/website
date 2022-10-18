@@ -1,0 +1,31 @@
+{
+	"name": "codespace",
+	"version": "1.0.0",
+	"description": "Code Space is the digital technology platform for [Sint Lucas Antwerpen](https://www.sintlucasantwerpen.be/)",
+	"main": ".eleventy.js",
+	"scripts": {
+		"start": "concurrently \"npm run watch\" \"npm run serve\"",
+		"watch": "eleventy --watch",
+		"serve": "serve _site",
+		"build": "eleventy",
+		"clean": "rm -rf _site",
+		"format": "prettier --write '**/*.{md,js,css,scss,html,yml,json}'"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/fdb/codespace.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/fdb/codespace/issues"
+	},
+	"homepage": "https://github.com/fdb/codespace#readme",
+	"devDependencies": {
+		"@11ty/eleventy": "1.0.2",
+		"concurrently": "7.4.0",
+		"prettier": "2.7.1",
+		"serve": "14.0.1"
+	}
+}

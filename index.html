@@ -52,118 +52,13 @@ layout: default
     <h1>Workshops</h1>
 
     <h2>2022-2023</h2>
-    <div class="responsive-table">
-      <table>
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Title</th>
-            <th>Location</th>
-            <th>Summary</th>
-            <th>Video</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% assign filtered_workshops = site.workshops | where:"academic_year","22-23" %}
-          {% for workshop in filtered_workshops %}
-          {% if workshop.done %}<tr class="workshop-done">{% else %}
-          <tr>{% endif %}
-            <td>{{ workshop.workshop_date | date_to_string }}</td>
-            <td>{{ workshop.workshop_time }}</td>
-            <td><a href="{{ workshop.url }}">{{ workshop.title }}</a></td>
-            <td>{{ workshop.room }}</td>
-            <td>{{ workshop.summary }}</td>
-            <td style="
-                min-width: 50px;
-                padding: 0.2rem 0.5rem;
-                text-align: center;
-              ">
-              {% if workshop.youtube_url %}<a href="{{ workshop.youtube_url }}" target="_blank"><img
-                  src="/media/img/youtube.svg" width="20" height="20" style="filter: invert()" /></a>
-              {% endif %}
-            </td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
+    {% render "_workshopsTable" with collections.workshops_22_23 as workshops %}
 
     <h2>2021-2022</h2>
-    <div class="responsive-table">
-      <table>
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Title</th>
-            <th>Location</th>
-            <th>Summary</th>
-            <th>Video</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% assign filtered_workshops = site.workshops | where:"academic_year","21-22" %}
-          {% for workshop in filtered_workshops %}
-          {% if workshop.done %}<tr class="workshop-done">{% else %}
-          <tr>{% endif %}
-            <td>{{ workshop.workshop_date | date_to_string }}</td>
-            <td>{{ workshop.workshop_time }}</td>
-            <td><a href="{{ workshop.url }}">{{ workshop.title }}</a></td>
-            <td>{{ workshop.room }}</td>
-            <td>{{ workshop.summary }}</td>
-            <td style="
-                min-width: 50px;
-                padding: 0.2rem 0.5rem;
-                text-align: center;
-              ">
-              {% if workshop.youtube_url %}<a href="{{ workshop.youtube_url }}" target="_blank"><img
-                  src="/media/img/youtube.svg" width="20" height="20" style="filter: invert()" /></a>
-              {% endif %}
-            </td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
+    {% render "_workshopsTable" with collections.workshops_21_22 as workshops %}
 
     <h2>2020-2021</h2>
-    <div class="responsive-table">
-      <table>
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Title</th>
-            <th>Location</th>
-            <th>Summary</th>
-            <th>Video</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% assign workshops_20_21 = site.workshops | where:"academic_year","20-21" %}
-          {% for workshop in workshops_20_21 %}
-          {% if workshop.done %}<tr class="workshop-done">{% else %}
-          <tr>{% endif %}
-            <td>{{ workshop.workshop_date | date_to_string }}</td>
-            <td>{{ workshop.workshop_time }}</td>
-            <td><a href="{{ workshop.url }}">{{ workshop.title }}</a></td>
-            <td>{{ workshop.room }}</td>
-            <td>{{ workshop.summary }}</td>
-            <td style="
-                min-width: 50px;
-                padding: 0.2rem 0.5rem;
-                text-align: center;
-              ">
-              {% if workshop.youtube_url %}<a href="{{ workshop.youtube_url }}" target="_blank"><img
-                  src="/media/img/youtube.svg" width="20" height="20" style="filter: invert()" /></a>
-              {% endif %}
-            </td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
+    {% render "_workshopsTable" with collections.workshops_20_21 as workshops %}
   </div>
 </section>
 
@@ -171,11 +66,11 @@ layout: default
   <div class="inner grid">
     <h1>Guides</h1>
     <div class="thumb-list">
-      {% for post in site.posts %}
+      {% for post in collections.post %}
       <div class="thumb post">
         <a href="{{ post.url }}">
           <!-- <img src="/media{{ post.id }}/{{post.bigshot}}" title="{{ post.title }}" class="img img-responsive"> -->
-          <p class="caption">{{ post.title }}</p>
+          <p class="caption">{{ post.data.title }}</p>
         </a>
       </div>
       {% endfor %}
