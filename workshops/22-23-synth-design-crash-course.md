@@ -5,7 +5,7 @@ title: Synth Design Crash Course
 summary: Design your own DIY musical instrument!
 academic_year: 22-23
 workshop_date: 2022-12-14
-workshop_time: TBD
+workshop_time: 10:00-17:00
 room: K.02.04
 done: false
 ---
@@ -35,6 +35,16 @@ This is a hands-on workshop on synth design and development using the [Simple Sy
 
 - You'll design and prototype your own synthesizer using the [Simple Synth DIY kit](https://www.synthux.academy/simple) and [Daisy Seed](https://www.electro-smith.com/daisy/daisy) microcontroller.
 - We can't provide the kits for free, but you can buy a synth kit for a heavily reduced price after the workshop.
+
+## Agenda
+
+- 10:00 Explaining the kit
+- 10:30 Introduction to sound design
+- 11:00 Playing with VCV rack
+- 12:00 Break
+- 13:00 Soldering the microcontroller pins, a knob and a socket
+- 14:00 Running some example code and learning how it works
+- 15:00 Experimentation and troubleshooting
 
 ## Next Steps
 
