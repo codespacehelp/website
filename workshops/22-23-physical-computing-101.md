@@ -29,11 +29,9 @@ Students need to have an account for the [MakeCode / micro:bit](https://makecode
 
 ## Project
 
-We will make a few simple project using a [BBC micro:bit](https://www.microbit.org/) - a microcontroller that can be programmed with a visual programming language.
+We will make a few simple projects using a [BBC micro:bit](https://www.microbit.org/) - a microcontroller that can be programmed with a visual programming language.
 
 ## Next Steps
 
-- [Frederik Vandenbosch](https://www.youtube.com/channel/UCQ45WW31610DQ3Vn7f4mpNw) has an amazing YouTube channel showing how he builds crazy machines and hacks.
-  Have a look at [syntax programming for the same micro:bit](https://microbit-micropython.readthedocs.io/en/v1.0.1/microbit_micropython_api.html).
-  Wander around in the world of [Arduino](https://www.arduino.cc/), [Raspberry Pi](https://projects.raspberrypi.org/en/projects/raspberry-pi-getting-started) or build a banana piano with [Makey makey](https://makeymakey.com/)
-  Visit a [Maker Faire](https://makerfaire.com/) to see other people working in the field.
+- Explore [IFTT](https://ifttt.com/) to see how you can trigger physical hardware based on virtual events.
+- Learn coding in Arduino with [FreeCodeCamp's Arduino Course for Beginners](https://www.freecodecamp.org/news/create-your-own-electronics-with-arduino-full-course/).
