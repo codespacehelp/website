@@ -5,9 +5,9 @@ title: Competent Web Design
 summary: Add interactivity with JavaScript
 academic_year: 22-23
 workshop_date: 2022-11-23
-workshop_time: 14:00-17:00
+workshop_time: Canceled
 room: K.02.04
-done: false
+done: true
 ---
 
 In this last part we will introduce JavaScript into the equation. Because JavaScript has so many possibilities, we will only be focussing on the very basics of it: how you can use it to manipulate elements on the page. This will help you get started with your very first programming language.
