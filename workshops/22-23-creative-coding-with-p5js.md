@@ -5,9 +5,9 @@ title: Creative Coding with p5js
 summary: Start with generative design.
 academic_year: 22-23
 workshop_date: 2022-11-30
-workshop_time: 14:00 - 17:00
+workshop_time: Rescheduled
 room: K.02.04
-done: false
+done: true
 youtube_url:
 ---
 
