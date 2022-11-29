@@ -6,7 +6,7 @@ summary: Design your own DIY musical instrument!
 academic_year: 22-23
 workshop_date: 2022-12-14
 workshop_time: 10:00-17:00
-room: K.02.04
+room: K.01.14
 done: false
 ---
 
