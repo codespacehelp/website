@@ -6,7 +6,7 @@ summary: Connect your hardware to the internet.
 academic_year: 22-23
 workshop_date: 2022-12-21
 workshop_time: 14:00-17:00
-room: K.02.04
+room: M.1
 done: false
 ---
 
