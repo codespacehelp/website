@@ -36,6 +36,9 @@ This is a hands-on workshop on synth design and development using the [Simple Sy
 - You'll design and prototype your own synthesizer using the [Simple Synth DIY kit](https://www.synthux.academy/simple) and [Daisy Seed](https://www.electro-smith.com/daisy/daisy) microcontroller.
 - We can't provide the kits for free, but you can buy a synth kit for a heavily reduced price after the workshop.
 
+[Synth Manual](https://tsemah.notion.site/Simple-Synth-Manual-4c2899938eb84fad988319995ea5fe3b)
+
+
 ## Agenda
 
 - 10:00 Explaining the kit
