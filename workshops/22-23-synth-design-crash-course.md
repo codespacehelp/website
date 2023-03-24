@@ -7,7 +7,7 @@ academic_year: 22-23
 workshop_date: 2022-12-14
 workshop_time: 10:00-17:00
 room: K.01.14
-done: false
+done: true
 ---
 
 _We're very happy to host a guest workshop by Roey Tsemah, founder of the [Synthux Academy](https://www.synthux.academy/), a community of DIY musicians and synth designers._

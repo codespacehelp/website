@@ -7,7 +7,7 @@ academic_year: 22-23
 workshop_date: 2022-12-21
 workshop_time: 14:00-17:00
 room: M.1
-done: false
+done: true
 ---
 
 After the previous workshop, we will continue to explore the world of hardware by connecting our devices to the internet. We will learn about what kinds of chips we need and how we do the communication between the physical and digital worlds.
