@@ -398,9 +398,19 @@ table small {
 	margin: 0.5rem 0 1rem 0;
 }
 
+.post video {
+	max-width: 100%;
+}
+
 .meta {
 	font-size: 0.8rem;
 	color: #666;
+}
+
+.full-width {
+	width: 100vw;
+	margin-left: calc(-50vw + 50%);
+	margin-right: calc(-50vw + 50%);
 }
 
 /********** INDEX **********/
