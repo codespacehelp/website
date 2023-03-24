@@ -4,9 +4,8 @@
 	"description": "Code Space is the digital technology platform for [Sint Lucas Antwerpen](https://www.sintlucasantwerpen.be/)",
 	"main": ".eleventy.js",
 	"scripts": {
-		"start": "concurrently \"npm run watch\" \"npm run serve\"",
-		"watch": "eleventy --watch",
-		"serve": "serve _site",
+		"start": "eleventy --serve",
+		"dev": "eleventy --serve",
 		"build": "eleventy",
 		"clean": "rm -rf _site",
 		"format": "prettier --write '**/*.{md,js,css,scss,html,yml,json}'"
@@ -23,7 +22,7 @@
 	},
 	"homepage": "https://github.com/fdb/codespace#readme",
 	"devDependencies": {
-		"@11ty/eleventy": "1.0.2",
+		"@11ty/eleventy": "2.0.0",
 		"concurrently": "7.4.0",
 		"prettier": "2.7.1",
 		"serve": "14.1.1"
