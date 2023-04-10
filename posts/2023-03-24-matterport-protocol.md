@@ -13,7 +13,7 @@ The tour was made with [Matterport](https://matterport.com/), a 3D capturing sol
 
 We wanted to have the measurements of this room and wondered if we would be able to get the file in a program like Blender; turns out, yes, we can:
 
-<video src="https://codespacehelp.s3.amazonaws.com/_site/matterport-protocol/museum-blender.mp4" controls muted autoplay loop></video>
+<video src="https://codespacehelp.s3.amazonaws.com/site/matterport-protocol/museum-blender.mp4" controls muted autoplay loop></video>
 
 I wanted to document the journey to show the steps I took to get there.
 
@@ -22,7 +22,7 @@ I wanted to document the journey to show the steps I took to get there.
 The first step in getting any kind of data is opening the web inspector. Specifically, when loading the 3D scene, I want to have the Network tab open to see all the requests coming in. It helps here to filter down on "XHR" requests, basically requests that don't come from the initial load of the page but are triggered by JavaScript, such as the Matterport player.
 
 
-<video src="https://codespacehelp.s3.amazonaws.com/_site/matterport-protocol/matterport-requests.mp4" muted autoplay loop></video>
+<video src="https://codespacehelp.s3.amazonaws.com/site/matterport-protocol/matterport-requests.mp4" muted autoplay loop></video>
 
 
 Immediately we can see all the traffic streaming in: a *lot* of JPEG files, and at the very top, some files in an unknown format. 
@@ -67,11 +67,11 @@ So then I asked GPT-4 to convert that code to JavaScript, which worked like a ch
 
 Once we decoded the protobuf file, we could convert it to an OBJ file and a MTL file referencing all the materials. We could then import the model in Blender, and even export it back out to a GLB file, ready to view on the web:
 
-<video src="https://codespacehelp.s3.amazonaws.com/_site/matterport-protocol/museum-glb-1.mp4" controls muted autoplay loop></video>
+<video src="https://codespacehelp.s3.amazonaws.com/site/matterport-protocol/museum-glb-1.mp4" controls muted autoplay loop></video>
 
 You see that the quality is considerably worse than the original; this is the "base" layer in Matterport, captured from a 3D scan of the museum. This layer you see while moving around from spot to spot. Matterport files additionally contain 360° photos of each fixed spots, giving a high-quality view of that exact spot.
 
-<video src="https://codespacehelp.s3.amazonaws.com/_site/matterport-protocol/museum-glb-2.mp4" controls muted autoplay loop></video>
+<video src="https://codespacehelp.s3.amazonaws.com/site/matterport-protocol/museum-glb-2.mp4" controls muted autoplay loop></video>
 
 Overall this was a fun project, and I'm happy to have found a way to decode the files. The techniques extend beyond just grabbing 3D models from Matterport, and can be used to decode any custom viewer that uses Protocol Buffers.
 
