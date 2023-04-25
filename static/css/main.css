@@ -413,6 +413,66 @@ table small {
 	margin-right: calc(-50vw + 50%);
 }
 
+/********** RESERVATIONS **********/
+
+.interests {
+	list-style-position: inside;
+	padding: 0;
+	margin: 0;
+	margin-top: -10px;
+}
+
+.appointment-feedback {
+	max-width: 800px;
+}
+
+.appointment-feedback label {
+	display: block;
+	margin-bottom: 0rem;
+	font-weight: bold;
+}
+
+.appointment-feedback input,
+.appointment-feedback select,
+.appointment-feedback textarea {
+	font-family: inherit;
+	font-size: 16px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+/* Style for text input */
+.appointment-feedback input[type='text'] {
+	width: 100%;
+	max-width: 400px; /* Set the maximum width for the text input */
+}
+
+textarea {
+	resize: vertical;
+	min-height: 100px;
+}
+
+/* Style the submit button */
+.appointment-feedback button[type='submit'] {
+	font-family: inherit;
+	font-size: 16px;
+	background-color: #4caf50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.appointment-feedback button[type='submit']:hover {
+	background-color: #45a049;
+}
+
 /********** INDEX **********/
 
 .cta {
@@ -480,4 +540,9 @@ footer a {
 		flex: 1;
 		text-align: right;
 	}
+}
+
+hr {
+	border: none;
+	border-bottom: 1px solid #aaa;
 }
