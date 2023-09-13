@@ -31,6 +31,10 @@ The workshop consists of two parts:
 
 Bring your own design (vector or bitmap) if you want to cut something. We expect a number of students, so make your design small enough (ideally less than 10x10cm).
 
+## Costs
+
+Students are required to pay for the available MDF material used in their projects. Of course, you're free to bring your own material.
+
 ## Next Steps
 
 - Watch an introduction on [laser cutting / engraving](https://www.youtube.com/watch?v=sdACSB8GH3Y).
