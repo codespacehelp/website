@@ -17,7 +17,9 @@ The workshop consists of two parts:
  - **Morning Session (10:00-12:30)**: We will cover the fundamentals of 3-D printing, including an introduction to 3D design, how the Ultimaker S2 works, and the basics of slicing software.
 - **Afternoon Session (14:00-17:00)**: You'll get hands-on experience by bringing your own design to print. Please note that the cost of PLA material will be your responsibility.
 
-
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/m12bX1eEVDM"></iframe>
+</div>
 
 ## Goals
 

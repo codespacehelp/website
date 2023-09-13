@@ -16,6 +16,10 @@ You will also learn how to guide AI in painting, designing, and creating visuals
 
  In this workshop we will be using [ClipDrop](https://clipdrop.co/), a simple web-based app, and [DreamStudio](https://beta.dreamstudio.ai/), a more advanced tool that requires a free account.
 
+ <div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kkYaikeLJdc"></iframe>
+</div>
+
 ## Goals
 
 - Learn to utilize various tools for generating images for their educational materials such as courses, presentations, and slides.

@@ -19,6 +19,9 @@ The workshop consists of two parts:
  - **Morning (10:00-12:30)**: We will go through the basics of laser, cutting and engraving, and the Beam Studio software.
  - **Afternoon (14:00-17:00)**: You can bring your own design and we will help you cut or engrave it. We provide the wood! (MDF 3mm)
 
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sdACSB8GH3Y"></iframe>
+</div>
 
 ## Goals
 
