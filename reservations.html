@@ -13,20 +13,23 @@ title: Reservaties
     <div class="two-column">
       <div class="column">
         <h3>Imane Benyecif</h3>
-        <p style="margin-top: -12px">Interests / Expertise:</p>
-        <ul>
+        <div style="margin-top: -10px">
+          <a href="https://calendly.com/imane-benyecif/code-space" target="_blank" class="cta__primary">Make a reservation</a>
+        </div>
+        <p><strong>Interests / Expertise:</strong></p>
+        <ul class="interests">
           <li>Web Design</li>
           <li>Generative Design / Font Design</li>
           <li>Laser Cutting</li>
         </ul>
-        <div>
-          <a href="https://calendly.com/imane-benyecif/code-space" class="cta__primary">Make a reservation</a>
-        </div>
       </div>
       <div class="column">
         <h3>Frederik De Bleser</h3>
-        <p style="margin-top: -12px">Interests / Expertise:</p>
-        <ul>
+        <div style="margin-top: -10px">
+          <a href="https://calendly.com/enigmeta/code-space" target="_blank" class="cta__primary">Make a reservation</a>
+        </div>
+        <p><strong>Interests / Expertise:</strong></p>
+        <ul class="interests">
           <li>Web Design</li>
           <li>Data Visualisation</li>
           <li>3D / VR</li>
@@ -35,14 +38,14 @@ title: Reservaties
           <li>Game Design</li>
           <li>Laser Cutting</li>
         </ul>
-        <div>
-          <a href="https://calendly.com/enigmeta/code-space" class="cta__primary">Make a reservation</a>
-        </div>
       </div>
       <div class="column">
         <h3>Lieven Menschaert</h3>
-        <p style="margin-top: -12px">Interests / Expertise:</p>
-        <ul>
+        <div style="margin-top: -10px">
+          <a href="https://calendly.com/lievenmenschaert/office-hours" target="_blank" class="cta__primary">Make a reservation</a>
+        </div>
+        <p><strong>Interests / Expertise:</strong></p>
+        <ul class="interests">
           <li>3D Printing</li>
           <li>Laser Cutting</li>
           <li>Robotics</li>
@@ -50,10 +53,47 @@ title: Reservaties
           <li>Sound Design</li>
           <li>Web Design</li>
         </ul>
-        <div>
-          <a href="https://calendly.com/lievenmenschaert/office-hours" class="cta__primary">Make a reservation</a>
-        </div>
       </div>
     </div>
+
+    <br>
+    <hr />
+    <br>
+
+    <form class="appointment-feedback" name="appointment-feedback" method="POST" data-netlify="true">
+      <h1>Can't book an appointment? Let us know!</h1>
+      <p>If you can't make an appointment, because the person is unavailable or there is no time slot we would like to
+        know! This helps us provide more availability in the future.
+      </p>
+
+      <label for="name">What is your name?</label>
+      <input type="text" id="name" name="name" required>
+
+      <br><br>
+
+      <label for="provider">Who did you want an appointment with:</label>
+      <select name="provider" id="provider">
+        <option value="DoesntMatter">Doesn't Matter</option>
+        <option value="Imane">Imane</option>
+        <option value="Frederik">Frederik</option>
+        <option value="Lieven">Lieven</option>
+      </select>
+
+      <br><br>
+
+      <label for="appointment-topic">What was the appointment about?</label>
+      <input type="text" id="appointment-topic" name="appointment_topic" required>
+
+      <br><br>
+
+      <label for="notes">Any other notes or remarks?</label>
+      <textarea id="notes" name="notes" rows="4" cols="50"></textarea>
+
+      <br><br>
+
+      <button type="submit">Submit</button>
+      <p>Thanks for providing this feedback. This really helps!</p>
+    </form>
+
   </div>
 </section>
