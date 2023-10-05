@@ -50,7 +50,9 @@ layout: default
 <section class="workshops light-on-dark">
   <div class="inner grid">
     <h1>Workshops</h1>
-
+    <h2>2023-2024</h2>
+    {% render "_workshopsTable" with collections.workshops_23_24 as workshops %}
+    
     <h2>2022-2023</h2>
     {% render "_workshopsTable" with collections.workshops_22_23 as workshops %}
 
