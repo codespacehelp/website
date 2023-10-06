@@ -1,8 +1,8 @@
 ---
 layout: workshop
 tags: workshop
-title: introduction to our dear machines
-summary: A first ecnounter with our 3d machine and our laser machine
+title: Introduction to Digital Fabrication
+summary: A first encounter with our dear 3D and laser machines
 academic_year: 23-24
 workshop_date: 2023-10-11
 workshop_time: 10:00-17:00

@@ -6,7 +6,7 @@ summary: From prompt to pixels
 academic_year: 23-24
 workshop_date: 2023-10-25
 workshop_time: 14:00 - 17:00
-room: K.03.08
+room: K.02.03
 done: false
 ---
 

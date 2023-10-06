@@ -6,7 +6,7 @@ summary: Learn 3D modeling and animation.
 academic_year: 23-24
 workshop_date: 2023-11-15
 workshop_time: 14:00-17:00
-room: K.02.04
+room: K.02.03
 done: false
 ---
 
