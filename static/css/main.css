@@ -189,10 +189,12 @@ main {
 		box-shadow: 0 10px 0 #fff;
 		margin-bottom: 16px;
 	}
+
 	.header__hamburger:hover:before {
 		box-shadow: 0 0 0 #fff;
 		transform: translateY(10px) rotate(45deg);
 	}
+
 	.header__hamburger:hover:after {
 		transform: translateY(-10px) rotate(-45deg);
 	}
@@ -394,6 +396,7 @@ table small {
 	background: #b0b2f8 url(../img/pattern_62.svg) repeat;
 	background-size: 10em;
 }
+
 .post h1 {
 	margin: 0.5rem 0 1rem 0;
 }
@@ -411,6 +414,25 @@ table small {
 	width: 100vw;
 	margin-left: calc(-50vw + 50%);
 	margin-right: calc(-50vw + 50%);
+}
+
+.side-by-side {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 1rem;
+}
+
+.side-by-side > * {
+	max-width: 100%;
+	width: calc(50% - 0.5rem);
+	height: auto;
+}
+
+@media (min-width: 768px) {
+	.side-by-side {
+		flex-direction: row;
+	}
 }
 
 /********** RESERVATIONS **********/
@@ -448,7 +470,8 @@ table small {
 /* Style for text input */
 .appointment-feedback input[type='text'] {
 	width: 100%;
-	max-width: 400px; /* Set the maximum width for the text input */
+	max-width: 400px;
+	/* Set the maximum width for the text input */
 }
 
 textarea {
