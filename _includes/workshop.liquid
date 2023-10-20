@@ -11,7 +11,7 @@ layout: default
   <p><strong>Location: {{ room }} — {{ workshop_time }}</strong></p>
 </div>
 <div class="page">
-  {{ content }} 
+  {{ content }}
   {% unless done %}
 
   <h1>Reservation</h1>
@@ -33,7 +33,11 @@ layout: default
         ><input class="form__field" type="email" name="email" required
       /></label>
     </div>
-    <input type="hidden" name="workshop" value="{{ title }}" />
+    <input type="hidden" name="workshop_title" value="{{ title }}" />
+    <input type="hidden" name="workshop_date" value="{{ workshop_date | date:"%Y%m%d" }}" />
+    <input type="hidden" name="workshop_time" value="{{ workshop_time }}" />
+    <input type="hidden" name="workshop_room" value="{{ room }}" />
+
     <div class="form__row">
       <label
         ><span class="form__label">Remarks</span
