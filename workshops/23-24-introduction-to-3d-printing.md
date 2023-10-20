@@ -7,7 +7,7 @@ academic_year: 23-24
 workshop_date: 2023-10-11
 workshop_time: 10:00-17:00
 room: K.03.08
-done: false
+done: true
 ---
 
 Welcome to the general introduction to our machines here at Code Space! In the morning, we'll provide a 101 on working with both the 3D printer and the laser printer. In the afternoon, we'll keep the door open for you to experiment with some files, helping you gain a hands-on understanding of how these machines operate. We'll be available throughout the day to answer any questions you may have.
@@ -19,4 +19,3 @@ Welcome to the general introduction to our machines here at Code Space! In the m
 - Learn how to trouble shoot some common mistakes
 
 - Learn to prepare files for the machines
-

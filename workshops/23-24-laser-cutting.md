@@ -7,7 +7,7 @@ academic_year: 23-24
 workshop_date: 2023-10-04
 workshop_time: 10:00 - 17:00
 room: K.03.08
-done: false
+done: true
 ---
 
 Get to know the laser cutter at Sint Lucas / Code Space: the awesome [Beambox Pro](https://www.fluxlasers.com/products/beambox-pro/). With it you can cut and engrave in wood (full wood or MDF), paper/cardboard, leather, fabric and acrylic.  More information can be found here:
