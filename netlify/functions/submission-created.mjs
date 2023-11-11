@@ -54,6 +54,9 @@ export const handler = async (event, _) => {
     '',
     `Thank you for registering for ${workshopTitle}! Please find the calendar invite attached to this email.`,
     '',
+    'Best,',
+    'Team Code Space',
+    '',
   ].join('\r\n')
   const attachmentPart = [
     `--${mimeBoundary}`,
