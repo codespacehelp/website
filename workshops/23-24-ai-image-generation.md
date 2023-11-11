@@ -7,7 +7,7 @@ academic_year: 23-24
 workshop_date: 2023-10-25
 workshop_time: 14:00 - 17:00
 room: K.02.03
-done: false
+done: true
 ---
 
 Immerse yourself in the captivating realm of AI-generated images. Discover how AI algorithms have evolved to create stunning visuals, from simplistic sketches to awe-inspiring art pieces. Get introduced to the technologies that make this magic happen, including open-source solutions like Stable Diffusion, and state-of-the-art creative tools like Midjourney and Adobe Firefly.
