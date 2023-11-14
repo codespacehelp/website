@@ -4,11 +4,13 @@ tags: workshop
 title: Awesome 3D with Blender
 summary: Learn 3D modeling and animation.
 academic_year: 23-24
-workshop_date: 2023-11-15
-workshop_time: 14:00-17:00
+workshop_date: 2023-11-29
+workshop_time: 10:00-17:00
 room: K.02.03
 done: false
 ---
+
+**The date of the workshop has moved from November 15 to November 29 in the morning.**
 
 [Blender](https://www.blender.org/) is an open-source application for creating 3D animation that is conquering the world: it's used in movies, animations, games, ... It's fast, has a built-in production quality renderer, and can be used to model traditionally, using virtual clay, as a 2D animation tool, or create complex environments using procedural geometry.
 
