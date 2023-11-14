@@ -3,7 +3,7 @@ layout: workshop
 tags: workshop
 title: Introduction to Website making
 summary: Create your own website from scratch.
-academic_year: 23-24
+#academic_year: 23-24
 workshop_date: TBC
 workshop_time: TBC
 room: K.02.04
