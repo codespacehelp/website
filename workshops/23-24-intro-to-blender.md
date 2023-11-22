@@ -34,6 +34,14 @@ Even though it has improved it can be a bit tricky to get started with. This wor
 
 This course is for beginners and intermediate students who have no, or very limited, experience with Blender. Please download the latest version of Blender at [blender.org](https://www.blender.org/).
 
+## Download Blender
+
+Direct links to Blender downloads:
+
+- [Blender 4.0.1 Mac M1/M2/M3](https://codespacehelp.s3.amazonaws.com/workshops/23-24-blender-geometry-nodes/blender-4.0.1-macos-arm64.dmg)
+- [Blender 4.0.1 Mac Intel](https://codespacehelp.s3.amazonaws.com/workshops/23-24-blender-geometry-nodes/blender-4.0.1-macos-x64.dmg)
+- [Blender 4.0.1 Windows](https://codespacehelp.s3.amazonaws.com/workshops/23-24-blender-geometry-nodes/blender-4.0.1-windows-x64.msi)
+
 ## Next Steps
 
 - If you haven't already, follow the legendary [Blender Donut Tutorial](https://www.youtube.com/watch?v=nIoXOplUvAw) by Andrew Price (blenderguru).
