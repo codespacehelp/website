@@ -5,7 +5,7 @@ title: Awesome 3D with Blender
 summary: Learn 3D modeling and animation.
 academic_year: 23-24
 workshop_date: 2023-11-29
-workshop_time: 10:00-17:00
+workshop_time: 10:00-13:00
 room: K.02.03
 done: false
 ---
