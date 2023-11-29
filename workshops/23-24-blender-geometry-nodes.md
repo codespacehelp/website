@@ -20,7 +20,6 @@ You can find some of Kris' work on his [Instagram](https://www.instagram.com/zup
 <video autoplay muted loop src="https://codespacehelp.s3.amazonaws.com/site/23-24-blender-geometry-nodes/Cx7kSc7rCRz_540.mp4"></video>
 </div>
 
-
 ## Goals
 
 - Learn the basics of "parametric modeling" — not using a fully modeled object, but using a set of rules to generate a model.
@@ -33,6 +32,14 @@ You can find some of Kris' work on his [Instagram](https://www.instagram.com/zup
 - We expect people to have a basic understanding of Blender; either because you followed our [Blender introduction workshop](/workshops/23-24-intro-to-blender/), or followed online tutorials on your own — like the [Blender Donut Tutorial](https://www.youtube.com/playlist?list=PLjEaoINr3zgFX8ZsChQVQsuDSjEqdWMAD).
 - Please bring your own laptop for hands-on exercises.
 
+## Download Blender
+
+Direct links to Blender downloads:
+
+- [Blender 4.0.1 Mac M1/M2/M3](https://codespacehelp.s3.amazonaws.com/workshops/23-24-blender-geometry-nodes/blender-4.0.1-macos-arm64.dmg)
+- [Blender 4.0.1 Mac Intel](https://codespacehelp.s3.amazonaws.com/workshops/23-24-blender-geometry-nodes/blender-4.0.1-macos-x64.dmg)
+- [Blender 4.0.1 Windows](https://codespacehelp.s3.amazonaws.com/workshops/23-24-blender-geometry-nodes/blender-4.0.1-windows-x64.msi)
+
 ## Next Steps
 
 There are tons of good resources on Geometry Nodes. Look at the following YouTube/Vimeo channels:
@@ -40,4 +47,3 @@ There are tons of good resources on Geometry Nodes. Look at the following YouTub
 - [Entagma](https://vimeo.com/entagma)
 - [Erindale](https://www.youtube.com/@Erindale)
 - [Midge Sinnaeve](https://www.youtube.com/@MidgeSinnaeve)
-

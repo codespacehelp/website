@@ -5,7 +5,7 @@ title: Awesome 3D with Blender
 summary: Learn 3D modeling and animation.
 academic_year: 23-24
 workshop_date: 2023-11-29
-workshop_time: 10:00-17:00
+workshop_time: 10:00-13:00
 room: K.02.03
 done: true
 ---
@@ -33,6 +33,18 @@ Even though it has improved it can be a bit tricky to get started with. This wor
 ## Requirements
 
 This course is for beginners and intermediate students who have no, or very limited, experience with Blender. Please download the latest version of Blender at [blender.org](https://www.blender.org/).
+
+## Download Blender
+
+Direct links to Blender downloads:
+
+- [Blender 4.0.1 Mac M1/M2/M3](https://codespacehelp.s3.amazonaws.com/workshops/23-24-blender-geometry-nodes/blender-4.0.1-macos-arm64.dmg)
+- [Blender 4.0.1 Mac Intel](https://codespacehelp.s3.amazonaws.com/workshops/23-24-blender-geometry-nodes/blender-4.0.1-macos-x64.dmg)
+- [Blender 4.0.1 Windows](https://codespacehelp.s3.amazonaws.com/workshops/23-24-blender-geometry-nodes/blender-4.0.1-windows-x64.msi)
+
+## Textures
+
+- [Barbershop Textures](https://codespacehelp.s3.amazonaws.com/workshops/23-24-blender-intro/barbershop-textures.zip)
 
 ## Next Steps
 
