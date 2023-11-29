@@ -42,6 +42,10 @@ Direct links to Blender downloads:
 - [Blender 4.0.1 Mac Intel](https://codespacehelp.s3.amazonaws.com/workshops/23-24-blender-geometry-nodes/blender-4.0.1-macos-x64.dmg)
 - [Blender 4.0.1 Windows](https://codespacehelp.s3.amazonaws.com/workshops/23-24-blender-geometry-nodes/blender-4.0.1-windows-x64.msi)
 
+## Textures
+
+- [Barbershop Textures](https://codespacehelp.s3.amazonaws.com/workshops/23-24-blender-intro/barbershop-textures.zip)
+
 ## Next Steps
 
 - If you haven't already, follow the legendary [Blender Donut Tutorial](https://www.youtube.com/watch?v=nIoXOplUvAw) by Andrew Price (blenderguru).
