@@ -7,7 +7,7 @@ academic_year: 23-24
 workshop_date: 2023-11-29
 workshop_time: 10:00-13:00
 room: K.02.03
-done: false
+done: true
 ---
 
 **The date of the workshop has moved from November 15 to November 29 in the morning.**

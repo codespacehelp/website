@@ -7,7 +7,7 @@ academic_year: 23-24
 workshop_date: 2023-11-22
 workshop_time: 14:00-17:00
 room: K.02.03
-done: false
+done: true
 ---
 By using geometry and shader nodes it's possible to generate a lot of variations of different materials, motion and shapes.
 
