@@ -22,10 +22,10 @@
 	},
 	"homepage": "https://github.com/fdb/codespace#readme",
 	"devDependencies": {
-		"@11ty/eleventy": "2.0.0",
-		"concurrently": "7.4.0",
-		"prettier": "2.7.1",
-		"serve": "14.1.1"
+		"@11ty/eleventy": "^3.0.0",
+		"concurrently": "^9.0.1",
+		"prettier": "^3.3.3",
+		"serve": "^14.2.3"
 	},
 	"dependencies": {
 		"aws-sdk": "^2.1477.0"

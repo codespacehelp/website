@@ -11,11 +11,11 @@ function addWorkshopCollection(eleventyConfig, academicYear) {
 	});
 }
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('static');
 
 	addWorkshopCollection(eleventyConfig, '20-21');
 	addWorkshopCollection(eleventyConfig, '21-22');
 	addWorkshopCollection(eleventyConfig, '22-23');
 	addWorkshopCollection(eleventyConfig, '23-24');
-};
+}
