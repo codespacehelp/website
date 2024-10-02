@@ -1,5 +1,6 @@
 {
 	"name": "codespace",
+	"type": "module",
 	"version": "1.0.0",
 	"description": "Code Space is the digital technology platform for [Sint Lucas Antwerpen](https://www.sintlucasantwerpen.be/)",
 	"main": ".eleventy.js",
