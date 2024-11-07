@@ -4,8 +4,8 @@ tags: workshop
 title: Coding with AI
 summary: Strategies to be More Ambitious in What You Create
 academic_year: 24-25
-workshop_date: 2024-11-22
-workshop_time: 10:00 - 13:00
+workshop_date: 2024-12-06
+workshop_time: 14:00 - 17:00
 room: K.03.08
 done: false
 ---
