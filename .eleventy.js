@@ -18,4 +18,5 @@ export default function (eleventyConfig) {
 	addWorkshopCollection(eleventyConfig, '21-22');
 	addWorkshopCollection(eleventyConfig, '22-23');
 	addWorkshopCollection(eleventyConfig, '23-24');
+	addWorkshopCollection(eleventyConfig, '24-25');
 }
