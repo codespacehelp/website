@@ -23,7 +23,7 @@ layout: default
 		<p>Code Space can support you in many domains:</p>
 		<ul>
 			<li><strong>VR</strong>: 3D painting, 360 video serious games</li>
-			<li><strong>Digital fabrication</strong>: laser cutting, 3D printing</li>
+			<li><strong>Digital fabrication</strong>: laser cutting, 3D printing, pen plotting</li>
 			<li><strong>Physical computing</strong>: drawing robots, IOT</li>
 			<li><strong>Web</strong>: interactive media, portfolio</li>
 			<li><strong>AI</strong>: image classification, text generation, image generation</li>
@@ -46,6 +46,10 @@ layout: default
 <section class="workshops light-on-dark">
   <div class="inner grid">
     <h1>Workshops</h1>
+	
+	<h2>2024-2025</h2>
+    {% render "_workshopsTable" with collections.workshops_24_25 as workshops %}
+
     <h2>2023-2024</h2>
     {% render "_workshopsTable" with collections.workshops_23_24 as workshops %}
 
