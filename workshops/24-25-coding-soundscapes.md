@@ -1,7 +1,7 @@
 ---
 layout: workshop
 tags: workshop
-title: Coding Soundscapes.
+title: Coding Soundscapes
 summary: An Introduction to Synthesis with Sonic Pi
 academic_year: 24-25
 workshop_date: 2024-11-22
@@ -10,9 +10,9 @@ room: K.02.10
 done: false
 ---
 
-Using [Sonic Pi](https://sonic-pi.net/) for synthesis allows you to create and manipulate sounds through live coding. 
+Using [Sonic Pi](https://sonic-pi.net/) for synthesis allows you to create and manipulate sounds through live coding.
 
-In this workshop, you'll explore how to use Sonic Pi to generate complex soundscapes, beats, and melodies by writing simple lines of code. 
+In this workshop, you'll explore how to use Sonic Pi to generate complex soundscapes, beats, and melodies by writing simple lines of code.
 
 We’ll cover the basics of sound synthesis, rhythm creation, and how to modify parameters like frequency, amplitude, and effects to craft dynamic musical compositions in real-time.
 
@@ -29,4 +29,3 @@ This course is for beginners and intermediate students who have no, or very limi
 ## Project
 
 We'll create a variety of sounds from scratch using oscillators, envelopes, and filters, and combine them into musical patterns. Participants will also experiment with live coding to generate interactive music sequences.
-
