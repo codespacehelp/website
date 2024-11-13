@@ -6,7 +6,7 @@ summary: Introduction to the Internet of Things
 academic_year: 24-25
 workshop_date: 2025-02-14
 workshop_time: 10:00 - 13:00
-room: K.03.08
+room: K.02.10
 done: false
 ---
 

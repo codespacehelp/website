@@ -6,7 +6,7 @@ summary: An Introduction to Synthesis with Sonic Pi
 academic_year: 24-25
 workshop_date: 2024-11-22
 workshop_time: 10:00 - 13:00
-room: K.03.08
+room: K.02.10
 done: false
 ---
 

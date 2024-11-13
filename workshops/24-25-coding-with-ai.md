@@ -6,7 +6,7 @@ summary: Strategies to be More Ambitious in What You Create
 academic_year: 24-25
 workshop_date: 2024-12-06
 workshop_time: 14:00 - 17:00
-room: K.03.08
+room: K.02.10
 done: false
 ---
 
