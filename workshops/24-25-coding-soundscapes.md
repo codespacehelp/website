@@ -1,8 +1,8 @@
 ---
 layout: workshop
 tags: workshop
-title: Coding Soundscapes
-summary: An Introduction to Synthesis with Sonic Pi
+title: Coding Soundscapes.
+summary: An Introduction to Synthesis with Sonic Pi.
 academic_year: 24-25
 workshop_date: 2024-11-22
 workshop_time: 10:00 - 13:00
