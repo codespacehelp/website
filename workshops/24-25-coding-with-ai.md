@@ -7,10 +7,10 @@ academic_year: 24-25
 workshop_date: 2024-12-06
 workshop_time: 14:00 - 17:00
 room: K.02.10
-done: false
+done: true
 ---
 
-By now everybody has used ChatGPT for writing. But do you know large language models are also really good at coding? They not only help you write code, but can also explain line-by-line what's going on, and can help you debug if things go wrong. 
+By now everybody has used ChatGPT for writing. But do you know large language models are also really good at coding? They not only help you write code, but can also explain line-by-line what's going on, and can help you debug if things go wrong.
 
 In this workshop, we'll cover the basics of coding, then jump in and start building our own projects. We'll use [ChatGPT](https://chatgpt.com/) and [Claude Artifacts](https://madewithclaude.com/) to quickly build and deploy apps. Then we'll set up Copilot in [VS Code](https://code.visualstudio.com/) to have an AI in our editor as we code. Finally we'll dive into next-gen coding tools like [v0](https://v0.dev/) and [bolt.new](https://bolt.new/).
 
@@ -19,7 +19,6 @@ In this workshop, we'll cover the basics of coding, then jump in and start build
 - Understand the strengths of LLMs and learn to code with them.
 - Recognize when models are making things up (hallucinations) and how to work around it.
 - Strategies for prompting for designing, writing, understanding and debugging programs.
-
 
 ## Requirements
 

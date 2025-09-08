@@ -7,10 +7,10 @@ academic_year: 24-25
 workshop_date: 2025-02-07
 workshop_time: 10:00 - 13:00
 room: K.02.10
-done: false
+done: true
 ---
 
-Using physical computing enables you to create systems that interact with the physical world through hardware. By using sensors, you can measure various environmental inputs like motion, temperature, light, or sound. 
+Using physical computing enables you to create systems that interact with the physical world through hardware. By using sensors, you can measure various environmental inputs like motion, temperature, light, or sound.
 
 This workshop will introduce you to capturing these inputs, processing them through a microcontroller like [Arduino](https://www.arduino.cc/), and generating responses like lights, sounds, or movements.
 
@@ -26,10 +26,10 @@ This course is for beginners and intermediate students who have no, or very limi
 
 ## Project
 
-We will work on simple projects using an Arduino microcontroller, connecting sensors to measure inputs and creating outputs such as the control over  LED displays or motors.
+We will work on simple projects using an Arduino microcontroller, connecting sensors to measure inputs and creating outputs such as the control over LED displays or motors.
 We take care of the hardware and components.
 
 ## Next Steps
 
-- Browe the [Arduino Playground](https://playground.arduino.cc/) or [Adafruit](https://learn.adafruit.com/)  to see more possibilities and code.
+- Browe the [Arduino Playground](https://playground.arduino.cc/) or [Adafruit](https://learn.adafruit.com/) to see more possibilities and code.
 - Have a look at what people do with it at [Instructables](https://www.instructables.com/)

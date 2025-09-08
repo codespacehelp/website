@@ -7,12 +7,12 @@ academic_year: 24-25
 workshop_date: 2025-02-14
 workshop_time: 10:00 - 13:00
 room: K.02.10
-done: false
+done: true
 ---
 
-Using IoT (Internet of Things) with [Arduino](https://www.arduino.cc/) allows you to connect physical devices to the internet, enabling real-time monitoring and control from anywhere. 
+Using IoT (Internet of Things) with [Arduino](https://www.arduino.cc/) allows you to connect physical devices to the internet, enabling real-time monitoring and control from anywhere.
 
-In this workshop, you'll learn how to integrate sensors and actuators with Arduino to gather environmental data, and then send or receive this data over the internet. 
+In this workshop, you'll learn how to integrate sensors and actuators with Arduino to gather environmental data, and then send or receive this data over the internet.
 
 You will also explore how to control devices remotely through web interfaces or cloud services, creating intelligent, connected systems.
 
@@ -34,6 +34,5 @@ We take care of the hardware and components.
 
 ## Next Steps
 
-- Browe the [Arduino Playground](https://playground.arduino.cc/) or [Adafruit](https://learn.adafruit.com/)  to see more possibilities and code.
+- Browe the [Arduino Playground](https://playground.arduino.cc/) or [Adafruit](https://learn.adafruit.com/) to see more possibilities and code.
 - Have a look at what people do with it at [Instructables](https://www.instructables.com/search/?q=iot&projects=all)
-

@@ -7,7 +7,7 @@ academic_year: 24-25
 workshop_date: 2024-11-22
 workshop_time: 10:00 - 13:00
 room: K.02.10
-done: false
+done: true
 ---
 
 Using [Sonic Pi](https://sonic-pi.net/) for synthesis allows you to create and manipulate sounds through live coding.
