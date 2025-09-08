@@ -4,104 +4,85 @@ title: Reservaties
 ---
 
 <section>
-    <div class="inner">
-        <h1>Make a reservation</h1>
-        <p>
-            Code Space is Imane Benyecif, Frederik De Bleser and Lieven Menschaert.
-            Make a reservation with either of them through Calendly:
-        </p>
-        <div class="two-column">
-            <div class="column">
-                <h3>Imane Benyecif</h3>
-                <div style="margin-top: -10px">
-                    <a href="https://calendly.com/imane-benyecif/code-space" target="_blank" class="cta__primary">Make a
-                        reservation</a>
-                </div>
-                <p><strong>Interests / Expertise:</strong></p>
-                <ul class="interests">
-                    <li>Web Design</li>
-                    <li>Generative Design / Font Design</li>
-                    <li>Laser Cutting</li>
-                </ul>
-            </div>
-            <div class="column">
-                <h3>Frederik De Bleser</h3>
-                <div style="margin-top: -10px">
-                    <a href="https://calendly.com/enigmeta/code-space" target="_blank" class="cta__primary">Make a
-                        reservation</a>
-                </div>
-                <p><strong>Interests / Expertise:</strong></p>
-                <ul class="interests">
-                    <li>Web Design</li>
-                    <li>Data Visualisation</li>
-                    <li>3D / VR</li>
-                    <li>Generative Design / Font Design</li>
-                    <li>AI / Machine Learning</li>
-                    <li>Game Design</li>
-                </ul>
-            </div>
-            <div class="column">
-                <h3>Lieven Menschaert</h3>
-                <div style="margin-top: -10px">
-                    <a href="https://calendly.com/lievenmenschaert/office-hours" target="_blank"
-                        class="cta__primary">Make a reservation</a>
-                </div>
-                <p><strong>Interests / Expertise:</strong></p>
-                <ul class="interests">
-                    <li>3D Printing</li>
-                    <li>Laser Cutting</li>
-                    <li>Robotics</li>
-                    <li>Electronics</li>
-                    <li>Sound Design</li>
-                    <li>Web Design</li>
-                </ul>
-            </div>
-        </div>
+	<div class="inner">
+		<h1>Make a reservation</h1>
+		<p>Code Space is Frederik De Bleser and Lieven Menschaert. Make a reservation with either of them through Calendly:</p>
+		<div class="two-column">
+			<div class="column">
+				<h3>Frederik De Bleser</h3>
+				<div style="margin-top: -10px">
+					<a href="https://calendly.com/enigmeta/code-space" target="_blank" class="cta__primary">Make a reservation</a>
+				</div>
+				<p><strong>Interests / Expertise:</strong></p>
+				<ul class="interests">
+					<li>Web Design</li>
+					<li>Data Visualisation</li>
+					<li>3D / VR</li>
+					<li>Generative Design / Font Design</li>
+					<li>AI / Machine Learning</li>
+					<li>Game Design</li>
+				</ul>
+			</div>
+			<div class="column">
+				<h3>Lieven Menschaert</h3>
+				<div style="margin-top: -10px">
+					<a href="https://calendly.com/lievenmenschaert/office-hours" target="_blank" class="cta__primary">Make a reservation</a>
+				</div>
+				<p><strong>Interests / Expertise:</strong></p>
+				<ul class="interests">
+					<li>3D Printing</li>
+					<li>Laser Cutting</li>
+					<li>Robotics</li>
+					<li>Electronics</li>
+					<li>Sound Design</li>
+					<li>Web Design</li>
+				</ul>
+			</div>
+		</div>
 
-        <br>
-        <hr />
-        <br>
+		<br />
+		<hr />
+		<br />
 
-        <form class="appointment-feedback" name="appointment-feedback" method="POST" data-netlify="true">
-            <h1>Can't book an appointment? Let us know!</h1>
-            <p>If you can't make an appointment, because the person is unavailable or there is no time slot we would
-                like to
-                know! This helps us provide more availability in the future.
-            </p>
+		<form class="appointment-feedback" name="appointment-feedback" method="POST" data-netlify="true">
+			<h1>Can't book an appointment? Let us know!</h1>
+			<p>
+				If you can't make an appointment, because the person is unavailable or there is no time slot we would like to know! This
+				helps us provide more availability in the future.
+			</p>
 
-            <label for="name">What is your name?</label>
-            <input type="text" id="name" name="name" required>
+			<label for="name">What is your name?</label>
+			<input type="text" id="name" name="name" required />
 
-            <br><br>
+			<br /><br />
 
-            <label for="name">What is your (KdG) email address?</label>
-            <input type="email" id="email" name="email" required>
+			<label for="name">What is your (KdG) email address?</label>
+			<input type="email" id="email" name="email" required />
 
-            <br><br>
+			<br /><br />
 
-            <label for="provider">Who did you want an appointment with:</label>
-            <select name="provider" id="provider">
-                <option value="DoesntMatter">Doesn't Matter</option>
-                <option value="Imane">Imane</option>
-                <option value="Frederik">Frederik</option>
-                <option value="Lieven">Lieven</option>
-            </select>
+			<label for="provider">Who did you want an appointment with:</label>
+			<select name="provider" id="provider">
+				<option value="DoesntMatter">Doesn't Matter</option>
+				<option value="Imane">Imane</option>
+				<option value="Frederik">Frederik</option>
+				<option value="Lieven">Lieven</option>
+			</select>
 
-            <br><br>
+			<br /><br />
 
-            <label for="appointment-topic">What was the appointment about?</label>
-            <input type="text" id="appointment-topic" name="appointment_topic" required>
+			<label for="appointment-topic">What was the appointment about?</label>
+			<input type="text" id="appointment-topic" name="appointment_topic" required />
 
-            <br><br>
+			<br /><br />
 
-            <label for="notes">Any other notes or remarks?</label>
-            <textarea id="notes" name="notes" rows="4" cols="50"></textarea>
+			<label for="notes">Any other notes or remarks?</label>
+			<textarea id="notes" name="notes" rows="4" cols="50"></textarea>
 
-            <br><br>
+			<br /><br />
 
-            <button type="submit">Submit</button>
-            <p>Thanks for providing this feedback. This really helps!</p>
-        </form>
-
-    </div>
+			<button type="submit">Submit</button>
+			<p>Thanks for providing this feedback. This really helps!</p>
+		</form>
+	</div>
 </section>
