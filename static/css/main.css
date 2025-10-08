@@ -374,6 +374,13 @@ table small {
 	text-align: center;
 }
 
+pre {
+	background-color: #e7e7e7;
+	padding: 0.5rem;
+	border-radius: 0.3rem;
+	overflow-x: auto;
+}
+
 /********** ARTICLE **********/
 
 .page-header {
