@@ -126,7 +126,7 @@ void loop()
 
 Electricity flows in a loop, from the positive pins (the numbered pins, or the Arduino's 5V pin), through the components (like the piezo buzzer), and back to ground (GND). The Arduino controls the flow of electricity (making the sound play) by either sending a signal (`tone`) or stopping the signal (`noTone`).
 
-### Example 3: Button-Controlled Tone
+## Example 3: Button-Controlled Tone
 
 Now we'll also add a button to control when the tone plays.
 
@@ -234,19 +234,20 @@ void playSiren() {
 
 **Key insight**: The playSiren() function creates a rising pitch effect by gradually increasing the frequency from 400 Hz to 800 Hz in small increments. The delay(10) controls how quickly the pitch changes, creating a smooth siren sound. We use a `for` loop to repeatedly call tone() with increasing frequencies.
 
-### Variation 4.1: Random Siren
+### Variation 5.1: Random Siren
 
 A variation on the siren is to play a random frequency sound while the buzzer is held down. For this we need a way to generate random numbers, and also change the `playSiren` function:
 
 ```cpp
 
 void setup() {
-    // Add this line in setup:
+    // Add these lines below the other lines in setup:
+
     // Seed random number generator with noise from an unconnected pin
     randomSeed(analogRead(0));
 }
 
-
+// Replace playSiren with this code:
 void playSiren() {
     // Play 20 random tones
     for (int i = 0; i < 20; i++) {
@@ -259,7 +260,7 @@ void playSiren() {
 }
 ```
 
-### Example 5: Playing a Melody
+### Example 6: Playing a Melody
 
 Now let's create a simple melody that plays when the button is pressed. We'll define the notes in an "array" (a fancy word for a list), then play them in sequence.
 
@@ -308,7 +309,7 @@ void playMelody() {
 
 **Try this**: Modify the `melody` array to create your own melody. You can change the frequencies to other notes, add more notes, or remove some. Experiment with the `noteLength` variable to make the melody play faster or slower.
 
-### Variation 5.1: Beat Sequencer
+### Variation 6.1: Beat Sequencer
 
 Instead of storing frequencies, we can store a pattern of 1s and 0s to create a simple beat sequencer. A 1 means "play a sound" and a 0 means "silence". This is a common pattern in drum machines and sequencers.
 
@@ -359,7 +360,7 @@ void playBeat() {
 
 **Try this**: Modify the `beatPattern` array to create your own rhythm. Try making it longer or shorter. Change the `stepDuration` to make the beat faster or slower. You can also change the frequency (currently 200 Hz) to create different timbres.
 
-### Example 6: Measuring Light with a Photoresistor
+### Example 7: Measuring Light with a Photoresistor
 
 A photoresistor (or LDR - Light Dependent Resistor) changes its resistance (the amount of current that can flow through it) based on the amount of light hitting it. More light means less resistance, allowing more current to flow. We can use this property to measure light levels.
 
@@ -371,7 +372,7 @@ A photoresistor (or LDR - Light Dependent Resistor) changes its resistance (the 
 
 It should look like this:
 
-FIXME: ![Breadboard components setup](/static/posts/2025-10-08-arduino-for-artists/example-06-breadboard.jpg)
+![Breadboard components setup](/static/posts/2025-10-08-arduino-for-artists/example-06-breadboard.jpg)
 
 We're just going to read the value from the photoresistor and print it on our computer. For that, we'll use the **Serial Monitor** in the Arduino IDE: it's a way for your Arduino to "talk back" to your computer.
 
@@ -386,7 +387,7 @@ void setup() {
 void loop() {
     int lightValue = analogRead(lightPin); // Read the light level (0-1023)
     Serial.println(lightValue); // Print the value to the Serial Monitor
-    delay(200); // Wait half a second before the next reading
+    delay(100); // Wait a bit before the next reading
 }
 ```
 
@@ -396,92 +397,136 @@ Open the Serial Plotter (next to the Serial Monitor icon) to see a graph of the 
 
 **Key insight**: The photoresistor acts as a variable resistor, changing its resistance based on light levels. The Arduino reads this change as an analog value between 0 and 1023, which we can use to measure the intensity of light in the environment.
 
-### Example 7: Tone Controlled by Light
+### Example 8: Tone Controlled by Light
 
 Now that we can measure light levels, let's use that data to control the pitch of a tone. The brighter the light, the higher the pitch. To convert the light value (0-1023) to a frequency range (e.g., 200-1000 Hz), we'll use the [`map()`](https://docs.arduino.cc/language-reference/en/functions/math/map/) function.
 
 ```cpp
-const int lightPin = A0; // Photoresistor connected to analog pin A0
-const int buzzerPin = 8; // Buzzer connected to digital pin 8
+const int lightPin = A0;  // Photoresistor connected to analog pin A0
+const int buttonPin = 2; // Button is connected to digital pin 2
+const int buzzerPin = 8;  // Buzzer connected to digital pin 8
+
 void setup() {
-    pinMode(buzzerPin, OUTPUT);
-    pinMode(lightPin, INPUT);
+  pinMode(lightPin, INPUT);
+  pinMode(buttonPin, INPUT_PULLUP);
+  pinMode(buzzerPin, OUTPUT);
+
+  // We'll be plotting the light level and frequency
+  Serial.begin(9600);  // Start serial communication at 9600 baud
 }
 
 void loop() {
-    int lightValue = analogRead(lightPin); // Read the light level (0-1023)
+  // Only play tones when the button is pressed
+  if (digitalRead(buttonPin) == LOW) {      // Button pressed
+    int lightLevel = analogRead(lightPin);  // Read the light level (0-1023)
+    Serial.print(lightLevel);               // Print the light level (use "print" instead of "println" to stay on the same line)
+    Serial.print(", ");                     // Print a comma to separate the light level and frequency
 
     // Map the light value (0-1023) to a frequency range (200-1000 Hz)
     // Note that we invert the range: more light = higher frequency
-    int frequency = map(lightValue, 1023, 0, 200, 1000);
+    int frequency = map(lightLevel, 1023, 0, 200, 1000);
+    Serial.println(frequency);  // Print the frequency (use "println" here to go to the next line);
 
-    tone(buzzerPin, frequency); // Play tone at the mapped frequency
-    delay(100); // Short delay to allow the sound to be heard
+    tone(buzzerPin, frequency);  // Play tone at the mapped frequency
+  } else {
+    // If button is released, don't play a tone
+    noTone(buzzerPin);
+  }
+  delay(100);  // Short delay to allow the sound to be heard
 }
 ```
 
 **Key insight**: The `map()` function takes the light value (0-1023) and converts it to a frequency range (200-1000 Hz). The tone() function then plays a sound at that frequency. As the light level changes, the pitch of the sound changes accordingly, creating an interactive experience where light controls sound.
 
-### Example 8: Light-Controlled Melody
+### Example 9: Light-Controlled Melody
 
 Now let's take it a step further and use the light level to control which note of a melody is played. We'll use the same melody array from Example 5, but this time, the light level determines how fast the melody plays.
 
 ```cpp
-const int lightPin = A0; // Photoresistor connected to analog pin A0
-const int buzzerPin = 8; // Buzzer connected to digital pin 8
-const int baseNoteLength = 200; // Base duration of each note in milliseconds
+const int lightPin = A0;         // Photoresistor connected to analog pin A0
+const int buttonPin = 2;         // Button is connected to digital pin 2
+const int buzzerPin = 8;         // Buzzer connected to digital pin 8
+
+int melodyLength = 0;
+int noteIndex = 0;
 
 // Frequencies of each note of the melody
 int melody[] = {
-    330, 370, 494, 554,   // E4, F#4, B4, C#5
-    587, 370, 330, 554,   // D5, F#4, E4, C#5
-    494, 370, 587, 554    // B4, F#4, D5, C#5
+  330, 370, 494, 554,  // E4, F#4, B4, C#5
+  587, 370, 330, 554,  // D5, F#4, E4, C#5
+  494, 370, 587, 554   // B4, F#4, D5, C#5
 };
 
 void setup() {
-    pinMode(buzzerPin, OUTPUT);
-    pinMode(lightPin, INPUT);
+  pinMode(lightPin, INPUT);
+  pinMode(buttonPin, INPUT_PULLUP);
+  pinMode(buzzerPin, OUTPUT);
+
+  // We'll be plotting the light level
+  Serial.begin(9600);  // Start serial communication at 9600 baud
+
+  // Store the length of the melody (we'll need it later)
+  melodyLength = sizeof(melody) / sizeof(melody[0]);
 }
 
 void loop() {
-    int lightValue = analogRead(lightPin); // Read the light level (0-1023)
-    playMelody(lightValue); // Pass light value to control melody speed
+  // Only play tones when the button is pressed
+  if (digitalRead(buttonPin) == LOW) {      // Button pressed
+    int lightLevel = analogRead(lightPin);  // Read the light level (0-1023)
+    Serial.println(lightLevel);             // Print out the light level
+    playNote(lightLevel);                   // Pass light value to control note speed
+  } else {
+    noTone(buzzerPin);
+  }
 }
 
-void playMelody(int lightValue) {
-    // Map the light value (0-1023) to a note length range (50-400 ms)
-    int noteLength = map(lightValue, 0, 1023, 400, 50);
-    int length = sizeof(melody) / sizeof(melody[0]);
-    int playDuration = noteLength * 0.2;
-    int pauseDuration = noteLength * 0.8;
+// We're playing here note-by-note, since we want changes in light level to have a direct effect
+// on the next note we're playing, and not have to wait until the melody restarts.
+void playNote(int lightLevel) {
+  // Map the light value (0-1023) to a note length range (50-400 ms)
+  int noteLength = map(lightLevel, 0, 1023, 20, 500);
+  int playDuration = noteLength * 0.4;
+  int pauseDuration = noteLength * 0.6;
 
-    for (int i = 0; i < length; i++) {
-        tone(buzzerPin, melody[i]); // Play the note
-        delay(playDuration);        // Wait for the note to finish
-        noTone(buzzerPin);          // Stop the tone
-        delay(pauseDuration);       // Short pause between notes
-    }
+  tone(buzzerPin, melody[noteIndex]);  // Play the note
+  delay(playDuration);                 // Wait for the note to finish
+  noTone(buzzerPin);                   // Stop the tone
+  delay(pauseDuration);                // Short pause between notes
+
+  // Go to the next note
+  noteIndex += 1;
+  // If our index would be larger than the amount of notes, reset
+  if (noteIndex >= melodyLength) {
+    noteIndex = 0;
+  }
 }
 ```
 
-### Variation 8.1: Light-Controlled Octaves
+### Variation 9.1: Light-Controlled Octaves
 
 A variation on the light-controlled melody is to change the octave of the melody based on the light level. We'll use the same melody array, but this time, we'll multiply the frequency of each note by a factor that changes with the light level.
 
 ```cpp
-void playMelody(int lightValue) {
-    // Map the light value (0-1023) to an octave factor (1-4)
-    float octaveFactor = map(lightValue, 0, 1023, 1, 4);
-    int length = sizeof(melody) / sizeof(melody[0]);
-    int noteLength = 200; // Fixed note length
-    int playDuration = noteLength * 0.2;
-    int pauseDuration = noteLength * 0.8;
-    for (int i = 0; i < length; i++) {
-        int frequency = melody[i] * octaveFactor; // Change octave based on light
-        tone(buzzerPin, frequency); // Play the note
-        delay(playDuration);        // Wait for the note to finish
-        noTone(buzzerPin);          // Stop the tone
-        delay(pauseDuration);       // Short pause between notes
-    }
+// Just replace the playNote function:
+void playNote(int lightLevel) {
+  // Map the light value (0-1023) to an octave factor (1-5)
+  float octaveFactor = map(lightLevel, 0, 1023, 4, 1);
+  int length = sizeof(melody) / sizeof(melody[0]);
+  int noteLength = 200;  // Fixed note length
+  int playDuration = noteLength * 0.4;
+  int pauseDuration = noteLength * 0.6;
+  int frequency = melody[noteIndex] * octaveFactor;  // Change octave based on light
+
+  tone(buzzerPin, frequency);  // Play the note
+  delay(playDuration);         // Wait for the note to finish
+  noTone(buzzerPin);           // Stop the tone
+  delay(pauseDuration);        // Short pause between notes
+
+  // Go to the next note
+  noteIndex += 1;
+  // If our index would be larger than the amount of notes, reset
+  if (noteIndex >= melodyLength) {
+    noteIndex = 0;
+  }
 }
 ```
