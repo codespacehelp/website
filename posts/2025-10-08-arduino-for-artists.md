@@ -109,12 +109,11 @@ void setup() {
   pinMode(buzzerPin, OUTPUT);
 }
 
-void loop()
-    tone(buzzerPin, 440);  // Play A4 note (440 Hz)
-    delay(1000);            // Wait 1 second
-    noTone(buzzerPin);     // Silence
-    delay(1000);            // Wait 1 second
-  }
+void loop() {
+  tone(buzzerPin, 440);  // Play A4 note (440 Hz)
+  delay(1000);           // Wait 1 second
+  noTone(buzzerPin);     // Silence
+  delay(1000);           // Wait 1 second
 }
 ```
 
@@ -145,8 +144,8 @@ It should look like this:
 Use the following code:
 
 ```cpp
-const int buttonPin = 2;
-const int buzzerPin = 8;
+const int buttonPin = 2;  // Button connected to digital pin 2
+const int buzzerPin = 8;  // Buzzer connected to digital pin 8
 
 void setup() {
   pinMode(buttonPin, INPUT_PULLUP);  // Internal resistor pulls pin HIGH
@@ -155,9 +154,9 @@ void setup() {
 
 void loop() {
   if (digitalRead(buttonPin) == LOW) {  // Button pressed (connects to ground)
-    tone(buzzerPin, 440);  // Play A4 note (440 Hz)
+    tone(buzzerPin, 440);               // Play A4 note (440 Hz)
   } else {
-    noTone(buzzerPin);     // Silence
+    noTone(buzzerPin);  // Silence
   }
 }
 ```
@@ -530,3 +529,9 @@ void playNote(int lightLevel) {
   }
 }
 ```
+
+## Conclusion
+
+Arduino is a powerful tool for artists to create interactive and engaging installations. By understanding the basics of physical computing, inputs and outputs, and how to write simple code, you can start building your own projects. Experiment with different sensors and actuators, and let your creativity guide you!
+
+All code examples are available for download: [arduino-for-artists.zip](https://codespacehelp.s3.amazonaws.com/workshops/25-26-arduino-for-artists/arduino-for-artists.zip)
