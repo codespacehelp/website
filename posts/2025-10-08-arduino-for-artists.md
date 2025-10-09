@@ -295,7 +295,7 @@ void playMelody() {
     int playDuration = noteLength * 0.2;
     int pauseDuration = noteLength * 0.8;
 
-    for (int i = 0; i < sizeof(melody) / sizeof(melody[0]); i++) {
+    for (int i = 0; i < length; i++) {
         tone(buzzerPin, melody[i]); // Play the note
         delay(playDuration);        // Wait for the note to finish
         noTone(buzzerPin);          // Stop the tone
