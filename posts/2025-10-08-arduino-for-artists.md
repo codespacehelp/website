@@ -98,9 +98,10 @@ Connect the wires like so:
 
 It should look like this:
 
+![Breadboard components setup schematic](/static/posts/2025-10-08-arduino-for-artists/breadboard_buzzer.png)
+
 ![Breadboard components setup](/static/posts/2025-10-08-arduino-for-artists/example-02-breadboard-wires.jpg)
 
-![Breadboard components setup schematic](/static/posts/2025-10-08-arduino-for-artists/breadboard_buzzer.png)
 
 Use the following code:
 
@@ -141,9 +142,10 @@ Then connect wires (in italic are the wires that are already there from the prev
 
 It should look like this:
 
+![Breadboard components setup schematic](/static/posts/2025-10-08-arduino-for-artists/breadboard_buzzer_button.png)
+
 ![Breadboard components setup](/static/posts/2025-10-08-arduino-for-artists/example-03-breadboard.jpg)
 
-![Breadboard components setup schematic](/static/posts/2025-10-08-arduino-for-artists/breadboard_buzzer_button.png)
 
 Use the following code:
 
@@ -375,9 +377,10 @@ A photoresistor (or LDR - Light Dependent Resistor) changes its resistance (the 
 
 It should look like this:
 
+![Breadboard components setup schematic](/static/posts/2025-10-08-arduino-for-artists/breadboard_all.png)
+
 ![Breadboard components setup](/static/posts/2025-10-08-arduino-for-artists/example-06-breadboard.jpg)
 
-![Breadboard components setup schematic](/static/posts/2025-10-08-arduino-for-artists/breadboard_all.png)
 
 We're just going to read the value from the photoresistor and print it on our computer. For that, we'll use the **Serial Monitor** in the Arduino IDE: it's a way for your Arduino to "talk back" to your computer.
 
