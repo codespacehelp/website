@@ -297,15 +297,10 @@ void loop() {
 
 void playMelody() {
     // This calculates the length of the array
-    int length = sizeof(melody) / sizeof(melody[0]);
-    int playDuration = noteLength * 0.2;
-    int pauseDuration = noteLength * 0.8;
-
+    const int length = sizeof(melody) / sizeof(melody[0]);
     for (int i = 0; i < length; i++) {
-        tone(buzzerPin, melody[i]); // Play the note
-        delay(playDuration);        // Wait for the note to finish
-        noTone(buzzerPin);          // Stop the tone
-        delay(pauseDuration);       // Short pause between notes
+      tone(buzzerPin, melody[i], noteLength * 0.2); // Play the note for 20% of its duration
+      delay(noteLength); // Wait for the full note duration before playing the next one
     }
 }
 ```
@@ -346,17 +341,13 @@ void loop() {
 
 void playBeat() {
     int length = sizeof(beatPattern) / sizeof(beatPattern[0]);
-
     for (int i = 0; i < length; i++) {
-        if (beatPattern[i] == 1) {
-            tone(buzzerPin, 200); // Play a low tone for the beat
-            delay(stepDuration * 0.5); // Sound for half the step
-            noTone(buzzerPin);
-            delay(stepDuration * 0.5); // Silence for the rest
-        } else {
-            noTone(buzzerPin);
-            delay(stepDuration); // Full step of silence
-        }
+      if (beatPattern[i] == 1) {
+        tone(buzzerPin, 200, stepDuration / 2); // Play for half a step
+        delay(stepDuration);                    // Wait full step
+      } else {
+        delay(stepDuration);                    // Silence for full step
+     }
     }
 }
 ```
@@ -491,18 +482,15 @@ void loop() {
 // We're playing here note-by-note, since we want changes in light level to have a direct effect
 // on the next note we're playing, and not have to wait until the melody restarts.
 void playNote(int lightLevel) {
-  // Map the light value (0-1023) to a note length range (50-400 ms)
+  // Map light value (0-1023) to note length (ms)
   int noteLength = map(lightLevel, 0, 1023, 20, 500);
-  int playDuration = noteLength * 0.4;
-  int pauseDuration = noteLength * 0.6;
 
-  tone(buzzerPin, melody[noteIndex]);  // Play the note
-  delay(playDuration);                 // Wait for the note to finish
-  noTone(buzzerPin);                   // Stop the tone
-  delay(pauseDuration);                // Short pause between notes
+  // Play the note for 40% of noteLength
+  tone(buzzerPin, melody[noteIndex], noteLength * 0.4);
+  delay(noteLength);  // Total note time including "pause"
 
   // Go to the next note
-  noteIndex += 1;
+  noteIndex++;
   // If our index would be larger than the amount of notes, reset
   if (noteIndex >= melodyLength) {
     noteIndex = 0;
@@ -517,21 +505,19 @@ A variation on the light-controlled melody is to change the octave of the melody
 ```cpp
 // Just replace the playNote function:
 void playNote(int lightLevel) {
-  // Map the light value (0-1023) to an octave factor (1-5)
+  // Map the light value (0-1023) to an octave factor (1-4)
   float octaveFactor = map(lightLevel, 0, 1023, 4, 1);
-  int length = sizeof(melody) / sizeof(melody[0]);
-  int noteLength = 200;  // Fixed note length
-  int playDuration = noteLength * 0.4;
-  int pauseDuration = noteLength * 0.6;
-  int frequency = melody[noteIndex] * octaveFactor;  // Change octave based on light
+  int noteLength = 200; // Fixed total note length
+  int frequency = melody[noteIndex] * octaveFactor;  // Adjust octave
 
-  tone(buzzerPin, frequency);  // Play the note
-  delay(playDuration);         // Wait for the note to finish
-  noTone(buzzerPin);           // Stop the tone
-  delay(pauseDuration);        // Short pause between notes
+  // Play the note for 40% of noteLength
+  tone(buzzerPin, frequency, noteLength * 0.4);
+  
+  // Wait total note time including pause
+  delay(noteLength);
 
   // Go to the next note
-  noteIndex += 1;
+  noteIndex++;
   // If our index would be larger than the amount of notes, reset
   if (noteIndex >= melodyLength) {
     noteIndex = 0;
