@@ -102,7 +102,6 @@ It should look like this:
 
 ![Breadboard components setup](/static/posts/2025-10-08-arduino-for-artists/example-02-breadboard-wires.jpg)
 
-
 Use the following code:
 
 ```cpp
@@ -145,7 +144,6 @@ It should look like this:
 ![Breadboard components setup schematic](/static/posts/2025-10-08-arduino-for-artists/breadboard_buzzer_button.png)
 
 ![Breadboard components setup](/static/posts/2025-10-08-arduino-for-artists/example-03-breadboard.jpg)
-
 
 Use the following code:
 
@@ -372,7 +370,6 @@ It should look like this:
 
 ![Breadboard components setup](/static/posts/2025-10-08-arduino-for-artists/example-06-breadboard.jpg)
 
-
 We're just going to read the value from the photoresistor and print it on our computer. For that, we'll use the **Serial Monitor** in the Arduino IDE: it's a way for your Arduino to "talk back" to your computer.
 
 ```cpp
@@ -524,6 +521,10 @@ void playNote(int lightLevel) {
   }
 }
 ```
+
+## Example projects
+
+Example projects can be found [on our Notion](https://www.notion.so/Arduino-for-Artists-287b9c0d3a78805a9433c69416ef0358?source=copy_link)
 
 ## Conclusion
 
