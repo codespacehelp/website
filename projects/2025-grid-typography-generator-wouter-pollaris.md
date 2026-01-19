@@ -5,7 +5,6 @@ title: Grid Typography Generator
 summary: A combinatorial system that generates all possible variations of a modular typographic grid by treating visual segments as binary states.
 student: Wouter Pollaris
 project_year: 2025
-project_month: 11
 project_type: Generative design system
 tech_stack: Python, SVG, Adobe Illustrator
 coaching: Code Space
@@ -36,17 +35,18 @@ The segments were designed in Adobe Illustrator and exported as individual SVG f
 
 Each segment file follows a naming convention that encodes its identity and relationships:
 
-| Pattern | Meaning |
-|---------|---------|
-| `grid-N.svg` | Base segment N |
-| `grid-N+M.svg` | Alternate for when segments N and M both appear |
-| `grid-N+M+P.svg` | Alternate for three-segment combination |
+| Pattern          | Meaning                                         |
+| ---------------- | ----------------------------------------------- |
+| `grid-N.svg`     | Base segment N                                  |
+| `grid-N+M.svg`   | Alternate for when segments N and M both appear |
+| `grid-N+M+P.svg` | Alternate for three-segment combination         |
 
 ![Individual segments from the library](/static/projects/2025-grid-typography-generator-wouter-pollaris/segments-index.png)
 
 A base segment is a simple rectangular bar:
 
 **Base segment (grid-1.svg)**
+
 ```xml
 <g id="Laag_1">
   <rect x="28.346" y="28.346" width="240.945" height="28.346"/>
@@ -56,6 +56,7 @@ A base segment is a simple rectangular bar:
 An alternate segment replaces colliding elements with a merged form:
 
 **Alternate segment (grid-1+9.svg)**
+
 ```xml
 <g id="Laag_1">
   <!-- Merged corner shape instead of two overlapping bars -->
@@ -69,6 +70,7 @@ An alternate segment replaces colliding elements with a merged form:
 The generator treats each segment as a bit in a 28-bit integer. Segment 1 maps to bit 0, segment 2 to bit 1, and so on. This allows iteration through all combinations using a simple counter:
 
 **Bit extraction logic**
+
 ```python
 segment_count = 28
 possible_combinations = int(math.pow(2, segment_count))
@@ -88,6 +90,7 @@ When `i = 100` (binary: `1100100`), segments 3, 6, and 7 are active. When `i = 2
 When certain segments appear together, they would overlap visually. The system detects these cases and substitutes a merged alternate:
 
 **Alternate detection and substitution**
+
 ```python
 # Build set of known alternates from filenames like "grid-1+9.svg"
 alternate_segment_set = set([find_segment_list(f) for f in alternate_files])
@@ -115,6 +118,7 @@ The substitution replaces the lowest-numbered segment ID with a tuple representi
 Each output is assembled by concatenating segment content into a single SVG:
 
 **Output generation**
+
 ```python
 SVG_HEADER = '<svg xmlns="http://www.w3.org/2000/svg" ' \
              'width="524.409px" height="524.409" viewBox="0 0 524.409 524.409">'
@@ -138,6 +142,7 @@ svg += SVG_FOOTER
 The `read_segment` function extracts the inner content from each segment file, stripping the XML declaration and outer `<svg>` wrapper:
 
 **Segment extraction**
+
 ```python
 def read_segment(file):
     with open(file) as fp:
@@ -221,4 +226,4 @@ The binary encoding means any configuration can be recalled by its index number,
 
 ---
 
-*Wouter Pollaris conceived and designed this typographic exploration system. Code Space provided technical coaching on the combinatorial generation approach and SVG manipulation.*
+_Wouter Pollaris conceived and designed this typographic exploration system. Code Space provided technical coaching on the combinatorial generation approach and SVG manipulation._
