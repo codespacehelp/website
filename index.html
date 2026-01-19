@@ -33,7 +33,10 @@ layout: default
 			possible and attainable to the technical implementation, to the final presentation.
 		</p>
 		<p>
-			<strong>We're generally around in K.03.07, and available on different days of the week. Make an appointment if you want to be sure of your spot:</strong>
+			<strong
+				>We're generally around in K.03.07 on Wednesdays, and available on different days of the week. Make an appointment if you want to be
+				sure of your spot:</strong
+			>
 		</p>
 		<div class="cta">
 			<a href="/reservations" class="cta__primary">Make a reservation</a>
@@ -45,7 +48,7 @@ layout: default
 <section id="workshops" class="workshops light-on-dark">
   <div class="inner grid">
     <h1>Workshops</h1>
-	
+
 	<h2>2024-2025</h2>
     {% render "_workshopsTable" with collections.workshops_24_25 as workshops %}
 
@@ -73,20 +76,19 @@ layout: default
 			<p class="projects__lead">Case studies on student work that blend visual direction and technical process.</p>
 		</div>
 		<div class="projects-grid">
-			{% for project in collections.projects limit:3 %}
-			{% assign project_date = '' %}
-			{% if project.data.project_year %}
-				{% if project.data.project_month %}
-					{% assign project_month = project.data.project_month | prepend: '0' | slice: -2 %}
-					{% assign project_date = project.data.project_year | append: '-' | append: project_month %}
-				{% else %}
-					{% assign project_date = project.data.project_year %}
-				{% endif %}
-			{% endif %}
+			{% for project in collections.projects limit:3 %} {% assign project_date = '' %} {% if project.data.project_year %} {% if
+			project.data.project_month %} {% assign project_month = project.data.project_month | prepend: '0' | slice: -2 %} {% assign
+			project_date = project.data.project_year | append: '-' | append: project_month %} {% else %} {% assign project_date =
+			project.data.project_year %} {% endif %} {% endif %}
 			<article class="project-card">
 				<a href="{{ project.url }}">
 					{% if project.data.thumbnail %}
-					<div class="project-card__media" style="background-image: url('{{ project.data.thumbnail }}');" role="img" aria-label="{{ project.data.title }}"></div>
+					<div
+						class="project-card__media"
+						style="background-image: url('{{ project.data.thumbnail }}');"
+						role="img"
+						aria-label="{{ project.data.title }}"
+					></div>
 					{% else %}
 					<div class="project-card__media project-card__media--empty"></div>
 					{% endif %}
@@ -95,10 +97,10 @@ layout: default
 						<h2 class="project-card__title">{{ project.data.title }}</h2>
 						{% if project.data.project_type or project.data.student %}
 						<p class="project-card__meta">
-							{% if project.data.project_type %}{{ project.data.project_type }}{% endif %}{% if project.data.project_type and project.data.student %} · {% endif %}{% if project.data.student %}{{ project.data.student }}{% endif %}
+							{% if project.data.project_type %}{{ project.data.project_type }}{% endif %}{% if project.data.project_type and
+							project.data.student %} · {% endif %}{% if project.data.student %}{{ project.data.student }}{% endif %}
 						</p>
-						{% endif %}
-						{% if project.data.summary %}
+						{% endif %} {% if project.data.summary %}
 						<p class="project-card__summary">{{ project.data.summary }}</p>
 						{% endif %}
 						<span class="project-card__link">Read case study →</span>
@@ -112,17 +114,17 @@ layout: default
 </section>
 
 <section class="guides">
-    <div class="inner grid">
-        <h1>Guides</h1>
-        <div class="thumb-list">
-            {% for post in collections.post %}
-            <div class="thumb post">
-                <a href="{{ post.url }}">
-                    <!-- <img src="/media{{ post.id }}/{{post.bigshot}}" title="{{ post.title }}" class="img img-responsive"> -->
-                    <p class="caption">{{ post.data.title }}</p>
-                </a>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
+	<div class="inner grid">
+		<h1>Guides</h1>
+		<div class="thumb-list">
+			{% for post in collections.post %}
+			<div class="thumb post">
+				<a href="{{ post.url }}">
+					<!-- <img src="/media{{ post.id }}/{{post.bigshot}}" title="{{ post.title }}" class="img img-responsive"> -->
+					<p class="caption">{{ post.data.title }}</p>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
 </section>
