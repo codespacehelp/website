@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <style>
+    .box { fill: white; stroke: #333; stroke-width: 2; }
+    .label { font-family: Arial, sans-serif; font-size: 12px; fill: #333; text-anchor: middle; }
+    .sublabel { font-family: Arial, sans-serif; font-size: 10px; fill: #666; text-anchor: middle; }
+    .arrow { stroke: #333; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    .annotation { font-family: Arial, sans-serif; font-size: 10px; fill: #888; font-style: italic; }
+    .protocol { font-family: Arial, sans-serif; font-size: 10px; fill: #666; text-anchor: middle; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Top flow: Website -> ESP32 -> mBot -->
+
+  <!-- Website box -->
+  <rect x="30" y="40" width="120" height="60" rx="4" class="box"/>
+  <text x="90" y="65" class="label">Website</text>
+  <text x="90" y="82" class="sublabel">(Browser)</text>
+
+  <!-- Arrow: Website to ESP32 -->
+  <path d="M 150 70 L 250 70" class="arrow"/>
+  <text x="200" y="60" class="protocol">MQTT</text>
+  <text x="200" y="90" class="sublabel">"steer" topic</text>
+
+  <!-- ESP32 box -->
+  <rect x="250" y="40" width="120" height="60" rx="4" class="box"/>
+  <text x="310" y="65" class="label">ESP32</text>
+  <text x="310" y="82" class="sublabel">(on top)</text>
+
+  <!-- Annotation for ESP32 -->
+  <text x="385" y="55" class="annotation">← "parasitic" controller</text>
+  <text x="385" y="70" class="annotation">   with WiFi</text>
+
+  <!-- Arrow: ESP32 to mBot -->
+  <path d="M 310 100 L 310 140" class="arrow"/>
+  <text x="355" y="125" class="sublabel">hijacks motor pins</text>
+
+  <!-- mBot box -->
+  <rect x="250" y="140" width="120" height="60" rx="4" class="box"/>
+  <text x="310" y="165" class="label">mBot</text>
+  <text x="310" y="182" class="sublabel">motors</text>
+
+  <!-- Annotation for mBot -->
+  <text x="385" y="170" class="annotation">← no WiFi on its own</text>
+
+  <!-- Bottom flow: Smartphone -> Twitch -> Website -->
+
+  <!-- Smartphone box -->
+  <rect x="30" y="250" width="120" height="60" rx="4" class="box"/>
+  <text x="90" y="275" class="label">Smartphone</text>
+  <text x="90" y="292" class="sublabel">(on robot)</text>
+
+  <!-- Arrow: Smartphone to Twitch -->
+  <path d="M 150 280 L 250 280" class="arrow"/>
+  <text x="200" y="270" class="protocol">RTMP</text>
+
+  <!-- Twitch box -->
+  <rect x="250" y="250" width="120" height="60" rx="4" class="box"/>
+  <text x="310" y="275" class="label">Twitch</text>
+  <text x="310" y="292" class="sublabel">Stream</text>
+
+  <!-- Arrow: Twitch to Website embed -->
+  <path d="M 310 310 L 310 340" class="arrow"/>
+
+  <!-- Website embed box -->
+  <rect x="250" y="340" width="120" height="50" rx="4" class="box"/>
+  <text x="310" y="362" class="label">Website</text>
+  <text x="310" y="378" class="sublabel">(embed)</text>
+
+</svg>

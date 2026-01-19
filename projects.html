@@ -1,0 +1,52 @@
+---
+id: projects
+title: Projects
+layout: default
+---
+
+<section class="projects">
+  <div class="inner">
+    <div class="projects__header">
+      <div>
+        <p class="projects__kicker">Case Studies</p>
+        <h1>Projects</h1>
+      </div>
+      <p class="projects__lead">Case studies of student projects that combine visual storytelling with technical process.</p>
+    </div>
+    <div class="projects-grid">
+      {% for project in collections.projects %}
+      {% assign project_date = '' %}
+      {% if project.data.project_year %}
+        {% if project.data.project_month %}
+          {% assign project_month = project.data.project_month | prepend: '0' | slice: -2 %}
+          {% assign project_date = project.data.project_year | append: '-' | append: project_month %}
+        {% else %}
+          {% assign project_date = project.data.project_year %}
+        {% endif %}
+      {% endif %}
+      <article class="project-card">
+        <a href="{{ project.url }}">
+          {% if project.data.thumbnail %}
+          <div class="project-card__media" style="background-image: url('{{ project.data.thumbnail }}');" role="img" aria-label="{{ project.data.title }}"></div>
+          {% else %}
+          <div class="project-card__media project-card__media--empty"></div>
+          {% endif %}
+          <div class="project-card__body">
+            <p class="project-card__eyebrow">Project{% if project_date %} · {{ project_date }}{% endif %}</p>
+            <h2 class="project-card__title">{{ project.data.title }}</h2>
+            {% if project.data.project_type or project.data.student %}
+            <p class="project-card__meta">
+              {% if project.data.project_type %}{{ project.data.project_type }}{% endif %}{% if project.data.project_type and project.data.student %} · {% endif %}{% if project.data.student %}{{ project.data.student }}{% endif %}
+            </p>
+            {% endif %}
+            {% if project.data.summary %}
+            <p class="project-card__summary">{{ project.data.summary }}</p>
+            {% endif %}
+            <span class="project-card__link">Read case study →</span>
+          </div>
+        </a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
