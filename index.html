@@ -44,28 +44,6 @@ layout: default
 	</div>
 </section>
 
-<!-- prettier-ignore -->
-<section id="workshops" class="workshops light-on-dark">
-  <div class="inner grid">
-    <h1>Workshops</h1>
-
-	<h2>2024-2025</h2>
-    {% render "_workshopsTable" with collections.workshops_24_25 as workshops %}
-
-    <h2>2023-2024</h2>
-    {% render "_workshopsTable" with collections.workshops_23_24 as workshops %}
-
-    <h2>2022-2023</h2>
-    {% render "_workshopsTable" with collections.workshops_22_23 as workshops %}
-
-    <h2>2021-2022</h2>
-    {% render "_workshopsTable" with collections.workshops_21_22 as workshops %}
-
-    <h2>2020-2021</h2>
-    {% render "_workshopsTable" with collections.workshops_20_21 as workshops %}
-    </div>
-</section>
-
 <section class="projects projects--home">
 	<div class="inner">
 		<div class="projects__header">
@@ -111,6 +89,28 @@ layout: default
 		</div>
 		<p class="projects__more"><a href="/projects">See all projects</a></p>
 	</div>
+</section>
+
+<!-- prettier-ignore -->
+<section id="workshops" class="workshops light-on-dark">
+  <div class="inner grid">
+    <h1>Workshops</h1>
+
+	<h2>2024-2025</h2>
+    {% render "_workshopsTable" with collections.workshops_24_25 as workshops %}
+
+    <h2>2023-2024</h2>
+    {% render "_workshopsTable" with collections.workshops_23_24 as workshops %}
+
+    <h2>2022-2023</h2>
+    {% render "_workshopsTable" with collections.workshops_22_23 as workshops %}
+
+    <h2>2021-2022</h2>
+    {% render "_workshopsTable" with collections.workshops_21_22 as workshops %}
+
+    <h2>2020-2021</h2>
+    {% render "_workshopsTable" with collections.workshops_20_21 as workshops %}
+    </div>
 </section>
 
 <section class="guides">
