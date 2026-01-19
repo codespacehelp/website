@@ -8,7 +8,7 @@ student: Zoë Artner
 coaching: Code Space
 project_type: Interactive narrative experience
 tech_stack: HTML, CSS, JavaScript, JSON
-thumbnail: /static/projects/2025-what-remains-of-us-zoe-artner/crash-site.jpg
+thumbnail: /static/projects/2025-what-remains-of-us-zoe-artner/hero-image-1600.jpg
 ---
 
 ## The Concept
@@ -17,7 +17,7 @@ Zoë Artner created a hauntingly atmospheric illustration of an airplane crash s
 
 This approach draws inspiration from games like *Dark Souls*, where item descriptions serve as fragments of lore. By examining a shattered watch, an empty first aid kit, or a worn diary, players gradually reconstruct the narrative of the crash survivors.
 
-![The crash site -- the central scene where players begin their exploration](/static/projects/2025-what-remains-of-us-zoe-artner/crash-site.jpg)
+![The composite scene -- the crash site sits as one layer within the full illustration](/static/projects/2025-what-remains-of-us-zoe-artner/hero-image.jpg)
 
 ## The Engine: Hypermedia Principles in Practice
 
