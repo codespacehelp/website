@@ -427,15 +427,13 @@ pre {
 		radial-gradient(circle at 80% 0%, rgba(4, 167, 235, 0.2), transparent 40%), #151722;
 	color: #e9edff;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	padding: 2.5rem 0 3rem;
 }
 
 .project-hero__inner {
-	max-width: 1200px;
+	max-width: 800px;
 	margin: 0 auto;
-	padding: 2.5rem 1.5rem 3rem;
-	display: grid;
-	gap: 2rem;
-	align-items: center;
+	padding: 0 1rem 2rem;
 }
 
 .project-hero__kicker {
@@ -465,6 +463,8 @@ pre {
 	margin-top: 1.25rem;
 	padding-top: 1.25rem;
 	border-top: 1px solid rgba(255, 255, 255, 0.12);
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .project-meta-block h3 {
@@ -519,10 +519,6 @@ pre {
 }
 
 @media (min-width: 900px) {
-	.project-hero__inner {
-		grid-template-columns: 1.1fr 0.9fr;
-	}
-
 	.project-meta-grid {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}

@@ -12,51 +12,44 @@ layout: default
 
 <section class="project-hero">
   <div class="project-hero__inner">
-    <div class="project-hero__content">
-      <p class="project-hero__kicker">Project Case Study</p>
-      <h1>{{ title }}</h1>
-      {% if summary %}
-      <p class="project-summary">{{ summary }}</p>
-      {% endif %}
-      <div class="project-meta-grid">
-        {% if project_date or project_type %}
-        <div class="project-meta-block">
-          <h3>Project</h3>
-          {% if project_type %}
-          <p><span class="meta-value">{{ project_type }}</span></p>
-          {% endif %}
-          {% if project_date %}
-          <p><span class="meta-value">{{ project_date }}</span><span class="meta-muted">year</span></p>
-          {% endif %}
-        </div>
+    <p class="project-hero__kicker">Project Case Study</p>
+    <h1>{{ title }}</h1>
+    {% if summary %}
+    <p class="project-summary">{{ summary }}</p>
+    {% endif %}
+    <div class="project-meta-grid">
+      {% if project_date or project_type %}
+      <div class="project-meta-block">
+        <h3>Project</h3>
+        {% if project_type %}
+        <p><span class="meta-value">{{ project_type }}</span></p>
         {% endif %}
-        {% if student or coaching %}
-        <div class="project-meta-block">
-          <h3>Team</h3>
-          {% if student %}
-          <p><span class="meta-value">{{ student }}</span><span class="meta-muted">student</span></p>
-          {% endif %}
-          {% if coaching %}
-          <p><span class="meta-value">{{ coaching }}</span><span class="meta-muted">coaching</span></p>
-          {% endif %}
-        </div>
-        {% endif %}
-        {% if tech_stack %}
-        <div class="project-meta-block project-meta-block--tools">
-          <h3>Tools</h3>
-          {% assign tech_items = tech_stack | split: ',' %}
-          {% for tech in tech_items %}
-          <p><span class="meta-value">{{ tech | strip }}</span></p>
-          {% endfor %}
-        </div>
+        {% if project_date %}
+        <p><span class="meta-value">{{ project_date }}</span><span class="meta-muted">year</span></p>
         {% endif %}
       </div>
+      {% endif %}
+      {% if student or coaching %}
+      <div class="project-meta-block">
+        <h3>Team</h3>
+        {% if student %}
+        <p><span class="meta-value">{{ student }}</span><span class="meta-muted">student</span></p>
+        {% endif %}
+        {% if coaching %}
+        <p><span class="meta-value">{{ coaching }}</span><span class="meta-muted">coaching</span></p>
+        {% endif %}
+      </div>
+      {% endif %}
+      {% if tech_stack %}
+      <div class="project-meta-block project-meta-block--tools">
+        <h3>Tools</h3>
+        {% assign tech_items = tech_stack | split: ',' %}
+        {% for tech in tech_items %}
+        <p><span class="meta-value">{{ tech | strip }}</span></p>
+        {% endfor %}
+      </div>
+      {% endif %}
     </div>
-    {% if thumbnail %}
-    <div class="project-hero__media" style="background-image: url('{{ thumbnail }}');" role="img" aria-label="{{ title }}"></div>
-    {% else %}
-    <div class="project-hero__media project-hero__media--empty"></div>
-    {% endif %}
   </div>
 </section>
 
