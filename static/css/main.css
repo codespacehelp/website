@@ -356,6 +356,23 @@ table td {
 	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.page table th {
+	color: #333;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.page table td {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.page table {
+	margin: 20px 0;
+}
+
+.page .responsive-table {
+	padding: 0 0.5rem;
+}
+
 table tr:last-child td {
 	border-bottom: none;
 }
