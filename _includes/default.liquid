@@ -1,15 +1,12 @@
----
+﻿---
 layout: base
 ---
-<header class="header">
-  <span class="header__title"><a href="/">Code Space</a></span>
-  <nav class="header__nav">
-    <a href="/">Home</a>
-    <a href="/reservations">Reservations</a>
-    <a href="/projects">Projects</a>
-    <a href="/guides">Guides</a>
-  </nav>
-  <a href="#" class="header__hamburger"></a>
+
+<header class="site-header">
+  <div class="inner">
+    <a href="/" class="site-header__logo">Code Space</a>
+    {% render "tab-nav.liquid", navigation: navigation, page: page %}
+  </div>
 </header>
 
 <main>
@@ -17,24 +14,9 @@ layout: base
 </main>
 
 <footer>
-  <div class="footer__left">
-    Code Space is an initiative of <a href="https://www.sintlucasantwerpen.be/">Sint Lucas Antwerp</a>. The <a href="https://github.com/codespacehelp/website" target="_blank">source code for this website</a> is open source.
-  </div>
-  <div class="footer__right">
-    Contact Us:<br>
-    <a href="mailto:frederik.debleser@kdg.be">frederik.debleser@kdg.be</a><br>
-    <a href="mailto:lieven.menschaert@kdg.be">lieven.menschaert@kdg.be</a><br>
-    <a href="mailto:jean-baptiste.gambier@kdg.be">jean-baptiste.gambier@kdg.be</a>
+  <div class="inner grid">
+    <p>
+      Code Space is an initiative of <a href="https://www.sintlucasantwerpen.be/" target="_blank">Sint Lucas Antwerpen</a>.
+    </p>
   </div>
 </footer>
-<script>
-  document.querySelector('.header__hamburger').addEventListener('click', (e) => {
-    document.body.classList.toggle('header--open');
-  });
-
-  Array.from(document.querySelectorAll('.header__nav a')).forEach(l => l.addEventListener('click', (e) => {
-    document.body.classList.remove('header--open');
-  }));
-</script>
-</body>
-</html>

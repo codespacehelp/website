@@ -1,0 +1,20 @@
+﻿---
+id: guides
+title: Guides
+layout: default
+---
+
+<section class="guides">
+    <div class="inner grid">
+        <h1>Guides</h1>
+        <div class="thumb-list">
+            {% for post in collections.post %}
+            <div class="thumb post">
+                <a href="{{ post.url }}">
+                    <p class="caption">{{ post.data.title }}</p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

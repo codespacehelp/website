@@ -1,130 +1,42 @@
----
+﻿---
 id: home
 title: Code Space
 layout: default
 ---
 
 <section class="intro">
-	<div class="inner grid">
-		<h1>
-			Code Space helps students at
-			<a href="https://www.sintlucasantwerpen.be/" target="_blank">Sint Lucas Antwerp</a>
-			with their questions about the digital medium.
-		</h1>
+    <div class="inner grid">
+        <h1>
+            Code Space helps students at
+            <a href="https://www.sintlucasantwerpen.be/" target="_blank">Sint Lucas Antwerp</a>
+            with their questions about the digital medium.
+        </h1>
 
-		<p>
-			<strong>Questions like:</strong>
-		</p>
-		<ul>
-			<li>How do I make a portfolio website?</li>
-			<li>How do I make an installaction that reacts to sound?</li>
-			<li>How do I make an interactive world in virtual reality?</li>
-		</ul>
-		<p>Code Space can support you in many domains:</p>
-		<ul>
-			<li><strong>VR</strong>: 3D painting, 360 video serious games</li>
-			<li><strong>Digital fabrication</strong>: laser cutting, 3D printing, pen plotting</li>
-			<li><strong>Physical computing</strong>: drawing robots, IOT</li>
-			<li><strong>Web</strong>: interactive media, portfolio</li>
-			<li><strong>AI</strong>: image classification, text generation, image generation</li>
-		</ul>
-		<p>
-			Are you a bachelor or (pre)master student at Sint Lucas? We can help you with the whole process: from helping you figure out what's
-			possible and attainable to the technical implementation, to the final presentation.
-		</p>
-		<p>
-			<strong
-				>We're generally around in K.03.07 on Wednesdays, and available on different days of the week. Make an appointment if you want to be
-				sure of your spot:</strong
-			>
-		</p>
-		<div class="cta">
-			<a href="/reservations" class="cta__primary">Make a reservation</a>
-		</div>
-	</div>
-</section>
-
-<section class="projects projects--home">
-	<div class="inner">
-		<div class="projects__header">
-			<div>
-				<p class="projects__kicker">Case Studies</p>
-				<h1>Projects</h1>
-			</div>
-			<p class="projects__lead">Case studies on student work that blend visual direction and technical process.</p>
-		</div>
-		<div class="projects-grid">
-			{% for project in collections.projects limit:3 %} {% assign project_date = '' %} {% if project.data.project_year %} {% if
-			project.data.project_month %} {% assign project_month = project.data.project_month | prepend: '0' | slice: -2 %} {% assign
-			project_date = project.data.project_year | append: '-' | append: project_month %} {% else %} {% assign project_date =
-			project.data.project_year %} {% endif %} {% endif %}
-			<article class="project-card">
-				<a href="{{ project.url }}">
-					{% if project.data.thumbnail %}
-					<div
-						class="project-card__media"
-						style="background-image: url('{{ project.data.thumbnail }}');"
-						role="img"
-						aria-label="{{ project.data.title }}"
-					></div>
-					{% else %}
-					<div class="project-card__media project-card__media--empty"></div>
-					{% endif %}
-					<div class="project-card__body">
-						<p class="project-card__eyebrow">Project{% if project_date %} · {{ project_date }}{% endif %}</p>
-						<h2 class="project-card__title">{{ project.data.title }}</h2>
-						{% if project.data.project_type or project.data.student %}
-						<p class="project-card__meta">
-							{% if project.data.project_type %}{{ project.data.project_type }}{% endif %}{% if project.data.project_type and
-							project.data.student %} · {% endif %}{% if project.data.student %}{{ project.data.student }}{% endif %}
-						</p>
-						{% endif %} {% if project.data.summary %}
-						<p class="project-card__summary">{{ project.data.summary }}</p>
-						{% endif %}
-						<span class="project-card__link">Read case study →</span>
-					</div>
-				</a>
-			</article>
-			{% endfor %}
-		</div>
-		<p class="projects__more"><a href="/projects">See all projects</a></p>
-	</div>
-</section>
-
-<!-- prettier-ignore -->
-<section id="workshops" class="workshops light-on-dark">
-  <div class="inner grid">
-    <h1>Workshops</h1>
-
-	<h2>2024-2025</h2>
-    {% render "_workshopsTable" with collections.workshops_24_25 as workshops %}
-
-    <h2>2023-2024</h2>
-    {% render "_workshopsTable" with collections.workshops_23_24 as workshops %}
-
-    <h2>2022-2023</h2>
-    {% render "_workshopsTable" with collections.workshops_22_23 as workshops %}
-
-    <h2>2021-2022</h2>
-    {% render "_workshopsTable" with collections.workshops_21_22 as workshops %}
-
-    <h2>2020-2021</h2>
-    {% render "_workshopsTable" with collections.workshops_20_21 as workshops %}
+        <p>
+            <strong>Questions like:</strong>
+        </p>
+        <ul>
+            <li>How do I make a portfolio website?</li>
+            <li>How do I make an installaction that reacts to sound?</li>
+            <li>How do I make an interactive world in virtual reality?</li>
+        </ul>
+        <p>Code Space can support you in many domains:</p>
+        <ul>
+            <li><strong>VR</strong>: 3D painting, 360 video serious games</li>
+            <li><strong>Digital fabrication</strong>: laser cutting, 3D printing, pen plotting</li>
+            <li><strong>Physical computing</strong>: drawing robots, IOT</li>
+            <li><strong>Web</strong>: interactive media, portfolio</li>
+            <li><strong>AI</strong>: image classification, text generation, image generation</li>
+        </ul>
+        <p>
+            Are you a bachelor or (pre)master student at Sint Lucas? We can help you with the whole process: from helping you figure out what's
+            possible and attainable to the technical implementation, to the final presentation.
+        </p>
+        <p>
+            <strong>We're generally around in K.03.07 on Wednesdays, and available on different days of the week. Make an appointment if you want to be sure of your spot:</strong>
+        </p>
+        <div class="cta">
+            <a href="/tabs/reservations/" class="cta__primary">Make a reservation</a>
+        </div>
     </div>
-</section>
-
-<section class="guides">
-	<div class="inner grid">
-		<h1>Guides</h1>
-		<div class="thumb-list">
-			{% for post in collections.post %}
-			<div class="thumb post">
-				<a href="{{ post.url }}">
-					<!-- <img src="/media{{ post.id }}/{{post.bigshot}}" title="{{ post.title }}" class="img img-responsive"> -->
-					<p class="caption">{{ post.data.title }}</p>
-				</a>
-			</div>
-			{% endfor %}
-		</div>
-	</div>
 </section>

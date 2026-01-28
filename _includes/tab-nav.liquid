@@ -1,0 +1,11 @@
+﻿<nav class="tab-nav">
+  <ul class="tab-nav__list">
+    {% for tab in navigation.tabs %}
+      <li class="tab-nav__item">
+        <a href="{{ tab.url }}" class="tab-nav__link {% if page.url == tab.url %}tab-nav__link--active{% endif %}">
+          {{ tab.label }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

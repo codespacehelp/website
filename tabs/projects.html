@@ -1,4 +1,4 @@
----
+﻿---
 id: projects
 title: Projects
 layout: default
@@ -18,7 +18,7 @@ layout: default
       {% assign project_date = '' %}
       {% if project.data.project_year %}
         {% if project.data.project_month %}
-          {% assign project_month = project.data.project_month | prepend: '0' | slice: -2 %}
+          {% assign project_month = project.data.project_month | prepend: '0' | slice: -2, 2 %}
           {% assign project_date = project.data.project_year | append: '-' | append: project_month %}
         {% else %}
           {% assign project_date = project.data.project_year %}
@@ -32,17 +32,17 @@ layout: default
           <div class="project-card__media project-card__media--empty"></div>
           {% endif %}
           <div class="project-card__body">
-            <p class="project-card__eyebrow">Project{% if project_date %} · {{ project_date }}{% endif %}</p>
+            <p class="project-card__eyebrow">Project{% if project_date %} - {{ project_date }}{% endif %}</p>
             <h2 class="project-card__title">{{ project.data.title }}</h2>
             {% if project.data.project_type or project.data.student %}
             <p class="project-card__meta">
-              {% if project.data.project_type %}{{ project.data.project_type }}{% endif %}{% if project.data.project_type and project.data.student %} · {% endif %}{% if project.data.student %}{{ project.data.student }}{% endif %}
+              {% if project.data.project_type %}{{ project.data.project_type }}{% endif %}{% if project.data.project_type and project.data.student %} - {% endif %}{% if project.data.student %}{{ project.data.student }}{% endif %}
             </p>
             {% endif %}
             {% if project.data.summary %}
             <p class="project-card__summary">{{ project.data.summary }}</p>
             {% endif %}
-            <span class="project-card__link">Read case study →</span>
+            <span class="project-card__link">Read case study</span>
           </div>
         </a>
       </article>
