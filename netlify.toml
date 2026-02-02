@@ -4,3 +4,8 @@ command = "npm run build"
 
 [context.production.environment]
   NODE_VERSION = "20"
+
+[[redirects]]
+  from = "/reservations"
+  to = "https://reservations.codespace.help/"
+  status = 301
