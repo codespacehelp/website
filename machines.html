@@ -1,0 +1,31 @@
+---
+id: machines
+title: Machines
+layout: default
+---
+
+<section class="machines" style="background: var(--color-main);">
+  <div class="inner">
+    <h1 class="text-T">Machines</h1>
+    <div class="card-grid">
+      {% for machine in collections.machines %}
+        {% render "card.liquid",
+          title: machine.data.name,
+          subtitle: machine.data.machine_model,
+          text: machine.data.description,
+          image: machine.data.image_path,
+          url: machine.url %}
+      {% endfor %}
+    </div>
+
+    <div class="machines__footer">
+      {% render "tech-line.liquid" %}
+      <div class="machines__footer-content">
+        <p class="machines__footer-text text-p">Available machines to use in Code Space for students. Please read the specifications before to book a machine.</p>
+        <div class="machines__footer-action">
+          <a href="https://reservations.codespace.help/" target="_blank" class="btn--highlight">Make a reservation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

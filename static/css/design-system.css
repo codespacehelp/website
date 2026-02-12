@@ -1,0 +1,483 @@
+/* ==========================================================================
+   Code Space Design System
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Color Palette
+   -------------------------------------------------------------------------- */
+:root {
+  --color-main: #333254;
+  --color-tabs: #282842;
+  --color-back: #1c1b2d;
+  --color-highlight: #acc41e;
+  --color-white: #ffffff;
+  --color-border: #84847c;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Font Sizes
+   Spec pixel values (at 1920x1080) are converted to fluid clamp() units.
+   -------------------------------------------------------------------------- */
+:root {
+  /* 8px base → roughly 0.5rem at 1920, fluid down */
+  --font-size-xs: clamp(0.5rem, 0.42rem + 0.42vw, 0.75rem);
+  /* 12px base → roughly 0.75rem at 1920, fluid down */
+  --font-size-base: clamp(0.7rem, 0.58rem + 0.6vw, 1rem);
+  /* 24px base → roughly 1.5rem at 1920, fluid down */
+  --font-size-xl: clamp(1.1rem, 0.85rem + 1.25vw, 1.875rem);
+}
+
+/* --------------------------------------------------------------------------
+   Text Style Classes
+   T: Noto Sans Bold, white, 12px base
+   s: IBM Plex Mono Light, highlight, 8px base
+   d: Noto Sans Regular, white, 8px base
+   p: Noto Sans Regular, white, 12px base
+   i: IBM Plex Mono Light, highlight, 24px base
+   h: IBM Plex Mono Light, highlight, 12px base
+   link: IBM Plex Mono, highlight, 12px base
+   -------------------------------------------------------------------------- */
+.text-T {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  color: var(--color-white);
+  font-size: var(--font-size-base);
+  line-height: 1.4;
+}
+
+.text-s {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
+  color: var(--color-highlight);
+  font-size: var(--font-size-xs);
+  line-height: 1.5;
+}
+
+.text-d {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  color: var(--color-white);
+  font-size: var(--font-size-xs);
+  line-height: 1.5;
+}
+
+.text-p {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  color: var(--color-white);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+}
+
+.text-i {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
+  color: var(--color-highlight);
+  font-size: var(--font-size-xl);
+  line-height: 1.3;
+}
+
+.text-h {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
+  color: var(--color-highlight);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+
+.text-link {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
+  color: var(--color-highlight);
+  font-size: var(--font-size-base);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.text-link:hover {
+  color: var(--color-white);
+}
+
+/* --------------------------------------------------------------------------
+   Button
+   -------------------------------------------------------------------------- */
+.btn--highlight {
+  display: inline-block;
+  padding: 0.8em 2em;
+  background: var(--color-highlight);
+  color: #000;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  font-size: var(--font-size-base);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn--highlight:hover {
+  opacity: 0.85;
+}
+
+/* --------------------------------------------------------------------------
+   Tech Line
+   Decorative element: two horizontal lines at different heights connected
+   by a 45-degree ramp. Left part is lower, right part is higher.
+   Uses an inline SVG for pixel-perfect rendering.
+   -------------------------------------------------------------------------- */
+.tech-line {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.tech-line svg {
+  display: block;
+  width: 100%;
+  overflow: visible;
+}
+
+.tech-line line {
+  stroke: var(--color-highlight);
+  stroke-width: 0.5;
+  vector-effect: non-scaling-stroke;
+}
+
+/* --------------------------------------------------------------------------
+   Card Container
+   Beveled top-right corner with border following the bevel.
+   Background: color-tabs. Entire card clickable.
+   Fixed-height images with proportional fit.
+
+   Uses two layers:
+   - ::before  → filled bevel shape as the border (color-border)
+   - ::after   → filled bevel shape inset by 1px (color-tabs = card bg)
+   Together they create a 0.5-1px border that follows the bevel.
+   -------------------------------------------------------------------------- */
+.card {
+  position: relative;
+  background: transparent;
+  overflow: visible;
+}
+
+/* Outer shape: acts as the border */
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-border);
+  clip-path: polygon(0 0, calc(100% - 1.8rem) 0, 100% 1.8rem, 100% 100%, 0 100%);
+  z-index: 0;
+  transition: background 0.25s;
+}
+
+.card:hover::before {
+  background: var(--color-highlight);
+}
+
+/* Inner fill: card background inset by 1px to reveal border */
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  background: var(--color-tabs);
+  clip-path: polygon(0 0, calc(100% - 1.7rem) 0, 100% 1.7rem, 100% 100%, 0 100%);
+  z-index: 0;
+}
+
+.card__link {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.card__image {
+  flex-shrink: 0;
+  width: 40%;
+  padding: 0.75rem;
+  overflow: hidden;
+}
+
+.card__image img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+}
+
+.card__body {
+  padding: 1.2em 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  flex: 1;
+}
+
+.card__title {
+  margin: 0;
+}
+
+.card__subtitle {
+  margin: 0;
+}
+
+.card__text {
+  margin: 0;
+}
+
+/* Card grid: 2 columns on desktop, 1 on mobile */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* Single-column card variant (projects listing uses full-width cards) */
+.card-grid--single {
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card__link {
+    flex-direction: column;
+  }
+
+  .card__image {
+    width: 100%;
+  }
+
+  .card__image img {
+    height: 10rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Section Header (tech line + subheading)
+   -------------------------------------------------------------------------- */
+.section-header {
+  margin-bottom: 2rem;
+}
+
+.section-header__text {
+  max-width: 24rem;
+  margin-top: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Home Page
+   -------------------------------------------------------------------------- */
+.home {
+  background: var(--color-main);
+}
+
+.home .inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.home__domains {
+  padding-left: 1.5em;
+  margin: 0.5em 0 1em;
+}
+
+.home__domains li {
+  margin: 0.2em 0;
+}
+
+.home__info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.home__info-block h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.home__info-block p {
+  margin: 0.2em 0;
+}
+
+.home__reservation {
+  margin-top: 1.5rem;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .home__info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home__reservation {
+    text-align: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Machines Page
+   -------------------------------------------------------------------------- */
+.machines__footer {
+  margin-top: 3rem;
+}
+
+.machines__footer-text {
+  margin-bottom: 1rem;
+}
+
+.machines__footer-action {
+  text-align: right;
+}
+
+/* --------------------------------------------------------------------------
+   Project Page Header
+   -------------------------------------------------------------------------- */
+.project-page {
+  background: var(--color-main);
+  padding: 2rem 0;
+}
+
+.project-page__header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.project-page__left {
+  padding-right: 1rem;
+}
+
+.project-page__left h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.project-page__right {
+  padding-left: 1rem;
+}
+
+.project-page__right p {
+  margin: 0.3em 0;
+}
+
+.project-page__divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
+/* Vertical tech line variant for project header */
+.project-page__divider .tech-line {
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  height: 100%;
+  padding: 0;
+}
+
+.project-page .page {
+  background: var(--color-main);
+}
+
+@media (max-width: 768px) {
+  .project-page__header {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Guide Page
+   -------------------------------------------------------------------------- */
+.guide-page {
+  background: var(--color-main);
+  padding: 2rem 0;
+}
+
+.guide-page .inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.guide-page h1 {
+  margin-top: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Workshop Table Overrides
+   -------------------------------------------------------------------------- */
+.workshops-styled table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.workshops-styled th {
+  text-align: left;
+  padding: 0.75em 0.5em;
+  border-bottom: none;
+}
+
+.workshops-styled td {
+  padding: 0.75em 0.5em;
+  border-bottom: 0.5px solid var(--color-border);
+}
+
+.workshops-styled a {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
+  color: var(--color-highlight);
+  font-size: var(--font-size-base);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.workshops-styled a:hover {
+  color: var(--color-white);
+}
+
+/* --------------------------------------------------------------------------
+   Workshop Page Header
+   -------------------------------------------------------------------------- */
+.workshop-page {
+  background: var(--color-main);
+  padding: 2rem 0;
+}
+
+.workshop-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.workshop-page__header h1 {
+  margin: 0;
+}
+
+.workshop-page .page {
+  background: var(--color-main);
+}
+
+@media (max-width: 768px) {
+  .workshop-page__header {
+    flex-direction: column;
+  }
+}

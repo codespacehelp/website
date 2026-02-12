@@ -4,39 +4,47 @@ title: Code Space
 layout: default
 ---
 
-<section class="intro">
-    <div class="inner grid">
-        <h1>
-            Code Space helps students at
-            <a href="https://www.sintlucasantwerpen.be/" target="_blank">Sint Lucas Antwerp</a>
-            with their questions about the digital medium.
-        </h1>
+<section class="home">
+    <div class="inner">
+        <p class="text-p">
+            Code Space is the digital workshop of Sint Lucas Antwerp. We help bachelor and master students with their questions about the digital medium.
+            We can help you with the whole process: from helping you figure out what's possible and attainable to the technical implementation, to the final presentation. Code Space can support you in many domains:
+        </p>
+        <ul class="text-p home__domains">
+            <li>VR: 3D painting, 360 video serious games</li>
+            <li>Digital fabrication: laser cutting, 3D printing, pen plotting</li>
+            <li>Physical computing: drawing robots, IOT</li>
+            <li>Web: interactive media, portfolio</li>
+            <li>AI: image classification, text generation, image generation</li>
+        </ul>
+        <p class="text-p">
+            To use the machines and arrange a meeting with one of the tutors, please make a reservation through the link below.
+            An email will be sent to you.
+        </p>
+        <p class="text-p"><strong>Please check the material dimensions and file formats you need for each machine.</strong></p>
 
-        <p>
-            <strong>Questions like:</strong>
-        </p>
-        <ul>
-            <li>How do I make a portfolio website?</li>
-            <li>How do I make an installaction that reacts to sound?</li>
-            <li>How do I make an interactive world in virtual reality?</li>
-        </ul>
-        <p>Code Space can support you in many domains:</p>
-        <ul>
-            <li><strong>VR</strong>: 3D painting, 360 video serious games</li>
-            <li><strong>Digital fabrication</strong>: laser cutting, 3D printing, pen plotting</li>
-            <li><strong>Physical computing</strong>: drawing robots, IOT</li>
-            <li><strong>Web</strong>: interactive media, portfolio</li>
-            <li><strong>AI</strong>: image classification, text generation, image generation</li>
-        </ul>
-        <p>
-            Are you a bachelor or (pre)master student at Sint Lucas? We can help you with the whole process: from helping you figure out what's
-            possible and attainable to the technical implementation, to the final presentation.
-        </p>
-        <p>
-            <strong>We're generally around in K.03.07 on Wednesdays, and available on different days of the week. Make an appointment if you want to be sure of your spot:</strong>
-        </p>
-        <div class="cta">
-            <a href="/reservations/" class="cta__primary">Make a reservation</a>
+        <div class="home__info-grid">
+            <div class="home__info-block">
+                <h2 class="text-i">Opening hours</h2>
+                <p class="text-p">Monday : 9:00 - 13:00 &nbsp;&nbsp; 14:00 - 17:00</p>
+                <p class="text-p">Tuesday : Closed</p>
+                <p class="text-p">Wednesday: 9:00 - 13:00 &nbsp;&nbsp; 14:00 - 17:00</p>
+                <p class="text-p">Thursday: Closed</p>
+                <p class="text-p">Friday: 9:00 - 13:00 &nbsp;&nbsp; 14:00 - 17:00</p>
+            </div>
+            <div class="home__info-block">
+                <h2 class="text-i">Location</h2>
+                <p class="text-p">Campus St Lucas</p>
+                <p class="text-p">Van Schoonbekestraat 143</p>
+                <p class="text-p">2018 Antwerpen</p>
+                <p class="text-p">K.03.07</p>
+            </div>
+        </div>
+
+        {% render "tech-line.liquid" %}
+
+        <div class="home__reservation">
+            <a href="https://reservations.codespace.help/" target="_blank" class="btn--highlight">Make a reservation</a>
         </div>
     </div>
 </section>

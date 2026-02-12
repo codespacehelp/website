@@ -1,26 +1,26 @@
-﻿---
+---
 id: workshops
 title: Workshops
 layout: default
 ---
 
-<section id="workshops" class="workshops light-on-dark">
-  <div class="inner grid">
-    <h1>Workshops</h1>
+<section id="workshops" class="workshops-styled" style="background: var(--color-main);">
+  <div class="inner">
+    {% render "tech-line.liquid" %}
 
-    <h2>2024-2025</h2>
+    <h2 class="text-T">2024-2025</h2>
     {% render "_workshopsTable.liquid", workshops: collections.workshops_24_25 %}
 
-    <h2>2023-2024</h2>
+    <h2 class="text-T">2023-2024</h2>
     {% render "_workshopsTable.liquid", workshops: collections.workshops_23_24 %}
 
-    <h2>2022-2023</h2>
+    <h2 class="text-T">2022-2023</h2>
     {% render "_workshopsTable.liquid", workshops: collections.workshops_22_23 %}
 
-    <h2>2021-2022</h2>
+    <h2 class="text-T">2021-2022</h2>
     {% render "_workshopsTable.liquid", workshops: collections.workshops_21_22 %}
 
-    <h2>2020-2021</h2>
+    <h2 class="text-T">2020-2021</h2>
     {% render "_workshopsTable.liquid", workshops: collections.workshops_20_21 %}
   </div>
 </section>

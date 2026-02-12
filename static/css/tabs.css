@@ -1,7 +1,7 @@
-﻿/* Tab Navigation Styles */
+/* Tab Navigation Styles */
 
 .site-header {
-  background: #000000;
+  background: var(--color-back, #1c1b2d);
   padding: 1rem 0;
   padding-bottom: 0;
 }
@@ -15,11 +15,13 @@
 }
 
 .site-header__logo {
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 1.5rem;
-  font-weight: bold;
-  color: #fff;
+  font-weight: 300;
+  color: var(--color-white, #fff);
   text-decoration: none;
   padding-bottom: 1rem;
+  margin-left: 1.5rem;
 }
 
 .site-header__logo:hover {
@@ -55,7 +57,9 @@
   padding: 0.8rem 5rem;
   color: #888;
   text-decoration: none;
-  background: #0a0a12;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  background: var(--color-tabs, #282842);
   clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 100%, 0 100%);
   transition: background-color 0.2s, color 0.2s;
   position: relative;
@@ -64,13 +68,13 @@
 }
 
 .tab-nav__link:hover {
-  background: #12121f;
-  color: #fff;
+  background: #1e1e38;
+  color: var(--color-white, #fff);
 }
 
 .tab-nav__link--active {
-  background: #1a1a3e;
-  color: #fff;
+  background: var(--color-main, #333254);
+  color: var(--color-white, #fff);
   font-weight: bold;
 }
 
@@ -79,7 +83,7 @@
 }
 
 .tab-nav__link--active:hover {
-  background: #1a1a3e;
+  background: var(--color-main, #333254);
 }
 
 /* Responsive */

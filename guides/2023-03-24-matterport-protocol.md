@@ -1,7 +1,9 @@
 ---
-layout: post
-tags: post
+layout: guide
+tags: guide
 title: Decoding Matterport 3D Scenes
+subtitle: 3D scanning
+description: Understand the Matterport protocol and extract 3D scene data from virtual tours.
 date: 2023-03-24
 categories: guides
 ---
@@ -9,7 +11,7 @@ Recently I came across a [virtual tour of the National Gallery](https://www.nati
 
 The tour was made with [Matterport](https://matterport.com/), a 3D capturing solution with special cameras that can quickly and accurately scan a room.
 
-![Screenshot of Matterport](/static/posts/2023-03-24-matterport-protocol/matterport-screenshot.jpg)
+![Screenshot of Matterport](/static/guides/2023-03-24-matterport-protocol/matterport-screenshot.jpg)
 
 We wanted to have the measurements of this room and wondered if we would be able to get the file in a program like Blender; turns out, yes, we can:
 
@@ -31,7 +33,7 @@ Specifically, we see that one file is a 1,19MB file with the type `application/o
 
 Before that, we actually have a number of JSON files, with an endpoint of `graph`, that also contain interesting data. They seem to kick off the loading of the files. One of them contains the following snippet:
 
-![Screenshot of Matterport](/static/posts/2023-03-24-matterport-protocol/network-view.jpg)
+![Screenshot of Matterport](/static/guides/2023-03-24-matterport-protocol/network-view.jpg)
 
 It seems to refer to a mesh file ending with the `.dam` extension, further confirming our hunch that this is the 3D model. Let's take a deeper look in the file!
 
@@ -39,12 +41,12 @@ It seems to refer to a mesh file ending with the `.dam` extension, further confi
 
 Opening this file in Hex Fiend clearly shows that this is a binary file. The `file` command in the Terminal also doesn't give more information. So we're a bit stuck here. 
 
-![Screenshot of Matterport](/static/posts/2023-03-24-matterport-protocol/hex-fiend.png)
+![Screenshot of Matterport](/static/guides/2023-03-24-matterport-protocol/hex-fiend.png)
 
 
 Searching for "DAM format Matterport" finds this [Gist](https://gist.github.com/foone/4bd3d9ca059d59e070d1e2aed7ddfe36):
 
-![Screenshot of Matterport](/static/posts/2023-03-24-matterport-protocol/proto-file.png)
+![Screenshot of Matterport](/static/guides/2023-03-24-matterport-protocol/proto-file.png)
 
 
 That seems like a Protocol Buffers format. Nice! Protocol Buffers is a file format developed by Google for efficiently encoding structured data. As we can see from the screenshot, we have data for vertices, faces and materials, which looks very promising.

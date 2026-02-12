@@ -14,7 +14,7 @@ npm start
 
 ## Building
 
-When pushing to the `main` branch, the site will be deployed automatically to Netlify. To create a local production version of the site:
+When pushing to the `master` branch, the site will be deployed automatically to Netlify. To create a local production version of the site:
 
 ```
 npm run build

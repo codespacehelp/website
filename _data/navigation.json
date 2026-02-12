@@ -1,9 +1,9 @@
 ﻿{
   "tabs": [
     { "label": "Home", "url": "/" },
-    { "label": "Reservations", "url": "/reservations/" },
+    { "label": "Machines", "url": "/machines/" },
     { "label": "Projects", "url": "/projects/" },
-    { "label": "Workshops", "url": "/workshops/" },
-    { "label": "Guides", "url": "/guides/" }
+    { "label": "Guides", "url": "/guides/" },
+    { "label": "Workshops", "url": "/workshops/" }
   ]
 }
