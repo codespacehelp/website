@@ -15,17 +15,20 @@
 }
 
 .site-header__logo {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: var(--color-white, #fff);
+  display: block;
   text-decoration: none;
   padding-bottom: 1rem;
   margin-left: 1.5rem;
 }
 
+.site-header__logo img {
+  height: 2rem;
+  width: auto;
+  display: block;
+}
+
 .site-header__logo:hover {
-  color: #ccc;
+  opacity: 0.8;
 }
 
 /* Tab Navigation */
@@ -57,7 +60,7 @@
   padding: 0.8rem 5rem;
   color: #888;
   text-decoration: none;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: var(--font-main, 'Atkinson Hyperlegible Next', sans-serif);
   font-weight: 700;
   background: var(--color-tabs, #282842);
   clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 100%, 0 100%);
@@ -110,6 +113,23 @@
 
   .tab-nav__item {
     margin-left: -24px;
+  }
+
+  .tab-nav__item:first-child {
+    margin-left: 0;
+  }
+}
+
+/* Very narrow screens */
+@media (max-width: 480px) {
+  .tab-nav__link {
+    padding: 0.6rem 1rem;
+    font-size: 0.75rem;
+    clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 100%, 0 100%);
+  }
+
+  .tab-nav__item {
+    margin-left: -16px;
   }
 
   .tab-nav__item:first-child {

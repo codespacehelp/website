@@ -6,7 +6,8 @@ layout: default
 
 <section class="projects-listing" style="background: var(--color-main);">
   <div class="inner">
-    {% render "section-header.liquid", subheading: "Case studies on student work that blend visual direction and technical process." %}
+    <h1 class="text-H">Projects</h1>
+    {% render "section-header.liquid", subheading: "Case studies on student work that blend visual direction and technical process.", mirrored: true %}
 
     <div class="card-grid card-grid--single">
       {% for project in collections.projects %}

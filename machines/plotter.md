@@ -2,8 +2,8 @@
 layout: machine
 tags: machine
 name: Plotter
-machine_model: ""
-description: "Pen plotter for drawing vector graphics on paper. File format: SVG. Prepare your design as a vector drawing with clear stroke paths."
+machine_model: Cricut Maker 3
+description: "Max. size: 31 x 31 cm<br>Materials: All kinds of paper, transfer, cardboard..."
 image_path: "/machines/mPlotter_CodeSpaceSLA.jpg"
 ---
 

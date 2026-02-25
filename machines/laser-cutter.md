@@ -2,8 +2,8 @@
 layout: machine
 tags: machine
 name: Laser Cutter
-machine_model: BeamBox Pro
-description: "Maximum format: 38 x 40 x 99 cm. Material allowed: MDF, Plexiglas, Leather, Rubber. Metal works but fades out by the time. File format: 2D vector drawing made in Illustrator. PDF, SVG."
+machine_model: Flux BeamBox Pro
+description: "Maximum format: 38 x 40 x 99 cm<br>Materials: MDF, Plexiglas, Leather, Rubber...<br>(!) Metal works but fades out by the time<br>File format: 2D vector drawing made in Illustrator: PDF, SVG..."
 image_path: "/machines/mLaserCutter_CodeSpaceSLA.jpg"
 ---
 

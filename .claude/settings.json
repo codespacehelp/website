@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit(*)",
+      "Write(*)",
+      "Read(*)",
+      "Bash(npm run build:*)",
+      "Bash(npm start:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run clean:*)",
+      "Bash(npm run format:*)",
+      "Bash(ls:*)",
+      "Bash(cp:*)",
+      "Bash(mkdir:*)",
+      "Bash(rm:*)"
+    ]
+  }
+}

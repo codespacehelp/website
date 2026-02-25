@@ -6,7 +6,8 @@ layout: default
 
 <section class="guides-listing" style="background: var(--color-main);">
   <div class="inner">
-    {% render "section-header.liquid", subheading: "This page provides basic tutorials for the different tools we use at Code Space." %}
+    <h1 class="text-H">Guides</h1>
+    {% render "section-header.liquid", subheading: "This page provides basic tutorials for the different tools we use at Code Space.", mirrored: true %}
 
     <div class="card-grid">
       {% for guide in collections.guide %}

@@ -3,7 +3,7 @@ layout: machine
 tags: machine
 name: PC 1
 machine_model: ""
-description: "Desktop computer available for students. Equipped with professional software for design, 3D modeling, and digital fabrication."
+description: "Desktop computer available for students. Equipped with professional software for design, 3D modeling, and digital fabrication.<br>PC computer: Windows 11<br>CPU: AMD "
 image_path: "/machines/mPCs_CodeSpaceSLA.jpg"
 ---
 

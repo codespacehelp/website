@@ -9,7 +9,7 @@ img {
 }
 
 html {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: var(--font-main, 'Atkinson Hyperlegible Next', sans-serif);
     line-height: 1.55;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -17,7 +17,7 @@ html {
 
 body {
     margin: 0;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: var(--font-main, 'Atkinson Hyperlegible Next', sans-serif);
     font-size: 0.9rem;
     font-weight: 400;
     background: var(--color-back, #1c1b2d);
@@ -28,15 +28,28 @@ body {
 
 h1,
 h2,
-h3,
+h3 {
+    font-family: var(--font-main, 'Atkinson Hyperlegible Next', sans-serif);
+    font-weight: 700;
+}
+
 code,
 .form__button {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: var(--font-detail, 'IBM Plex Mono', monospace);
+}
+
+/* Stretched letter-spacing for markdown content headings */
+.page h1,
+.page h2,
+.page h3,
+.guide-content h1,
+.guide-content h2,
+.guide-content h3 {
+    letter-spacing: 0.05em;
 }
 
 h1 {
     font-size: 1.5rem;
-    font-weight: 400;
     line-height: 1.5;
     color: var(--color-white, #ffffff);
 }
@@ -147,7 +160,7 @@ section .inner {
     border-bottom: 1px solid #fff !important;
     width: 100%;
     font-size: 16px;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: var(--font-detail, 'IBM Plex Mono', monospace);
     margin: 0;
     margin-top: 0.5rem;
     padding: 4px 10px;

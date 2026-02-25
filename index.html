@@ -26,11 +26,18 @@ layout: default
         <div class="home__info-grid">
             <div class="home__info-block">
                 <h2 class="text-i">Opening hours</h2>
-                <p class="text-p">Monday : 9:00 - 13:00 &nbsp;&nbsp; 14:00 - 17:00</p>
-                <p class="text-p">Tuesday : Closed</p>
-                <p class="text-p">Wednesday: 9:00 - 13:00 &nbsp;&nbsp; 14:00 - 17:00</p>
-                <p class="text-p">Thursday: Closed</p>
-                <p class="text-p">Friday: 9:00 - 13:00 &nbsp;&nbsp; 14:00 - 17:00</p>
+                <div class="home__hours">
+                    <span class="text-p">Monday</span>
+                    <span class="text-p">9:00 - 13:00 &nbsp;&nbsp; 14:00 - 17:00</span>
+                    <span class="text-p">Tuesday</span>
+                    <span class="text-p">Closed</span>
+                    <span class="text-p">Wednesday</span>
+                    <span class="text-p">9:00 - 13:00 &nbsp;&nbsp; 14:00 - 17:00</span>
+                    <span class="text-p">Thursday</span>
+                    <span class="text-p">Closed</span>
+                    <span class="text-p">Friday</span>
+                    <span class="text-p">9:00 - 13:00 &nbsp;&nbsp; 14:00 - 17:00</span>
+                </div>
             </div>
             <div class="home__info-block">
                 <h2 class="text-i">Location</h2>
@@ -44,7 +51,7 @@ layout: default
         {% render "tech-line.liquid" %}
 
         <div class="home__reservation">
-            <a href="https://reservations.codespace.help/" target="_blank" class="btn--highlight">Make a reservation</a>
+            <a href="https://reservations.codespace.help/" target="_blank" class="btn--highlight btn--highlight--large">Make a reservation</a>
         </div>
     </div>
 </section>

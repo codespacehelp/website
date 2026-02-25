@@ -2,8 +2,8 @@
 layout: machine
 tags: machine
 name: 3D Printer
-machine_model: ""
-description: "Maximum format: 38 x 40 x 99 cm. Material: PLA, ABS. File format: STL. Bring your finished model and make sure the scale is correct."
+machine_model: Ultimaker 2+ Connect
+description: "FDM printer nozzle 0.4mm<br>Build volume: 22,3 x 22 x 20,5 cm<br>Materials: PLA, ABS, PTEG, TPLA, CPE, Nylon, CPE+, PC, TPU95A, PP<br>File format: prefferably STL<br>Bring your finished model and make sure the scale is correct."
 image_path: "/machines/m3DPrinter_CodeSpaceSLA.jpg"
 ---
 
