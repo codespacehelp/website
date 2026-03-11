@@ -15,8 +15,25 @@ layout: base
 
 <footer>
   <div class="inner grid">
+    <div class="footer__logos">
+      <img src="/static/img/logo_sintlucasantwerpen_wit.png" alt="Sint Lucas Antwerpen">
+      <img src="/static/img/EN-KdG-wit-horizontaal.png" alt="Karel de Grote">
+    </div>
     <p>
       Code Space is an initiative of <a href="https://www.sintlucasantwerpen.be/" target="_blank">Sint Lucas Antwerpen</a>.
     </p>
   </div>
 </footer>
+
+<script>
+(function() {
+  var toggle = document.getElementById('menu-toggle');
+  var nav = document.getElementById('tab-nav');
+  if (!toggle || !nav) return;
+
+  toggle.addEventListener('click', function() {
+    var isOpen = nav.classList.toggle('menu-open');
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+})();
+</script>

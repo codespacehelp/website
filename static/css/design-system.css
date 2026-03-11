@@ -32,6 +32,10 @@
   --font-size-xs: clamp(0.5rem, 0.42rem + 0.42vw, 0.75rem);
   /* 12px base */
   --font-size-base: clamp(0.7rem, 0.58rem + 0.6vw, 1rem);
+  /* 16px base — content subheadings */
+  --font-size-md: clamp(0.85rem, 0.7rem + 0.8vw, 1.25rem);
+  /* 20px base — content h2 */
+  --font-size-lg: clamp(1rem, 0.8rem + 1vw, 1.5rem);
   /* 24px base */
   --font-size-xl: clamp(1.1rem, 0.85rem + 1.25vw, 1.875rem);
 }
@@ -264,9 +268,8 @@
 
 .card__text {
   margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Card grid: 2 columns on desktop, 1 on mobile */
@@ -532,5 +535,52 @@
 @media (max-width: 768px) {
   .workshop-page__header {
     flex-direction: column;
+  }
+}
+
+/* ==========================================================================
+   Mobile Overrides (<=480px)
+   ========================================================================== */
+@media (max-width: 480px) {
+
+  /* --- Font Size Bump (~10-15% increase) --- */
+  :root {
+    --font-size-xs: clamp(0.575rem, 0.48rem + 0.5vw, 0.85rem);
+    --font-size-base: clamp(0.8rem, 0.66rem + 0.7vw, 1.1rem);
+    --font-size-md: clamp(0.95rem, 0.8rem + 0.9vw, 1.4rem);
+    --font-size-lg: clamp(1.15rem, 0.92rem + 1.1vw, 1.65rem);
+    --font-size-xl: clamp(1.25rem, 0.97rem + 1.4vw, 2.1rem);
+  }
+
+  /* --- Tech Line: flatten angle on all pages --- */
+  .tech-line svg {
+    transform: scaleY(0.55);
+  }
+
+  /* Remove vertical flip on Projects, Guides, Workshops
+     so left segment is lower than right on all pages */
+  .tech-line--mirrored svg {
+    transform: scaleY(0.55);
+  }
+
+  /* --- Card Container: taller images, shifted left, bigger text --- */
+  .card__image img {
+    height: clamp(10rem, 40vw, 14rem);
+  }
+
+  .card__image {
+    padding-right: 1.5rem;
+  }
+
+  .card__title {
+    font-size: var(--font-size-md);
+  }
+
+  .card__subtitle {
+    font-size: var(--font-size-base);
+  }
+
+  .card__text {
+    font-size: var(--font-size-base);
   }
 }

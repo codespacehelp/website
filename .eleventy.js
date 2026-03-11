@@ -28,6 +28,7 @@ function addWorkshopCollection(eleventyConfig, academicYear) {
 }
 
 export default function (eleventyConfig) {
+	eleventyConfig.addPassthroughCopy('favicon.ico');
 	eleventyConfig.addPassthroughCopy('static');
 	eleventyConfig.addPassthroughCopy('machines/**/*.jpg');
 	eleventyConfig.addPassthroughCopy('machines/**/*.png');

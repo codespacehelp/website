@@ -1,11 +1,23 @@
-﻿<nav class="tab-nav">
-  <ul class="tab-nav__list">
+<nav class="tab-nav" id="tab-nav">
+  <ul class="tab-nav__list" id="tab-nav-list">
     {% for tab in navigation.tabs %}
-      <li class="tab-nav__item">
+      <li class="tab-nav__item{% if page.url == tab.url %} tab-nav__item--active{% endif %}">
         <a href="{{ tab.url }}" class="tab-nav__link {% if page.url == tab.url %}tab-nav__link--active{% endif %}">
           {{ tab.label }}
         </a>
       </li>
     {% endfor %}
   </ul>
+  <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <svg class="menu-toggle__icon" viewBox="0 0 24 24" width="24" height="24">
+      <line class="menu-line menu-line--top" x1="4" y1="6" x2="20" y2="6" />
+      <line class="menu-line menu-line--mid" x1="4" y1="12" x2="20" y2="12" />
+      <line class="menu-line menu-line--bot" x1="4" y1="18" x2="20" y2="18" />
+    </svg>
+    <span class="menu-toggle__label">
+      {% for tab in navigation.tabs %}
+        {% if page.url == tab.url %}{{ tab.label }}{% endif %}
+      {% endfor %}
+    </span>
+  </button>
 </nav>

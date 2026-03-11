@@ -4,6 +4,8 @@
   background: var(--color-back, #1c1b2d);
   padding: 1rem 0;
   padding-bottom: 0;
+  position: relative;
+  z-index: 10;
 }
 
 .site-header .inner {
@@ -70,11 +72,6 @@
   line-height: 1;
 }
 
-.tab-nav__link:hover {
-  background: #1e1e38;
-  color: var(--color-white, #fff);
-}
-
 .tab-nav__link--active {
   background: var(--color-main, #333254);
   color: var(--color-white, #fff);
@@ -85,11 +82,12 @@
   z-index: 1;
 }
 
-.tab-nav__link--active:hover {
-  background: var(--color-main, #333254);
+/* --- Menu Toggle Button (hidden on desktop) --- */
+.menu-toggle {
+  display: none;
 }
 
-/* Responsive */
+/* --- Tablet (<=768px) --- */
 @media (max-width: 768px) {
   .site-header .inner {
     flex-direction: column;
@@ -120,19 +118,165 @@
   }
 }
 
-/* Very narrow screens */
+/* --- Mobile (<=480px): Hamburger Menu --- */
 @media (max-width: 480px) {
-  .tab-nav__link {
-    padding: 0.6rem 1rem;
-    font-size: 0.75rem;
-    clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 100%, 0 100%);
+  .site-header .inner {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0;
+    overflow: visible;
   }
 
+  .site-header__logo {
+    margin-left: 0.75rem;
+    padding-top: 3.2rem;
+    flex-shrink: 0;
+  }
+
+  .site-header__logo img {
+    height: 1.1rem;
+  }
+
+  /* --- Nav wrapper: list on top, toggle at bottom (stuck to content) --- */
+  .tab-nav {
+    --tab-label-w: 10rem;
+    flex-direction: column;   /* list first, button last = button at bottom */
+    align-items: flex-end;
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* --- Toggle button = active tab (always visible, at bottom) --- */
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: var(--tab-label-w);
+    box-sizing: border-box;
+    background: var(--color-main, #333254);
+    border: none;
+    color: var(--color-white, #fff);
+    font-family: var(--font-main, 'Atkinson Hyperlegible Next', sans-serif);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.65rem 1.2rem;
+    cursor: pointer;
+    clip-path: polygon(14px 0, calc(100% - 14px) 0, 100% 100%, 0 100%);
+    white-space: nowrap;
+    position: relative;
+    z-index: 6;
+    filter: drop-shadow(0 0 1px var(--color-border, #84847c));
+  }
+
+  /* Active tab overlaps last menu item; main content IS its page body */
+  .tab-nav.menu-open .menu-toggle {
+    margin-top: -2.8rem;
+  }
+
+  .menu-toggle__icon {
+    order: -1;
+    flex-shrink: 0;
+    overflow: visible;
+  }
+
+  .menu-toggle__icon line {
+    stroke: var(--color-white, #fff);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: 12px 12px;
+  }
+
+  .tab-nav.menu-open .menu-line--top {
+    transform: translate(0, 6px) rotate(45deg);
+  }
+  .tab-nav.menu-open .menu-line--mid {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  .tab-nav.menu-open .menu-line--bot {
+    transform: translate(0, -6px) rotate(-45deg);
+  }
+
+  /* --- Dropdown list (in-flow, pushes toggle down when open) --- */
+  .tab-nav__list {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100vw;
+    margin-left: calc(-100vw + 100%);
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    line-height: normal;
+    flex-wrap: nowrap;
+    padding-top: 3rem;
+  }
+
+  .tab-nav.menu-open .tab-nav__list {
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  /* --- Menu items: parallelogram tab + full-width page body --- */
   .tab-nav__item {
-    margin-left: -16px;
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+  }
+
+  /* Overlap: all visible items get negative margin-top;
+     list padding-top compensates for the first one */
+  .tab-nav__item:not(.tab-nav__item--active) {
+    margin-top: -3rem;
+  }
+
+  .tab-nav__item--active {
+    display: none;
   }
 
   .tab-nav__item:first-child {
     margin-left: 0;
   }
+
+  /* Parallelogram tab label on top-right — fixed width, centered text */
+  .tab-nav__link {
+    display: block;
+    width: var(--tab-label-w);
+    padding: 0.65rem 1.2rem;
+    font-size: 1rem;
+    text-align: center;
+    background: var(--color-tabs, #282842);
+    color: var(--color-white, #fff);
+    border: none;
+    clip-path: polygon(14px 0, calc(100% - 14px) 0, 100% 100%, 0 100%);
+    min-width: 0;
+    white-space: nowrap;
+    box-sizing: border-box;
+  }
+
+  /* Full-width page body below the tab */
+  .tab-nav__item::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4rem;
+    background: var(--color-tabs, #282842);
+    margin-top: -1px;
+  }
+
+  /* Outline + stacking: each item overlaps the one above */
+  .tab-nav__item {
+    filter: drop-shadow(0 0 1px var(--color-border, #84847c));
+    z-index: 1;
+  }
+  .tab-nav__item:nth-child(2) { z-index: 2; }
+  .tab-nav__item:nth-child(3) { z-index: 3; }
+  .tab-nav__item:nth-child(4) { z-index: 4; }
+  .tab-nav__item:nth-child(5) { z-index: 5; }
 }

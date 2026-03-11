@@ -38,13 +38,22 @@ code,
     font-family: var(--font-detail, 'IBM Plex Mono', monospace);
 }
 
-/* Stretched letter-spacing for markdown content headings */
+/* Markdown content headings — sized below the page title (text-H / --font-size-xl) */
 .page h1,
+.guide-content h1 {
+    font-size: var(--font-size-lg);
+    letter-spacing: 0.05em;
+}
+
 .page h2,
+.guide-content h2 {
+    font-size: var(--font-size-lg);
+    letter-spacing: 0.05em;
+}
+
 .page h3,
-.guide-content h1,
-.guide-content h2,
 .guide-content h3 {
+    font-size: var(--font-size-md);
     letter-spacing: 0.05em;
 }
 
@@ -307,6 +316,18 @@ footer {
 
 footer a {
     color: var(--color-highlight, #acc41e);
+}
+
+.footer__logos {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer__logos img {
+    height: 3rem;
+    width: auto;
 }
 
 .footer__left {
