@@ -33,7 +33,7 @@
   opacity: 0.8;
 }
 
-/* Tab Navigation */
+/* Tab Navigation (desktop) */
 .tab-nav {
   display: flex;
 }
@@ -82,44 +82,21 @@
   z-index: 1;
 }
 
-/* --- Menu Toggle Button (hidden on desktop) --- */
-.menu-toggle {
+/* --- Card-stack elements: hidden on desktop --- */
+.card-nav__card {
   display: none;
 }
 
-/* --- Tablet (<=768px) --- */
+/* ============================================================
+   MOBILE / TABLET (<=768px): Card-Stack Navigation
+   ============================================================ */
 @media (max-width: 768px) {
-  .site-header .inner {
-    flex-direction: column;
-    align-items: flex-start;
+
+  /* --- Header adjustments --- */
+  .site-header {
+    overflow: visible;
   }
 
-  .site-header__logo {
-    padding-bottom: 0.5rem;
-  }
-
-  .tab-nav__list {
-    width: 100%;
-    justify-content: flex-start;
-  }
-
-  .tab-nav__link {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.85rem;
-    clip-path: polygon(12px 0, calc(100% - 12px) 0, 100% 100%, 0 100%);
-  }
-
-  .tab-nav__item {
-    margin-left: -24px;
-  }
-
-  .tab-nav__item:first-child {
-    margin-left: 0;
-  }
-}
-
-/* --- Mobile (<=480px): Hamburger Menu --- */
-@media (max-width: 480px) {
   .site-header .inner {
     flex-direction: row;
     align-items: flex-start;
@@ -131,7 +108,7 @@
   .site-header__logo {
     margin-left: 0.75rem;
     padding-top: 1.2rem;
-    padding-bottom: 0;
+    padding-bottom: 0.5rem;
     flex-shrink: 0;
   }
 
@@ -139,145 +116,101 @@
     height: 1.1rem;
   }
 
-  /* --- Nav wrapper: list on top, toggle at bottom (stuck to content) --- */
-  .tab-nav {
-    --tab-label-w: 10rem;
-    flex-direction: column;   /* list first, button last = button at bottom */
-    align-items: flex-end;
-    flex: 1;
-    min-width: 0;
-  }
-
-  /* --- Toggle button = active tab (always visible, at bottom) --- */
-  .menu-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    width: var(--tab-label-w);
-    box-sizing: border-box;
-    background: var(--color-main, #333254);
-    border: none;
-    color: var(--color-white, #fff);
-    font-family: var(--font-main, 'Atkinson Hyperlegible Next', sans-serif);
-    font-weight: 700;
-    font-size: 1rem;
-    padding: 0.65rem 1.2rem;
-    cursor: pointer;
-    clip-path: polygon(14px 0, calc(100% - 14px) 0, 100% 100%, 0 100%);
-    white-space: nowrap;
-    position: relative;
-    z-index: 6;
-    filter: drop-shadow(0 0 1px var(--color-border, #84847c));
-    margin-bottom: 0;
-  }
-
-  /* Active tab overlaps last menu item; main content IS its page body */
-  .tab-nav.menu-open .menu-toggle {
-    margin-top: -2.8rem;
-  }
-
-  .menu-toggle__icon {
-    order: -1;
-    flex-shrink: 0;
-    overflow: visible;
-  }
-
-  .menu-toggle__icon line {
-    stroke: var(--color-white, #fff);
-    stroke-width: 2.5;
-    stroke-linecap: round;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    transform-origin: 12px 12px;
-  }
-
-  .tab-nav.menu-open .menu-line--top {
-    transform: translate(0, 6px) rotate(45deg);
-  }
-  .tab-nav.menu-open .menu-line--mid {
-    opacity: 0;
-    transform: scaleX(0);
-  }
-  .tab-nav.menu-open .menu-line--bot {
-    transform: translate(0, -6px) rotate(-45deg);
-  }
-
-  /* --- Dropdown list (in-flow, pushes toggle down when open) --- */
+  /* --- Hide desktop tab list on mobile --- */
   .tab-nav__list {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100vw;
-    margin-left: calc(-100vw + 100%);
-    overflow: hidden;
-    max-height: 0;
-    padding-top: 0;
-    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-                padding-top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    line-height: normal;
-    flex-wrap: nowrap;
-  }
-
-  .tab-nav.menu-open .tab-nav__list {
-    max-height: 600px;
-    padding-top: 3rem;  /* compensates for first item's negative margin-top overlap */
-  }
-
-  /* --- Menu items: parallelogram tab + full-width page body --- */
-  .tab-nav__item {
-    margin-left: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    position: relative;
-  }
-
-  /* Overlap between stacked items */
-  .tab-nav__item:not(.tab-nav__item--active) {
-    margin-top: -3rem;
-  }
-
-  .tab-nav__item--active {
     display: none;
   }
 
-  .tab-nav__item:first-child {
-    margin-left: 0;
+  /* --- Card-nav container --- */
+  .card-nav {
+    --card-reveal: 100px;
+    --tab-label-h: 40px;
+    --anim-duration: 300ms;
+    --anim-easing: cubic-bezier(0.4, 0, 0.2, 1);
+
+    position: relative;
+    width: 100%;
+    display: block;
+    overflow: visible;
   }
 
-  /* Parallelogram tab label on top-right — fixed width, centered text */
-  .tab-nav__link {
+  /* --- Each card --- */
+  .card-nav__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-right: 0.75rem;
+    box-sizing: border-box;
+    transition: transform var(--anim-duration) var(--anim-easing),
+                visibility 0s var(--anim-duration); /* delay hide until after close animation */
+    transform: translateY(var(--card-offset, 0));
+    z-index: calc(var(--card-total, 5) - var(--card-index, 0));
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  /* Active card is in flow (sets container height) */
+  .card-nav__card--active {
+    position: relative;
+    z-index: calc(var(--card-total, 5) + 1);
+    pointer-events: auto;
+    visibility: visible;
+    transition: transform var(--anim-duration) var(--anim-easing);
+  }
+
+  /* When menu is open: show cards immediately, hide after animation on close */
+  .card-nav--open .card-nav__card {
+    pointer-events: auto;
+    visibility: visible;
+    transition: transform var(--anim-duration) var(--anim-easing),
+                visibility 0s 0s; /* show immediately when opening */
+  }
+
+  /* --- Tab label (protruding parallelogram) --- */
+  .card-nav__tab-label {
     display: block;
-    width: var(--tab-label-w);
+    width: 10rem;
     padding: 0.65rem 1.2rem;
+    font-family: var(--font-main, 'Atkinson Hyperlegible Next', sans-serif);
+    font-weight: 700;
     font-size: 1rem;
     text-align: center;
-    background: var(--color-tabs, #282842);
+    text-decoration: none;
     color: var(--color-white, #fff);
-    border: none;
+    background: var(--color-tabs, #282842);
     clip-path: polygon(14px 0, calc(100% - 14px) 0, 100% 100%, 0 100%);
-    min-width: 0;
+    cursor: pointer;
     white-space: nowrap;
     box-sizing: border-box;
-  }
-
-  /* Full-width page body below the tab */
-  .tab-nav__item::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 4rem;
-    background: var(--color-tabs, #282842);
-    margin-top: -1px;
-  }
-
-  /* Outline + stacking: each item overlaps the one above */
-  .tab-nav__item {
+    border: none;
     filter: drop-shadow(0 0 1px var(--color-border, #84847c));
-    z-index: 1;
   }
-  .tab-nav__item:nth-child(2) { z-index: 2; }
-  .tab-nav__item:nth-child(3) { z-index: 3; }
-  .tab-nav__item:nth-child(4) { z-index: 4; }
-  .tab-nav__item:nth-child(5) { z-index: 5; }
+
+  .card-nav__tab-label--active {
+    background: var(--color-main, #333254);
+  }
+
+  /* --- Card body (visible strip when fanned out) --- */
+  .card-nav__card-body {
+    width: 100%;
+    height: calc(var(--card-reveal) - var(--tab-label-h));
+    background: var(--color-tabs, #282842);
+    margin-top: -1px; /* close gap with tab label */
+  }
+
+  /* --- Main content transition --- */
+  .card-nav__main-content {
+    transition: margin-top var(--anim-duration, 300ms) var(--anim-easing, cubic-bezier(0.4, 0, 0.2, 1));
+  }
+
+  /* --- Navigating card: rises to top --- */
+  .card-nav__card--navigating {
+    transition: transform 200ms var(--anim-easing);
+    transform: translateY(0) !important;
+    z-index: calc(var(--card-total, 5) + 2) !important;
+  }
 }
