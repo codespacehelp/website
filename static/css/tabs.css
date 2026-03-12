@@ -130,7 +130,8 @@
 
   .site-header__logo {
     margin-left: 0.75rem;
-    padding-top: 3.2rem;
+    padding-top: 1.2rem;
+    padding-bottom: 0;
     flex-shrink: 0;
   }
 
@@ -168,6 +169,7 @@
     position: relative;
     z-index: 6;
     filter: drop-shadow(0 0 1px var(--color-border, #84847c));
+    margin-bottom: 0;
   }
 
   /* Active tab overlaps last menu item; main content IS its page body */
@@ -208,16 +210,16 @@
     margin-left: calc(-100vw + 100%);
     overflow: hidden;
     max-height: 0;
-    opacity: 0;
-    transition: max-height 0.4s ease, opacity 0.3s ease;
+    padding-top: 0;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                padding-top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     line-height: normal;
     flex-wrap: nowrap;
-    padding-top: 3rem;
   }
 
   .tab-nav.menu-open .tab-nav__list {
-    max-height: 500px;
-    opacity: 1;
+    max-height: 600px;
+    padding-top: 3rem;  /* compensates for first item's negative margin-top overlap */
   }
 
   /* --- Menu items: parallelogram tab + full-width page body --- */
@@ -230,8 +232,7 @@
     position: relative;
   }
 
-  /* Overlap: all visible items get negative margin-top;
-     list padding-top compensates for the first one */
+  /* Overlap between stacked items */
   .tab-nav__item:not(.tab-nav__item--active) {
     margin-top: -3rem;
   }
