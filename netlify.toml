@@ -30,3 +30,8 @@ command = "npm run build"
   from = "/posts/2025-10-08-arduino-for-artists/*"
   to = "/guides/2025-10-08-arduino-for-artists/:splat"
   status = 301
+
+[[redirects]]
+  from = "/reservations"
+  to = "https://reservations.codespace.help/"
+  status = 301
