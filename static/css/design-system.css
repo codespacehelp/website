@@ -296,11 +296,23 @@
   }
 
   .card__image {
-    width: 100%;
+    width: 97%;
   }
 
   .card__image img {
     height: 10rem;
+  }
+
+  .text-H + .section-header {
+    margin-top: -1.6rem;
+  }
+
+  .tech-line svg {
+    transform: scaleY(0.8);
+  }
+
+  .tech-line--mirrored svg {
+    transform: scaleY(-0.8);
   }
 }
 
@@ -552,15 +564,13 @@
     --font-size-xl: clamp(1.25rem, 0.97rem + 1.4vw, 2.1rem);
   }
 
-  /* --- Tech Line: flatten angle on all pages --- */
+
   .tech-line svg {
-    transform: scaleY(0.55);
+    transform: scaleY(0.6);
   }
 
-  /* Remove vertical flip on Projects, Guides, Workshops
-     so left segment is lower than right on all pages */
   .tech-line--mirrored svg {
-    transform: scaleY(0.55);
+    transform: scaleY(-0.6);
   }
 
   /* --- Card Container: taller images, shifted left, bigger text --- */

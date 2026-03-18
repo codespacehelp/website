@@ -9,9 +9,39 @@ layout: base
   </div>
 </header>
 
-<main class="card-nav__main-content" id="main-content">
-  {{ content }}
-</main>
+<div class="mobilemenu" id="mobilemenu">
+  {% for tab in navigation.tabs %}
+    {% assign is_active = false %}
+    {% if page.url == tab.url %}
+      {% assign is_active = true %}
+    {% elsif tab.url != "/" and page.url contains tab.url %}
+      {% assign is_active = true %}
+    {% endif %}
+    {% if is_active %}
+      <div class="mobilemenu__page mobilemenu__page--active"
+           style="--card-index: {{ forloop.index0 }}; --card-total: {{ navigation.tabs.size }};">
+        <button class="mobilemenu__tab mobilemenu__tab--active"
+                aria-label="Toggle menu" aria-expanded="false">
+          <span class="mobilemenu__icon material-symbols-outlined mobilemenu__icon-menu">menu</span>
+          <span class="mobilemenu__icon material-symbols-outlined mobilemenu__icon-close">close</span>
+          {{ tab.label }}
+        </button>
+        <main class="mobilemenu__body mobilemenu__body--active" id="main-content">
+          {{ content }}
+        </main>
+      </div>
+    {% else %}
+      <div class="mobilemenu__page"
+           data-url="{{ tab.url }}"
+           style="--card-index: {{ forloop.index0 }}; --card-total: {{ navigation.tabs.size }};">
+        <a href="{{ tab.url }}" class="mobilemenu__tab">
+          {{ tab.label }}
+        </a>
+        <div class="mobilemenu__body"></div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
 
 <footer>
   <div class="inner grid">
@@ -27,15 +57,14 @@ layout: base
 
 <script>
 (function() {
-  var nav = document.getElementById('card-nav');
-  var main = document.getElementById('main-content');
-  if (!nav || !main) return;
+  var nav = document.getElementById('mobilemenu');
+  if (!nav) return;
 
-  var cards = Array.from(nav.querySelectorAll('.card-nav__card'));
-  var activeCard = nav.querySelector('.card-nav__card--active');
-  var activeLabel = activeCard ? activeCard.querySelector('.card-nav__tab-label') : null;
+  var cards = Array.from(nav.querySelectorAll('.mobilemenu__page'));
+  var activeCard = nav.querySelector('.mobilemenu__page--active');
+  var activeLabel = activeCard ? activeCard.querySelector('.mobilemenu__tab') : null;
   var isOpen = false;
-  var revealHeight = 100;
+  var revealHeight = 55;
   var N = cards.length;
 
   function isMobile() {
@@ -45,37 +74,34 @@ layout: base
   function openMenu() {
     if (!isMobile()) return;
     isOpen = true;
-    nav.classList.add('card-nav--open');
+    nav.classList.add('mobilemenu--open');
     if (activeLabel) activeLabel.setAttribute('aria-expanded', 'true');
 
-    // Active card slides down the most (top of the stack)
-    // Bottom card (first non-active) stays at offset 0
+    // Padding on container creates space for cascade; no margin-collapse issues
+    nav.style.paddingTop = ((N - 1) * revealHeight) + 'px';
+
     var nonActiveIdx = 0;
     cards.forEach(function(card) {
-      if (card.classList.contains('card-nav__card--active')) {
-        var offset = (N - 1) * revealHeight;
-        card.style.setProperty('--card-offset', offset + 'px');
-        card.style.zIndex = N + 1;
-      } else {
+      if (!card.classList.contains('mobilemenu__page--active')) {
         var offset = nonActiveIdx * revealHeight;
         card.style.setProperty('--card-offset', offset + 'px');
         card.style.zIndex = nonActiveIdx + 1;
         nonActiveIdx++;
       }
     });
-    main.style.marginTop = ((N - 1) * revealHeight) + 'px';
   }
 
   function closeMenu() {
     isOpen = false;
-    nav.classList.remove('card-nav--open');
+    nav.classList.remove('mobilemenu--open');
     if (activeLabel) activeLabel.setAttribute('aria-expanded', 'false');
+
+    nav.style.paddingTop = '0px';
 
     cards.forEach(function(card) {
       card.style.setProperty('--card-offset', '0px');
       card.style.zIndex = '';
     });
-    main.style.marginTop = '0px';
   }
 
   if (activeLabel) {
@@ -90,14 +116,14 @@ layout: base
   }
 
   cards.forEach(function(card) {
-    if (card.classList.contains('card-nav__card--active')) return;
+    if (card.classList.contains('mobilemenu__page--active')) return;
 
     card.addEventListener('click', function(e) {
       if (!isOpen || !isMobile()) return;
       e.preventDefault();
       var url = card.dataset.url;
 
-      card.classList.add('card-nav__card--navigating');
+      card.classList.add('mobilemenu__page--navigating');
 
       function navigate() {
         window.location.href = url;

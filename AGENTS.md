@@ -58,6 +58,39 @@ Defined in `_data/navigation.json`. Current tabs: Home, Machines, Projects, Guid
 
 Reservations link to external service: `https://reservations.codespace.help/`
 
+### Mobile Menu (<=768px)
+
+The mobile navigation uses a card-stack system (class prefix `mobilemenu`) defined in `_includes/default.liquid` and styled in `static/css/tabs.css`. It replaces the desktop horizontal tabs on mobile/tablet viewports.
+
+**Architecture**:
+- Each nav tab is a `.mobilemenu__page` containing a `.mobilemenu__tab` (parallelogram tab label) and a `.mobilemenu__body` (content area)
+- The active page's body (`<main class="mobilemenu__body mobilemenu__body--active">`) IS the main content container — `{{ content }}` renders inside it
+- Active page detection uses `page.url == tab.url` or `page.url contains tab.url` (for sub-pages like `/machines/3d-printer/`)
+- Non-active pages are `position: absolute`, active page is `position: relative` (in flow)
+- The site header uses `height: 0; overflow: visible` so the logo floats over the card area without taking layout space
+
+**Behavior**:
+- **Closed**: Only the active tab is visible with a hamburger icon (Google Material Symbols `menu`)
+- **Open**: Tapping the active tab fans out all cards in a cascade (`transform: translateY`). Icon changes to `close`. Content pushes down via `padding-top` on `.mobilemenu` container
+- **Navigate**: Tapping a non-active card triggers `.mobilemenu__page--navigating` (rises to top, background changes to `--color-main`), then navigates
+- Drop-shadows: active card always has shadow; non-active cards only get shadows when menu is open
+
+**CSS Variables** (on `.mobilemenu`):
+- `--card-reveal: 55px` — vertical spacing between fanned cards
+- `--tab-label-h: 40px` — height of tab labels
+- `--anim-duration: 300ms` — animation duration
+- `--anim-easing: cubic-bezier(0.4, 0, 0.2, 1)` — animation easing
+
+**Key classes**:
+- `.mobilemenu` — container (id: `mobilemenu`)
+- `.mobilemenu__page` / `--active` / `--navigating` — each nav card
+- `.mobilemenu__tab` / `--active` — parallelogram tab label
+- `.mobilemenu__body` / `--active` — card body (active = main content)
+- `.mobilemenu__icon` / `__icon-menu` / `__icon-close` — hamburger/close icons
+- `.mobilemenu--open` — modifier on container when menu is expanded
+
+**Desktop (>768px)**: All `.mobilemenu__page` elements are `display: none` except the active one which is `display: block` with its tab label hidden. The desktop horizontal tabs (`.tab-nav`) are shown instead.
+
 ### Collections (in .eleventy.js)
 
 - **workshops**: Grouped by `academic_year` field (20-21 through 24-25), sorted by `workshop_date`

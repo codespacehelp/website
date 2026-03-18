@@ -1,29 +1,17 @@
-<nav class="tab-nav card-nav" id="card-nav">
+<nav class="tab-nav">
   <ul class="tab-nav__list">
     {% for tab in navigation.tabs %}
-      <li class="tab-nav__item{% if page.url == tab.url %} tab-nav__item--active{% endif %}">
-        <a href="{{ tab.url }}" class="tab-nav__link{% if page.url == tab.url %} tab-nav__link--active{% endif %}">
+      {% assign is_active = false %}
+      {% if page.url == tab.url %}
+        {% assign is_active = true %}
+      {% elsif tab.url != "/" and page.url contains tab.url %}
+        {% assign is_active = true %}
+      {% endif %}
+      <li class="tab-nav__item{% if is_active %} tab-nav__item--active{% endif %}">
+        <a href="{{ tab.url }}" class="tab-nav__link{% if is_active %} tab-nav__link--active{% endif %}">
           {{ tab.label }}
         </a>
       </li>
     {% endfor %}
   </ul>
-
-  {% for tab in navigation.tabs %}
-    <div class="card-nav__card{% if page.url == tab.url %} card-nav__card--active{% endif %}"
-         data-url="{{ tab.url }}"
-         style="--card-index: {{ forloop.index0 }}; --card-total: {{ navigation.tabs.size }};">
-      {% if page.url == tab.url %}
-        <button class="card-nav__tab-label card-nav__tab-label--active"
-                aria-label="Toggle menu" aria-expanded="false">
-          {{ tab.label }}
-        </button>
-      {% else %}
-        <a href="{{ tab.url }}" class="card-nav__tab-label">
-          {{ tab.label }}
-        </a>
-        <div class="card-nav__card-body"></div>
-      {% endif %}
-    </div>
-  {% endfor %}
 </nav>

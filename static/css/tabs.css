@@ -82,19 +82,40 @@
   z-index: 1;
 }
 
-/* --- Card-stack elements: hidden on desktop --- */
-.card-nav__card {
+/* --- Mobile menu elements: desktop defaults --- */
+.mobilemenu__page {
   display: none;
 }
 
+.mobilemenu__page--active {
+  display: block;
+}
+
+.mobilemenu__page--active .mobilemenu__tab {
+  display: none;
+}
+
+.mobilemenu__body--active {
+  background: var(--color-main, #333254);
+}
+
 /* ============================================================
-   MOBILE / TABLET (<=768px): Card-Stack Navigation
+   MOBILE / TABLET (<=768px): Mobile Menu Navigation
    ============================================================ */
 @media (max-width: 768px) {
 
-  /* --- Header adjustments --- */
+  body {
+    padding-top: 1rem;
+  }
+
+  /* --- Header: zero-height, logo floats over cards --- */
   .site-header {
+    position: relative;
+    height: 0;
     overflow: visible;
+    z-index: calc(var(--card-total, 5) + 2);
+    padding: 0;
+    background: transparent;
   }
 
   .site-header .inner {
@@ -107,8 +128,8 @@
 
   .site-header__logo {
     margin-left: 0.75rem;
-    padding-top: 1.2rem;
-    padding-bottom: 0.5rem;
+    padding-top: 0.15rem;
+    padding-bottom: 0;
     flex-shrink: 0;
   }
 
@@ -122,8 +143,8 @@
   }
 
   /* --- Card-nav container --- */
-  .card-nav {
-    --card-reveal: 100px;
+  .mobilemenu {
+    --card-reveal: 55px;
     --tab-label-h: 40px;
     --anim-duration: 300ms;
     --anim-easing: cubic-bezier(0.4, 0, 0.2, 1);
@@ -132,10 +153,11 @@
     width: 100%;
     display: block;
     overflow: visible;
+    transition: padding-top var(--anim-duration) var(--anim-easing);
   }
 
-  /* --- Each card --- */
-  .card-nav__card {
+  /* --- Each card (non-active) --- */
+  .mobilemenu__page {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -143,38 +165,41 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding-right: 0.75rem;
     box-sizing: border-box;
-    transition: transform var(--anim-duration) var(--anim-easing),
-                visibility 0s var(--anim-duration); /* delay hide until after close animation */
+    transition: transform var(--anim-duration) var(--anim-easing);
     transform: translateY(var(--card-offset, 0));
     z-index: calc(var(--card-total, 5) - var(--card-index, 0));
     pointer-events: none;
-    visibility: hidden;
+    filter: none;
   }
 
-  /* Active card is in flow (sets container height) */
-  .card-nav__card--active {
+  /* Active card is in flow, contains page content */
+  .mobilemenu__page--active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     position: relative;
     z-index: calc(var(--card-total, 5) + 1);
     pointer-events: auto;
-    visibility: visible;
-    transition: transform var(--anim-duration) var(--anim-easing);
+    filter: drop-shadow(0 0 1.5px var(--color-border, #84847c));
   }
 
-  /* When menu is open: show cards immediately, hide after animation on close */
-  .card-nav--open .card-nav__card {
+  /* When menu is open, all cards are clickable and get shadows */
+  .mobilemenu--open .mobilemenu__page {
     pointer-events: auto;
-    visibility: visible;
-    transition: transform var(--anim-duration) var(--anim-easing),
-                visibility 0s 0s; /* show immediately when opening */
+    filter: drop-shadow(0 0 1.5px var(--color-border, #84847c));
   }
 
   /* --- Tab label (protruding parallelogram) --- */
-  .card-nav__tab-label {
-    display: block;
+  .mobilemenu__tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     width: 10rem;
-    padding: 0.65rem 1.2rem;
+    margin-right: 0.75rem;
+    height: var(--tab-label-h);
+    padding: 0 1.2rem;
     font-family: var(--font-main, 'Atkinson Hyperlegible Next', sans-serif);
     font-weight: 700;
     font-size: 1rem;
@@ -187,30 +212,64 @@
     white-space: nowrap;
     box-sizing: border-box;
     border: none;
-    filter: drop-shadow(0 0 1px var(--color-border, #84847c));
   }
 
-  .card-nav__tab-label--active {
+  .mobilemenu__page--active .mobilemenu__tab {
+    display: flex;
     background: var(--color-main, #333254);
   }
 
-  /* --- Card body (visible strip when fanned out) --- */
-  .card-nav__card-body {
-    width: 100%;
-    height: calc(var(--card-reveal) - var(--tab-label-h));
-    background: var(--color-tabs, #282842);
-    margin-top: -1px; /* close gap with tab label */
+  /* --- Menu/close icon in active tab --- */
+  .mobilemenu__icon {
+    display: none;
+    flex-shrink: 0;
+    font-size: 20px;
   }
 
-  /* --- Main content transition --- */
-  .card-nav__main-content {
-    transition: margin-top var(--anim-duration, 300ms) var(--anim-easing, cubic-bezier(0.4, 0, 0.2, 1));
+  .mobilemenu__page--active .mobilemenu__icon-menu {
+    display: block;
+  }
+
+  .mobilemenu__page--active .mobilemenu__icon-close {
+    display: none;
+  }
+
+  .mobilemenu--open .mobilemenu__page--active .mobilemenu__icon-menu {
+    display: none;
+  }
+
+  .mobilemenu--open .mobilemenu__page--active .mobilemenu__icon-close {
+    display: block;
+  }
+
+  /* --- Card body (non-active): fixed height strip --- */
+  .mobilemenu__body {
+    width: 100%;
+    height: 100vh;
+    background: var(--color-tabs, #282842);
+    margin-top: -1px;
+  }
+
+  /* --- Active card body: IS the main content area --- */
+  .mobilemenu__body--active {
+    width: 100%;
+    height: auto;
+    background: var(--color-main, #333254);
+    margin-top: -1px;
   }
 
   /* --- Navigating card: rises to top --- */
-  .card-nav__card--navigating {
+  .mobilemenu__page--navigating {
     transition: transform 200ms var(--anim-easing);
     transform: translateY(0) !important;
     z-index: calc(var(--card-total, 5) + 2) !important;
+  }
+
+  .mobilemenu__page--navigating .mobilemenu__tab {
+    background: var(--color-main, #333254);
+  }
+
+  .mobilemenu__page--navigating .mobilemenu__body {
+    background: var(--color-main, #333254);
   }
 }
