@@ -2,7 +2,7 @@
 publish = "_site"
 command = "npm run build"
 
-[context.production.environment]
+[build.environment]
   NODE_VERSION = "20"
 
 # Redirects from old /posts/ URLs to new /guides/ URLs
