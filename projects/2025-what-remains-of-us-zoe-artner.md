@@ -1,6 +1,5 @@
 ---
 layout: project
-tags: project
 title: What Remains of Us
 summary: A hypermedia-inspired narrative game where players piece together a plane crash story through object exploration.
 project_year: 2025

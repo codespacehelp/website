@@ -1,14 +1,16 @@
 ---
-layout: post
-tags: post
+layout: guide
+tags: guide
 title: '3D terrain from image'
+subtitle: 3D modeling
+description: Generate a 3D terrain model from a height map image using Blender.
 date: 2015-02-11
 categories: guides
 ---
 
 Although it looks difficult, it's actually quite easy to generate a 3D model from a height map. This technique has been used for a long time, most notably in the landmark game [Myst](https://en.wikipedia.org/wiki/Myst).
 
-![Screenshot from a surface in Blender](/static/posts/2015-02-11-3d-terrain-from-image/surface-blender.png)
+![Screenshot from a surface in Blender](/static/guides/2015-02-11-3d-terrain-from-image/surface-blender.png)
 
 # Blender
 

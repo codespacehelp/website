@@ -1,7 +1,9 @@
 ---
-layout: post
-tags: post
+layout: guide
+tags: guide
 title: Arduino for Artists
+subtitle: Physical computing
+description: Get started with your own electronic devices and understand the basics of Arduino.
 date: 2025-10-08
 categories: guides
 ---
@@ -37,7 +39,7 @@ We've put together a simple hardware kit to get you started. It includes:
 - A light sensor (LDR)
 - A piezo buzzer
 
-![Arduino Hardware Kit](/static/posts/2025-10-08-arduino-for-artists/arduino-hardware-kit.jpg)
+![Arduino Hardware Kit](/static/guides/2025-10-08-arduino-for-artists/arduino-hardware-kit.jpg)
 
 ## Getting Started with Arduino
 
@@ -45,7 +47,7 @@ In this demo we're using the [Arduino Uno R4](https://store.arduino.cc/products/
 
 If you're working with the UNO R4 WiFi, make sure to install the necessary boards in the Arduino software. In the sidebar, click the "boards" icon (second icon from the top), search for "UNO R4" and click "Install".
 
-![Arduino Board setup](/static/posts/2025-10-08-arduino-for-artists/arduino-board-setup.png)
+![Arduino Board setup](/static/guides/2025-10-08-arduino-for-artists/arduino-board-setup.png)
 
 ### Example 1: Blinking an LED
 
@@ -74,7 +76,7 @@ Write this code in the Arduino IDE, then hit the upload button (right arrow icon
 
 **Key insight**: The setup code runs once when the Arduino is powered on or reset, configuring pin 13 as an output. The loop code runs repeatedly, turning the LED on and off with a one-second delay in between. The blinking pattern emerges from the repetition of the on/off/delay loop structure.
 
-![Example 1: Blink](/static/posts/2025-10-08-arduino-for-artists/example-01-blink.jpg)
+![Example 1: Blink](/static/guides/2025-10-08-arduino-for-artists/example-01-blink.jpg)
 
 ### Example 2: Tone Generator
 
@@ -82,11 +84,11 @@ Write this code in the Arduino IDE, then hit the upload button (right arrow icon
 
 We'll use the breadboard for this. The breadboard has internal wires that connect the columns of the breadboard together. You can see this on the back of the breadboard:
 
-![Back of the breadboard](/static/posts/2025-10-08-arduino-for-artists/breadboard-back.jpg)
+![Back of the breadboard](/static/guides/2025-10-08-arduino-for-artists/breadboard-back.jpg)
 
 We'll first create a "ground rail": a row of pins that are all connected to ground (GND) on the Arduino. This makes it easier to connect multiple components to ground. Always use a consistent color for ground; I'm using yellow here:
 
-![Breadboard ground rail](/static/posts/2025-10-08-arduino-for-artists/example-02-ground-rail.jpg)
+![Breadboard ground rail](/static/guides/2025-10-08-arduino-for-artists/example-02-ground-rail.jpg)
 
 You see that I've already plugged in the piezo buzzer. Its location doesn't really matter; I just have it facing outwards. The buzzer needs two pins to connect: the `-` pin (negative) will connect to ground and the `S` pin (signal) will connect to port 8 on the Arduino. The middle pin is not used.
 
@@ -98,9 +100,9 @@ Connect the wires like so:
 
 It should look like this:
 
-![Breadboard components setup schematic](/static/posts/2025-10-08-arduino-for-artists/breadboard_buzzer.png)
+![Breadboard components setup schematic](/static/guides/2025-10-08-arduino-for-artists/breadboard_buzzer.png)
 
-![Breadboard components setup](/static/posts/2025-10-08-arduino-for-artists/example-02-breadboard-wires.jpg)
+![Breadboard components setup](/static/guides/2025-10-08-arduino-for-artists/example-02-breadboard-wires.jpg)
 
 Use the following code:
 
@@ -141,9 +143,9 @@ Then connect wires (in italic are the wires that are already there from the prev
 
 It should look like this:
 
-![Breadboard components setup schematic](/static/posts/2025-10-08-arduino-for-artists/breadboard_buzzer_button.png)
+![Breadboard components setup schematic](/static/guides/2025-10-08-arduino-for-artists/breadboard_buzzer_button.png)
 
-![Breadboard components setup](/static/posts/2025-10-08-arduino-for-artists/example-03-breadboard.jpg)
+![Breadboard components setup](/static/guides/2025-10-08-arduino-for-artists/example-03-breadboard.jpg)
 
 Use the following code:
 
@@ -366,9 +368,9 @@ A photoresistor (or LDR - Light Dependent Resistor) changes its resistance (the 
 
 It should look like this:
 
-![Breadboard components setup schematic](/static/posts/2025-10-08-arduino-for-artists/breadboard_all.png)
+![Breadboard components setup schematic](/static/guides/2025-10-08-arduino-for-artists/breadboard_all.png)
 
-![Breadboard components setup](/static/posts/2025-10-08-arduino-for-artists/example-06-breadboard.jpg)
+![Breadboard components setup](/static/guides/2025-10-08-arduino-for-artists/example-06-breadboard.jpg)
 
 We're just going to read the value from the photoresistor and print it on our computer. For that, we'll use the **Serial Monitor** in the Arduino IDE: it's a way for your Arduino to "talk back" to your computer.
 

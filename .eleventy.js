@@ -28,12 +28,24 @@ function addWorkshopCollection(eleventyConfig, academicYear) {
 }
 
 export default function (eleventyConfig) {
+	eleventyConfig.addPassthroughCopy('favicon.ico');
 	eleventyConfig.addPassthroughCopy('static');
+	eleventyConfig.addPassthroughCopy('machines/**/*.jpg');
+	eleventyConfig.addPassthroughCopy('machines/**/*.png');
+	eleventyConfig.addPassthroughCopy('machines/**/*.webp');
 
 	eleventyConfig.addCollection('projects', (api) => {
-		const projects = api.getAll().filter((item) => hasTag(item, 'project'));
+		const projects = api.getFilteredByGlob('projects/*.md');
 		projects.sort((a, b) => getProjectSortKey(b.data) - getProjectSortKey(a.data));
 		return projects;
+	});
+
+	eleventyConfig.addCollection('machines', (api) => {
+		return api.getAll().filter((item) => hasTag(item, 'machine'));
+	});
+
+	eleventyConfig.addCollection('guide', (api) => {
+		return api.getAll().filter((item) => hasTag(item, 'guide'));
 	});
 
 	addWorkshopCollection(eleventyConfig, '20-21');

@@ -1,6 +1,5 @@
 ---
 layout: project
-tags: project
 title: Where Are We Going?
 summary: A robot-guided exhibition during COVID that let visitors steer a live robot through a gallery via Twitch and MQTT.
 project_year: 2021

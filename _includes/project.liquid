@@ -1,58 +1,24 @@
 ---
 layout: default
 ---
-{% if project_year %}
-  {% if project_month %}
-    {% assign project_month_padded = project_month | prepend: '0' | slice: -2 %}
-    {% assign project_date = project_year | append: '-' | append: project_month_padded %}
-  {% else %}
-    {% assign project_date = project_year %}
-  {% endif %}
-{% endif %}
-
-<section class="project-hero">
-  <div class="project-hero__inner">
-    <p class="project-hero__kicker">Project Case Study</p>
-    <h1>{{ title }}</h1>
-    {% if summary %}
-    <p class="project-summary">{{ summary }}</p>
-    {% endif %}
-    <div class="project-meta-grid">
-      {% if project_date or project_type %}
-      <div class="project-meta-block">
-        <h3>Project</h3>
-        {% if project_type %}
-        <p><span class="meta-value">{{ project_type }}</span></p>
-        {% endif %}
-        {% if project_date %}
-        <p><span class="meta-value">{{ project_date }}</span><span class="meta-muted">year</span></p>
-        {% endif %}
-      </div>
+<section class="project-page">
+  <div class="project-page__header">
+    <div class="project-page__left">
+      <h1 class="text-H">{{ title }}</h1>
+      {% if summary %}
+      <p class="text-p">{{ summary }}</p>
       {% endif %}
-      {% if student or coaching %}
-      <div class="project-meta-block">
-        <h3>Team</h3>
-        {% if student %}
-        <p><span class="meta-value">{{ student }}</span><span class="meta-muted">student</span></p>
-        {% endif %}
-        {% if coaching %}
-        <p><span class="meta-value">{{ coaching }}</span><span class="meta-muted">coaching</span></p>
-        {% endif %}
-      </div>
-      {% endif %}
+    </div>
+    <div class="project-page__right">
+      <p class="text-h">{{ student }} // {{ project_type }} // {{ project_year }}</p>
       {% if tech_stack %}
-      <div class="project-meta-block project-meta-block--tools">
-        <h3>Tools</h3>
-        {% assign tech_items = tech_stack | split: ',' %}
-        {% for tech in tech_items %}
-        <p><span class="meta-value">{{ tech | strip }}</span></p>
-        {% endfor %}
-      </div>
+      <p class="text-p">Tools: {{ tech_stack }}</p>
       {% endif %}
     </div>
   </div>
+  {% render "tech-line.liquid" %}
 </section>
 
-<div class="page project">
+<div class="page project" style="background: var(--color-main);">
   {{ content }}
 </div>

@@ -5,6 +5,32 @@ command = "npm run build"
 [context.production.environment]
   NODE_VERSION = "20"
 
+# Redirects from old /posts/ URLs to new /guides/ URLs
+[[redirects]]
+  from = "/posts/2014-10-09-getting-started-augmented-reality/*"
+  to = "/guides/2014-10-09-getting-started-augmented-reality/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/posts/2014-11-05-reading-reflectance-sensor/*"
+  to = "/guides/2014-11-05-reading-reflectance-sensor/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/posts/2015-02-11-3d-terrain-from-image/*"
+  to = "/guides/2015-02-11-3d-terrain-from-image/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/posts/2023-03-24-matterport-protocol/*"
+  to = "/guides/2023-03-24-matterport-protocol/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/posts/2025-10-08-arduino-for-artists/*"
+  to = "/guides/2025-10-08-arduino-for-artists/:splat"
+  status = 301
+
 [[redirects]]
   from = "/reservations"
   to = "https://reservations.codespace.help/"

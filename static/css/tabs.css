@@ -1,0 +1,275 @@
+/* Tab Navigation Styles */
+
+.site-header {
+  background: var(--color-back, #1c1b2d);
+  padding: 1rem 0;
+  padding-bottom: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.site-header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.site-header__logo {
+  display: block;
+  text-decoration: none;
+  padding-bottom: 1rem;
+  margin-left: 1.5rem;
+}
+
+.site-header__logo img {
+  height: 2rem;
+  width: auto;
+  display: block;
+}
+
+.site-header__logo:hover {
+  opacity: 0.8;
+}
+
+/* Tab Navigation (desktop) */
+.tab-nav {
+  display: flex;
+}
+
+.tab-nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  flex-wrap: wrap;
+  line-height: 0;
+}
+
+.tab-nav__item {
+  margin: 0;
+  margin-left: -40px;
+}
+
+.tab-nav__item:first-child {
+  margin-left: 0;
+}
+
+.tab-nav__link {
+  display: block;
+  padding: 0.8rem 5rem;
+  color: #888;
+  text-decoration: none;
+  font-family: var(--font-main, 'Atkinson Hyperlegible Next', sans-serif);
+  font-weight: 700;
+  background: var(--color-tabs, #282842);
+  clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 100%, 0 100%);
+  transition: background-color 0.2s, color 0.2s;
+  position: relative;
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.tab-nav__link--active {
+  background: var(--color-main, #333254);
+  color: var(--color-white, #fff);
+  font-weight: bold;
+}
+
+.tab-nav__item:has(.tab-nav__link--active) {
+  z-index: 1;
+}
+
+/* --- Mobile menu elements: desktop defaults --- */
+.mobilemenu__page {
+  display: none;
+}
+
+.mobilemenu__page--active {
+  display: block;
+}
+
+.mobilemenu__page--active .mobilemenu__tab {
+  display: none;
+}
+
+.mobilemenu__body--active {
+  background: var(--color-main, #333254);
+}
+
+/* ============================================================
+   MOBILE / TABLET (<=768px): Mobile Menu Navigation
+   ============================================================ */
+@media (max-width: 768px) {
+
+  body {
+    padding-top: 1rem;
+  }
+
+  /* --- Header: zero-height, logo floats over cards --- */
+  .site-header {
+    position: relative;
+    height: 0;
+    overflow: visible;
+    z-index: calc(var(--card-total, 5) + 2);
+    padding: 0;
+    background: transparent;
+  }
+
+  .site-header .inner {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0;
+    overflow: visible;
+  }
+
+  .site-header__logo {
+    margin-left: 0.75rem;
+    padding-top: 0.15rem;
+    padding-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .site-header__logo img {
+    height: 1.1rem;
+  }
+
+  /* --- Hide desktop tab list on mobile --- */
+  .tab-nav__list {
+    display: none;
+  }
+
+  /* --- Card-nav container --- */
+  .mobilemenu {
+    --card-reveal: 55px;
+    --tab-label-h: 40px;
+    --anim-duration: 300ms;
+    --anim-easing: cubic-bezier(0.4, 0, 0.2, 1);
+
+    position: relative;
+    width: 100%;
+    display: block;
+    overflow: visible;
+    transition: padding-top var(--anim-duration) var(--anim-easing);
+  }
+
+  /* --- Each card (non-active) --- */
+  .mobilemenu__page {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    transition: transform var(--anim-duration) var(--anim-easing);
+    transform: translateY(var(--card-offset, 0));
+    z-index: calc(var(--card-total, 5) - var(--card-index, 0));
+    pointer-events: none;
+    filter: none;
+  }
+
+  /* Active card is in flow, contains page content */
+  .mobilemenu__page--active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    z-index: calc(var(--card-total, 5) + 1);
+    pointer-events: auto;
+    filter: drop-shadow(0 0 1.5px var(--color-border, #84847c));
+  }
+
+  /* When menu is open, all cards are clickable and get shadows */
+  .mobilemenu--open .mobilemenu__page {
+    pointer-events: auto;
+    filter: drop-shadow(0 0 1.5px var(--color-border, #84847c));
+  }
+
+  /* --- Tab label (protruding parallelogram) --- */
+  .mobilemenu__tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 10rem;
+    margin-right: 0.75rem;
+    height: var(--tab-label-h);
+    padding: 0 1.2rem;
+    font-family: var(--font-main, 'Atkinson Hyperlegible Next', sans-serif);
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-white, #fff);
+    background: var(--color-tabs, #282842);
+    clip-path: polygon(14px 0, calc(100% - 14px) 0, 100% 100%, 0 100%);
+    cursor: pointer;
+    white-space: nowrap;
+    box-sizing: border-box;
+    border: none;
+  }
+
+  .mobilemenu__page--active .mobilemenu__tab {
+    display: flex;
+    background: var(--color-main, #333254);
+  }
+
+  /* --- Menu/close icon in active tab --- */
+  .mobilemenu__icon {
+    display: none;
+    flex-shrink: 0;
+    font-size: 20px;
+  }
+
+  .mobilemenu__page--active .mobilemenu__icon-menu {
+    display: block;
+  }
+
+  .mobilemenu__page--active .mobilemenu__icon-close {
+    display: none;
+  }
+
+  .mobilemenu--open .mobilemenu__page--active .mobilemenu__icon-menu {
+    display: none;
+  }
+
+  .mobilemenu--open .mobilemenu__page--active .mobilemenu__icon-close {
+    display: block;
+  }
+
+  /* --- Card body (non-active): fixed height strip --- */
+  .mobilemenu__body {
+    width: 100%;
+    height: 100vh;
+    background: var(--color-tabs, #282842);
+    margin-top: -1px;
+  }
+
+  /* --- Active card body: IS the main content area --- */
+  .mobilemenu__body--active {
+    width: 100%;
+    height: auto;
+    background: var(--color-main, #333254);
+    margin-top: -1px;
+  }
+
+  /* --- Navigating card: rises to top --- */
+  .mobilemenu__page--navigating {
+    transition: transform 200ms var(--anim-easing);
+    transform: translateY(0) !important;
+    z-index: calc(var(--card-total, 5) + 2) !important;
+  }
+
+  .mobilemenu__page--navigating .mobilemenu__tab {
+    background: var(--color-main, #333254);
+  }
+
+  .mobilemenu__page--navigating .mobilemenu__body {
+    background: var(--color-main, #333254);
+  }
+}

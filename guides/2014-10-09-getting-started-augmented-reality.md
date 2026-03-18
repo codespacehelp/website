@@ -1,7 +1,9 @@
 ---
-layout: post
-tags: post
+layout: guide
+tags: guide
 title: Getting Started with Augmented Reality
+subtitle: VR / AR
+description: Set up Unity and Vuforia to build your first augmented reality application.
 date: 2014-10-09
 categories: guides
 ---
@@ -28,11 +30,11 @@ You can't import an image directly for this to work: the image needs to be conve
 
 Here's an example marker. It looks horrible but works very well:
 
-![Marker](/static/posts/2014-10-09-getting-started-augmented-reality/marker.png)
+![Marker](/static/guides/2014-10-09-getting-started-augmented-reality/marker.png)
 
 1.  On the Vuforia developer website, go to the [Target Manager](https://developer.vuforia.com/target-manager)
-2.  Click "Create Database". Give it the name of your project. ![](/static/posts/2014-10-09-getting-started-augmented-reality/create-database.png)
-3.  Click "Add Target" to upload a target image. Set the width to 100. ![](/static/posts/2014-10-09-getting-started-augmented-reality/add-new-target.png)
+2.  Click "Create Database". Give it the name of your project. ![](/static/guides/2014-10-09-getting-started-augmented-reality/create-database.png)
+3.  Click "Add Target" to upload a target image. Set the width to 100. ![](/static/guides/2014-10-09-getting-started-augmented-reality/add-new-target.png)
 4.  The target will appear with a star rating. The better the rating, the better the marker will work.
 5.  Click the checkbox next to the target name, then press "Download Selected Targets". Select "Unity Editor" in the dialog that pops up.
 6.  Install the downloaded Unity package: go to Unity, right-click the project pane, select import package and import the target.
@@ -41,11 +43,11 @@ Here's an example marker. It looks horrible but works very well:
 
 The way AR works in Unity is that it views the scene through a special camera.
 
-1.  In the Project pane, expand the "Qualcomm Augmented Reality" folder under Assets, expand "Prefabs", then drag the "ARCamera" into your scene. ![](/static/posts/2014-10-09-getting-started-augmented-reality/prefabs.png)
+1.  In the Project pane, expand the "Qualcomm Augmented Reality" folder under Assets, expand "Prefabs", then drag the "ARCamera" into your scene. ![](/static/guides/2014-10-09-getting-started-augmented-reality/prefabs.png)
 2.  Delete the Main Camera by right-clicking on it in the Hierarchy pane, and choosing "Delete".
 3.  Also from the "Prefabs" folder, drag "Image Target" into the scene. This should set up a plane.
-4.  In the Inspector, set the "Data Set" property to the name of your imported target. ![](/static/posts/2014-10-09-getting-started-augmented-reality/data-set.png)
-5.  You should now see your target in the scene. ![](/static/posts/2014-10-09-getting-started-augmented-reality/target-scene.png)
+4.  In the Inspector, set the "Data Set" property to the name of your imported target. ![](/static/guides/2014-10-09-getting-started-augmented-reality/data-set.png)
+5.  You should now see your target in the scene. ![](/static/guides/2014-10-09-getting-started-augmented-reality/target-scene.png)
 6.  Finally, click the ARCamera object. In the Inspector, find the "Data Set Load Behaviour", and click "Load Data Set _yourdataset_" and "Activate".
 
 ### Try it out!
@@ -57,8 +59,8 @@ If you press the Play icon, Unity will show the result of your webcam. It expect
 ### Running on Android
 
 1.  First we need to set some obscure Android settings or it won't work. Go to Edit > Project Settings > Player. No window pops up, but the inspector now has data on the different settings.
-2.  Click the little Android icon.![](/static/posts/2014-10-09-getting-started-augmented-reality/android-guy.png)
-3.  In Other Settings > Identification, set the bundle identifier. This is like a domain name, but reversed, e.g. `be.codestudio.Argh`. ![](/static/posts/2014-10-09-getting-started-augmented-reality/bundle-identifier.png)
+2.  Click the little Android icon.![](/static/guides/2014-10-09-getting-started-augmented-reality/android-guy.png)
+3.  In Other Settings > Identification, set the bundle identifier. This is like a domain name, but reversed, e.g. `be.codestudio.Argh`. ![](/static/guides/2014-10-09-getting-started-augmented-reality/bundle-identifier.png)
 4.  Now go to File > Build Settings. Under the (empty) Scenes in Build pane, click "Add Current". It might ask you to save the scene first.
 5.  Attach an Android phone using a USB cable.
 6.  Click "Build And Run". The app should start on your Android phone.

@@ -1,0 +1,17 @@
+<nav class="tab-nav">
+  <ul class="tab-nav__list">
+    {% for tab in navigation.tabs %}
+      {% assign is_active = false %}
+      {% if page.url == tab.url %}
+        {% assign is_active = true %}
+      {% elsif tab.url != "/" and page.url contains tab.url %}
+        {% assign is_active = true %}
+      {% endif %}
+      <li class="tab-nav__item{% if is_active %} tab-nav__item--active{% endif %}">
+        <a href="{{ tab.url }}" class="tab-nav__link{% if is_active %} tab-nav__link--active{% endif %}">
+          {{ tab.label }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
