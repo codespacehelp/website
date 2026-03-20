@@ -39,20 +39,17 @@ code,
 }
 
 /* Markdown content headings — sized below the page title (text-H / --font-size-xl) */
-.page h1,
-.guide-content h1 {
+.page h1 {
     font-size: var(--font-size-lg);
     letter-spacing: 0.05em;
 }
 
-.page h2,
-.guide-content h2 {
+.page h2 {
     font-size: var(--font-size-lg);
     letter-spacing: 0.05em;
 }
 
-.page h3,
-.guide-content h3 {
+.page h3 {
     font-size: var(--font-size-md);
     letter-spacing: 0.05em;
 }

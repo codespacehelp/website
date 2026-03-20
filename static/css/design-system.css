@@ -442,85 +442,6 @@
 }
 
 /* --------------------------------------------------------------------------
-   Project Page Header
-   -------------------------------------------------------------------------- */
-.project-page {
-  background: var(--color-main);
-  padding: 2rem 0;
-}
-
-.project-page__header {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 1rem;
-  align-items: start;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-.project-page__left {
-  padding-right: 1rem;
-}
-
-.project-page__left h1 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
-
-.project-page__right {
-  padding-left: 1rem;
-}
-
-.project-page__right p {
-  margin: 0.3em 0;
-}
-
-.project-page__divider {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 0.5rem;
-}
-
-/* Vertical tech line variant for project header */
-.project-page__divider .tech-line {
-  flex-direction: column;
-  align-items: center;
-  width: auto;
-  height: 100%;
-  padding: 0;
-}
-
-.project-page .page {
-  background: var(--color-main);
-}
-
-@media (max-width: 768px) {
-  .project-page__header {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* --------------------------------------------------------------------------
-   Guide Page
-   -------------------------------------------------------------------------- */
-.guide-page {
-  background: var(--color-main);
-  padding: 2rem 0;
-}
-
-.guide-page .inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-.guide-page h1 {
-  margin-top: 0;
-}
-
-/* --------------------------------------------------------------------------
    Workshop Table Overrides
    -------------------------------------------------------------------------- */
 .workshops-styled table {
@@ -552,39 +473,6 @@
 
 .workshops-styled a:hover {
   color: var(--color-white);
-}
-
-/* --------------------------------------------------------------------------
-   Workshop Page Header
-   -------------------------------------------------------------------------- */
-.workshop-page {
-  background: var(--color-main);
-  padding: 2rem 0;
-}
-
-.workshop-page__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-.workshop-page__header h1 {
-  margin: 0;
-}
-
-.workshop-page .page {
-  background: var(--color-main);
-}
-
-@media (max-width: 768px) {
-  .workshop-page__header {
-    flex-direction: column;
-  }
 }
 
 /* --------------------------------------------------------------------------

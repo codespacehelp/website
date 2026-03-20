@@ -35,26 +35,26 @@
 }
 
 /* --- Base defaults (all viewports, mobile overrides below) --- */
-.mobilemenu__page {
+.tabmenu__page {
   display: none;
 }
 
-.mobilemenu__page--active {
+.tabmenu__page--active {
   display: block;
 }
 
-.mobilemenu__page--active .mobilemenu__tab {
+.tabmenu__page--active .tabmenu__tab {
   display: none;
 }
 
-.mobilemenu__body--active {
+.tabmenu__body--active {
   background: var(--color-main, #333254);
   padding-bottom: 4.1em;
 }
 
 /* --- Desktop (>768px): grid layout with subgrid for unified shadow --- */
 @media (min-width: 769px) {
-  .mobilemenu {
+  .tabmenu {
     display: grid;
     grid-template-columns: 1fr repeat(var(--card-total, 5), auto);
     align-items: end;
@@ -64,12 +64,12 @@
   }
 
   /* Non-active pages: contents (tabs become grid children) */
-  .mobilemenu__page:not(.mobilemenu__page--active) {
+  .tabmenu__page:not(.tabmenu__page--active) {
     display: contents;
   }
 
   /* Active page: spans all columns + 2 rows, unified shadow */
-  .mobilemenu__page--active {
+  .tabmenu__page--active {
     display: grid;
     grid-template-columns: subgrid;
     grid-row: 1 / span 2;
@@ -83,7 +83,7 @@
 
   /* Tab labels: parallelogram shape via ::before, shadow via filter.
      clip-path is on ::before so filter: drop-shadow follows the shape. */
-  .mobilemenu__tab {
+  .tabmenu__tab {
     grid-row: 1;
     grid-column: calc(var(--card-index, 0) + 2);
     display: flex;
@@ -107,7 +107,7 @@
     z-index: calc(var(--card-total, 5) - var(--card-index, 0));
   }
 
-  .mobilemenu__tab::before {
+  .tabmenu__tab::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -118,12 +118,12 @@
   }
 
   /* First tab: no overlap margin */
-  [style*="--card-index: 0"] > .mobilemenu__tab {
+  [style*="--card-index: 0"] > .tabmenu__tab {
     margin-left: 0;
   }
 
   /* Active tab: wrapper provides the shadow, no individual shadow */
-  .mobilemenu__page--active > .mobilemenu__tab {
+  .tabmenu__page--active > .tabmenu__tab {
     display: flex;
     color: var(--color-white, #fff);
     cursor: default;
@@ -131,22 +131,22 @@
     pointer-events: auto;
   }
 
-  .mobilemenu__page--active > .mobilemenu__tab::before {
+  .tabmenu__page--active > .tabmenu__tab::before {
     background: var(--color-main, #333254);
   }
 
   /* Hide hamburger/close icons on desktop */
-  .mobilemenu__icon {
+  .tabmenu__icon {
     display: none !important;
   }
 
   /* Non-active bodies: hidden */
-  .mobilemenu__body:not(.mobilemenu__body--active) {
+  .tabmenu__body:not(.tabmenu__body--active) {
     display: none;
   }
 
   /* Active body: spans all columns in second row */
-  .mobilemenu__body--active {
+  .tabmenu__body--active {
     display: block;
     grid-row: 2;
     grid-column: 1 / -1;
@@ -156,7 +156,7 @@
   }
 
   /* Hover on non-active tabs */
-  .mobilemenu__page:not(.mobilemenu__page--active) > .mobilemenu__tab:hover {
+  .tabmenu__page:not(.tabmenu__page--active) > .tabmenu__tab:hover {
     color: var(--color-white, #fff);
   }
 }
@@ -202,7 +202,7 @@
   }
 
   /* --- Card-nav container --- */
-  .mobilemenu {
+  .tabmenu {
     --card-reveal: 55px;
     --tab-label-h: 40px;
     --anim-duration: 300ms;
@@ -216,7 +216,7 @@
   }
 
   /* --- Each card (non-active) --- */
-  .mobilemenu__page {
+  .tabmenu__page {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -233,7 +233,7 @@
   }
 
   /* Active card is in flow, contains page content */
-  .mobilemenu__page--active {
+  .tabmenu__page--active {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -244,14 +244,14 @@
   }
 
   /* When menu is open, all cards are clickable and get shadows */
-  .mobilemenu--open .mobilemenu__page {
+  .tabmenu--open .tabmenu__page {
     pointer-events: auto;
     filter: drop-shadow(0 0 1.5px var(--color-border, #84847c));
     cursor: pointer;
   }
 
   /* --- Tab label (protruding parallelogram) --- */
-  .mobilemenu__tab {
+  .tabmenu__tab {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -274,36 +274,36 @@
     border: none;
   }
 
-  .mobilemenu__page--active .mobilemenu__tab {
+  .tabmenu__page--active .tabmenu__tab {
     display: flex;
     background: var(--color-main, #333254);
   }
 
   /* --- Menu/close icon in active tab --- */
-  .mobilemenu__icon {
+  .tabmenu__icon {
     display: none;
     flex-shrink: 0;
     font-size: 20px;
   }
 
-  .mobilemenu__page--active .mobilemenu__icon-menu {
+  .tabmenu__page--active .tabmenu__icon-menu {
     display: block;
   }
 
-  .mobilemenu__page--active .mobilemenu__icon-close {
+  .tabmenu__page--active .tabmenu__icon-close {
     display: none;
   }
 
-  .mobilemenu--open .mobilemenu__page--active .mobilemenu__icon-menu {
+  .tabmenu--open .tabmenu__page--active .tabmenu__icon-menu {
     display: none;
   }
 
-  .mobilemenu--open .mobilemenu__page--active .mobilemenu__icon-close {
+  .tabmenu--open .tabmenu__page--active .tabmenu__icon-close {
     display: block;
   }
 
   /* --- Card body (non-active): fixed height strip --- */
-  .mobilemenu__body {
+  .tabmenu__body {
     width: 100%;
     height: 100vh;
     background: var(--color-tabs, #282842);
@@ -311,7 +311,7 @@
   }
 
   /* --- Active card body: IS the main content area --- */
-  .mobilemenu__body--active {
+  .tabmenu__body--active {
     width: 100%;
     height: auto;
     background: var(--color-main, #333254);
@@ -319,17 +319,17 @@
   }
 
   /* --- Navigating card: rises to top --- */
-  .mobilemenu__page--navigating {
+  .tabmenu__page--navigating {
     transition: transform 200ms var(--anim-easing);
     transform: translateY(0) !important;
     z-index: calc(var(--card-total, 5) + 2) !important;
   }
 
-  .mobilemenu__page--navigating .mobilemenu__tab {
+  .tabmenu__page--navigating .tabmenu__tab {
     background: var(--color-main, #333254);
   }
 
-  .mobilemenu__page--navigating .mobilemenu__body {
+  .tabmenu__page--navigating .tabmenu__body {
     background: var(--color-main, #333254);
   }
 }

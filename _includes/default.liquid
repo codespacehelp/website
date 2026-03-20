@@ -9,7 +9,7 @@ layout: base
   </div>
 </header>
 
-<div class="mobilemenu" id="mobilemenu" style="--card-total: {{ navigation.tabs.size }}">
+<div class="tabmenu" id="tabmenu" style="--card-total: {{ navigation.tabs.size }}">
   {% for tab in navigation.tabs %}
     {% assign is_active = false %}
     {% if page.url == tab.url %}
@@ -18,26 +18,26 @@ layout: base
       {% assign is_active = true %}
     {% endif %}
     {% if is_active %}
-      <div class="mobilemenu__page mobilemenu__page--active"
+      <div class="tabmenu__page tabmenu__page--active"
            style="--card-index: {{ forloop.index0 }}; --card-total: {{ navigation.tabs.size }};">
-        <button class="mobilemenu__tab mobilemenu__tab--active"
+        <button class="tabmenu__tab tabmenu__tab--active"
                 aria-label="Toggle menu" aria-expanded="false">
-          <span class="mobilemenu__icon material-symbols-outlined mobilemenu__icon-menu">menu</span>
-          <span class="mobilemenu__icon material-symbols-outlined mobilemenu__icon-close">close</span>
+          <span class="tabmenu__icon material-symbols-outlined tabmenu__icon-menu">menu</span>
+          <span class="tabmenu__icon material-symbols-outlined tabmenu__icon-close">close</span>
           {{ tab.label }}
         </button>
-        <main class="mobilemenu__body mobilemenu__body--active" id="main-content">
+        <main class="tabmenu__body tabmenu__body--active" id="main-content">
           {{ content }}
         </main>
       </div>
     {% else %}
-      <div class="mobilemenu__page"
+      <div class="tabmenu__page"
            data-url="{{ tab.url }}"
            style="--card-index: {{ forloop.index0 }}; --card-total: {{ navigation.tabs.size }};">
-        <a href="{{ tab.url }}" class="mobilemenu__tab">
+        <a href="{{ tab.url }}" class="tabmenu__tab">
           {{ tab.label }}
         </a>
-        <div class="mobilemenu__body"></div>
+        <div class="tabmenu__body"></div>
       </div>
     {% endif %}
   {% endfor %}
@@ -63,12 +63,12 @@ layout: base
 
 <script>
 (function() {
-  var nav = document.getElementById('mobilemenu');
+  var nav = document.getElementById('tabmenu');
   if (!nav) return;
 
-  var cards = Array.from(nav.querySelectorAll('.mobilemenu__page'));
-  var activeCard = nav.querySelector('.mobilemenu__page--active');
-  var activeLabel = activeCard ? activeCard.querySelector('.mobilemenu__tab') : null;
+  var cards = Array.from(nav.querySelectorAll('.tabmenu__page'));
+  var activeCard = nav.querySelector('.tabmenu__page--active');
+  var activeLabel = activeCard ? activeCard.querySelector('.tabmenu__tab') : null;
   var isOpen = false;
   var revealHeight = 55;
   var N = cards.length;
@@ -80,7 +80,7 @@ layout: base
   function openMenu() {
     if (!isMobile()) return;
     isOpen = true;
-    nav.classList.add('mobilemenu--open');
+    nav.classList.add('tabmenu--open');
     if (activeLabel) activeLabel.setAttribute('aria-expanded', 'true');
 
     // Padding on container creates space for cascade; no margin-collapse issues
@@ -88,7 +88,7 @@ layout: base
 
     var nonActiveIdx = 0;
     cards.forEach(function(card) {
-      if (!card.classList.contains('mobilemenu__page--active')) {
+      if (!card.classList.contains('tabmenu__page--active')) {
         var offset = nonActiveIdx * revealHeight;
         card.style.setProperty('--card-offset', offset + 'px');
         card.style.zIndex = nonActiveIdx + 1;
@@ -99,7 +99,7 @@ layout: base
 
   function closeMenu() {
     isOpen = false;
-    nav.classList.remove('mobilemenu--open');
+    nav.classList.remove('tabmenu--open');
     if (activeLabel) activeLabel.setAttribute('aria-expanded', 'false');
 
     nav.style.paddingTop = '0px';
@@ -122,14 +122,14 @@ layout: base
   }
 
   cards.forEach(function(card) {
-    if (card.classList.contains('mobilemenu__page--active')) return;
+    if (card.classList.contains('tabmenu__page--active')) return;
 
     card.addEventListener('click', function(e) {
       if (!isOpen || !isMobile()) return;
       e.preventDefault();
       var url = card.dataset.url;
 
-      card.classList.add('mobilemenu__page--navigating');
+      card.classList.add('tabmenu__page--navigating');
 
       function navigate() {
         window.location.href = url;

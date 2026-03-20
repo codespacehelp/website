@@ -24,11 +24,9 @@
 	"homepage": "https://github.com/fdb/codespace#readme",
 	"devDependencies": {
 		"@11ty/eleventy": "^3.1.2",
+		"@playwright/test": "^1.58.2",
 		"concurrently": "^9.2.1",
 		"prettier": "^3.6.2",
 		"serve": "^14.2.5"
-	},
-	"dependencies": {
-		"aws-sdk": "^2.1692.0"
 	}
 }
