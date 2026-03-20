@@ -22,6 +22,9 @@
 		"url": "https://github.com/fdb/codespace/issues"
 	},
 	"homepage": "https://github.com/fdb/codespace#readme",
+	"dependencies": {
+		"aws-sdk": "^2.1692.0"
+	},
 	"devDependencies": {
 		"@11ty/eleventy": "^3.1.2",
 		"@playwright/test": "^1.58.2",
