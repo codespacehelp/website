@@ -1,5 +1,5 @@
 ---
-layout: guide
+layout: subpage
 tags: guide
 title: Reading in a Reflectance Sensor with Arduino
 subtitle: Physical computing

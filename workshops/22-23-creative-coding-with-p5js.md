@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Creative Coding with p5js
 summary: Start with generative design.

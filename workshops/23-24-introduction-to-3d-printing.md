@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Introduction to Digital Fabrication
 summary: A first encounter with our dear 3D and laser machines

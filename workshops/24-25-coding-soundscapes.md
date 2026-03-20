@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Coding Soundscapes
 summary: An Introduction to Synthesis with Sonic Pi.

@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Generative Design
 summary: Let's get that computational power to work for us.

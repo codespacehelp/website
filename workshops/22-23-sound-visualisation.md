@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Sound visualisation
 summary: Sound visualisation with p5js

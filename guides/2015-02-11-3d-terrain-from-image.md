@@ -1,5 +1,5 @@
 ---
-layout: guide
+layout: subpage
 tags: guide
 title: '3D terrain from image'
 subtitle: 3D modeling

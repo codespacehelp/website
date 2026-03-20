@@ -5,7 +5,6 @@
   padding: 1rem 0;
   padding-bottom: 0;
   position: relative;
-  z-index: 10;
 }
 
 .site-header .inner {
@@ -21,6 +20,8 @@
   text-decoration: none;
   padding-bottom: 1rem;
   margin-left: 1.5rem;
+  position: relative;
+  z-index: 11;
 }
 
 .site-header__logo img {
@@ -33,56 +34,7 @@
   opacity: 0.8;
 }
 
-/* Tab Navigation (desktop) */
-.tab-nav {
-  display: flex;
-}
-
-.tab-nav__list {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 0;
-  flex-wrap: wrap;
-  line-height: 0;
-}
-
-.tab-nav__item {
-  margin: 0;
-  margin-left: -40px;
-}
-
-.tab-nav__item:first-child {
-  margin-left: 0;
-}
-
-.tab-nav__link {
-  display: block;
-  padding: 0.8rem 5rem;
-  color: #888;
-  text-decoration: none;
-  font-family: var(--font-main, 'Atkinson Hyperlegible Next', sans-serif);
-  font-weight: 700;
-  background: var(--color-tabs, #282842);
-  clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 100%, 0 100%);
-  transition: background-color 0.2s, color 0.2s;
-  position: relative;
-  font-size: 0.95rem;
-  line-height: 1;
-}
-
-.tab-nav__link--active {
-  background: var(--color-main, #333254);
-  color: var(--color-white, #fff);
-  font-weight: bold;
-}
-
-.tab-nav__item:has(.tab-nav__link--active) {
-  z-index: 1;
-}
-
-/* --- Mobile menu elements: desktop defaults --- */
+/* --- Base defaults (all viewports, mobile overrides below) --- */
 .mobilemenu__page {
   display: none;
 }
@@ -97,6 +49,116 @@
 
 .mobilemenu__body--active {
   background: var(--color-main, #333254);
+  padding-bottom: 4.1em;
+}
+
+/* --- Desktop (>768px): grid layout with subgrid for unified shadow --- */
+@media (min-width: 769px) {
+  .mobilemenu {
+    display: grid;
+    grid-template-columns: 1fr repeat(var(--card-total, 5), auto);
+    align-items: end;
+    margin-top: -2.55rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  /* Non-active pages: contents (tabs become grid children) */
+  .mobilemenu__page:not(.mobilemenu__page--active) {
+    display: contents;
+  }
+
+  /* Active page: spans all columns + 2 rows, unified shadow */
+  .mobilemenu__page--active {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-row: 1 / span 2;
+    grid-column: 1 / -1;
+    align-items: end;
+    filter: drop-shadow(0 0 1.5px var(--color-border, #84847c));
+    position: relative;
+    z-index: calc(var(--card-total, 5) + 1);
+    pointer-events: none;
+  }
+
+  /* Tab labels: parallelogram shape via ::before, shadow via filter.
+     clip-path is on ::before so filter: drop-shadow follows the shape. */
+  .mobilemenu__tab {
+    grid-row: 1;
+    grid-column: calc(var(--card-index, 0) + 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem clamp(2rem, 4vw, 5rem);
+    font-family: var(--font-main, 'Atkinson Hyperlegible Next', sans-serif);
+    font-weight: 700;
+    font-size: 0.95rem;
+    line-height: 1;
+    color: #888;
+    background: transparent;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    margin-left: -40px;
+    filter: drop-shadow(0 0 1.5px var(--color-border, #84847c));
+    transition: color 0.2s;
+    position: relative;
+    z-index: calc(var(--card-total, 5) - var(--card-index, 0));
+  }
+
+  .mobilemenu__tab::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--color-tabs, #282842);
+    clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 100%, 0 100%);
+    z-index: -1;
+    transition: background-color 0.2s;
+  }
+
+  /* First tab: no overlap margin */
+  [style*="--card-index: 0"] > .mobilemenu__tab {
+    margin-left: 0;
+  }
+
+  /* Active tab: wrapper provides the shadow, no individual shadow */
+  .mobilemenu__page--active > .mobilemenu__tab {
+    display: flex;
+    color: var(--color-white, #fff);
+    cursor: default;
+    filter: none;
+    pointer-events: auto;
+  }
+
+  .mobilemenu__page--active > .mobilemenu__tab::before {
+    background: var(--color-main, #333254);
+  }
+
+  /* Hide hamburger/close icons on desktop */
+  .mobilemenu__icon {
+    display: none !important;
+  }
+
+  /* Non-active bodies: hidden */
+  .mobilemenu__body:not(.mobilemenu__body--active) {
+    display: none;
+  }
+
+  /* Active body: spans all columns in second row */
+  .mobilemenu__body--active {
+    display: block;
+    grid-row: 2;
+    grid-column: 1 / -1;
+    background: var(--color-main, #333254);
+    margin-top: -1px;
+    pointer-events: auto;
+  }
+
+  /* Hover on non-active tabs */
+  .mobilemenu__page:not(.mobilemenu__page--active) > .mobilemenu__tab:hover {
+    color: var(--color-white, #fff);
+  }
 }
 
 /* ============================================================
@@ -116,6 +178,7 @@
     z-index: calc(var(--card-total, 5) + 2);
     padding: 0;
     background: transparent;
+    pointer-events: none;
   }
 
   .site-header .inner {
@@ -131,15 +194,11 @@
     padding-top: 0.15rem;
     padding-bottom: 0;
     flex-shrink: 0;
+    pointer-events: auto;
   }
 
   .site-header__logo img {
     height: 1.1rem;
-  }
-
-  /* --- Hide desktop tab list on mobile --- */
-  .tab-nav__list {
-    display: none;
   }
 
   /* --- Card-nav container --- */
@@ -188,6 +247,7 @@
   .mobilemenu--open .mobilemenu__page {
     pointer-events: auto;
     filter: drop-shadow(0 0 1.5px var(--color-border, #84847c));
+    cursor: pointer;
   }
 
   /* --- Tab label (protruding parallelogram) --- */

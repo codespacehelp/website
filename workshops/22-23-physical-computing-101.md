@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Physical Computing
 summary: Get away from the screen and onto hardware devices.

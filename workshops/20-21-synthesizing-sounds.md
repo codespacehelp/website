@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Synthesizing Sounds
 summary: Explore sound in new and exciting ways.

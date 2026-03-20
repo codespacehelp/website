@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: 3D on the web with Three.js
 summary: Enter the metaverse.

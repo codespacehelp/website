@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Procedural 3D with Houdini
 summary: Build entire worlds using nodes.

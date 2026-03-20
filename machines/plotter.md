@@ -1,5 +1,5 @@
 ---
-layout: machine
+layout: subpage
 tags: machine
 name: Plotter
 machine_model: Cricut Maker 3

@@ -1,7 +1,7 @@
 ---
 title: Tools for Social Change
 summary: Organize and broadcast your message online.
-layout: workshop
+layout: subpage
 workshop_date: 2020-12-09
 duration: 3 hours
 room: Online

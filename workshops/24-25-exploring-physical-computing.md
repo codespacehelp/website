@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Exploring Physical Computing
 summary: Introduction to Arduino

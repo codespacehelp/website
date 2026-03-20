@@ -19,7 +19,7 @@ layout: default
         </ul>
         <p class="text-p">
             To use the machines and arrange a meeting with one of the tutors, please make a reservation through the link below.
-            An email will be sent to you.
+            An email will be sent to you. The workshop is also open during the opening hours mentioned below, but it can be busy, so it's prefferable to make a reservation.
         </p>
         <p class="text-p"><strong>Please check the material dimensions and file formats you need for each machine.</strong></p>
 
@@ -28,7 +28,7 @@ layout: default
                 <h2 class="text-i">Opening hours</h2>
                 <div class="home__hours">
                     <span class="text-p">Monday</span>
-                    <span class="text-p">9:00 - 13:00 &nbsp;&nbsp;</span>
+                    <span class="text-p">10:00 - 13:00 &nbsp;&nbsp;</span>
                     <span class="text-p">Tuesday</span>
                     <span class="text-p">Closed</span>
                     <span class="text-p">Wednesday</span>
@@ -41,16 +41,15 @@ layout: default
             </div>
             <div class="home__info-block">
                 <h2 class="text-i">Location</h2>
-                <p class="text-p">Campus St Lucas</p>
+                <p class="text-p">Campus St Lucas - K.03.07</p>
                 <p class="text-p">Van Schoonbekestraat 143</p>
                 <p class="text-p">2018 Antwerpen</p>
-                <p class="text-p">K.03.07</p>
             </div>
         </div>
 
-        {% render "tech-line.liquid" %}
+        {% render "tech-line.liquid", full_bleed: true %}
 
-        <div class="home__reservation">
+        <div class="reservation-action">
             <a href="https://reservations.codespace.help/" target="_blank" class="btn--highlight btn--highlight--large">Make a reservation</a>
         </div>
     </div>

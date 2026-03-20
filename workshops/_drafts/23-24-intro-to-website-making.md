@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Introduction to Website making
 summary: Create your own website from scratch.

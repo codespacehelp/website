@@ -1,7 +1,7 @@
 ---
 title: Community Content
 summary: Let the audience participate.
-layout: workshop
+layout: subpage
 workshop_date: 2020-12-16
 duration: 3 hours
 room: K.02.04

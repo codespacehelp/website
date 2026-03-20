@@ -1,5 +1,5 @@
 ---
-layout: machine
+layout: subpage
 tags: machine
 name: Laser Cutter
 machine_model: Flux BeamBox Pro

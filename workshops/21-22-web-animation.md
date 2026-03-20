@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Animation on the Web
 summary: Breathe life into your projects.

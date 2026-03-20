@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Competent Web Design
 summary: Add interactivity with JavaScript

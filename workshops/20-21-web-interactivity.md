@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Web Interactivity
 summary: Learn animation with JavaScript.

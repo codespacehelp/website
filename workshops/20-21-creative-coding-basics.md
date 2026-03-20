@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Creative Coding - Basics
 summary: Start with generative design.

@@ -1,5 +1,5 @@
 ---
-layout: project
+layout: subpage
 title: Grid Typography Generator
 summary: A combinatorial system that generates all possible variations of a modular typographic grid by treating visual segments as binary states.
 student: Wouter Pollaris

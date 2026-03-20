@@ -15,7 +15,11 @@
       "Bash(where npx.cmd)",
       "Bash(where node.exe)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8080/)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8081/)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8081/)",
+      "Bash(gh pr:*)",
+      "Bash(gh.exe pr:*)",
+      "Bash(where gh:*)",
+      "Bash(cmd.exe /c \"where gh\")"
     ]
   }
 }

@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Creative Coding - Beyond the Basics
 summary: Improve your basic coding skills.

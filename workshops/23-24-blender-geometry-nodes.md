@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Blender Geometry Nodes
 summary: A deep dive into procedural geometry

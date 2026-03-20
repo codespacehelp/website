@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Laser Cutting
 summary: Introduction to using the BeamBox Pro

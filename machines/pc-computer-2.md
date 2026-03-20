@@ -1,5 +1,5 @@
 ---
-layout: machine
+layout: subpage
 tags: machine
 name: Computer 2
 machine_model: "Windows PC"

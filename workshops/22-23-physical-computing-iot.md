@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Physical Computing and IOT
 summary: Connect your hardware to the internet.

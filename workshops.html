@@ -7,7 +7,7 @@ layout: default
 <section id="workshops" class="workshops-styled" style="background: var(--color-main);">
   <div class="inner">
     <h1 class="text-H">Workshops</h1>
-    {% render "tech-line.liquid", mirrored: true %}
+    {% render "tech-line.liquid", mirrored: true, full_bleed: true %}
 
     <h2 class="text-H">2024-2025</h2>
     {% render "_workshopsTable.liquid", workshops: collections.workshops_24_25 %}

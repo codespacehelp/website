@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Awesome 3D with Blender
 summary: Learn 3D modeling and animation.

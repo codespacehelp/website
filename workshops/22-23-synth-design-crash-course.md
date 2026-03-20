@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Synth Design Crash Course
 summary: Design your own DIY musical instrument!

@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Interactive Storytelling
 summary: Creating stories by linking text and images on the web.

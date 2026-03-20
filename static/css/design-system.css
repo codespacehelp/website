@@ -6,9 +6,9 @@
    Color Palette
    -------------------------------------------------------------------------- */
 :root {
-  --color-main: #333254;
-  --color-tabs: #282842;
-  --color-back: #1c1b2d;
+  --color-main: #1e2040;
+  --color-tabs: #151830;
+  --color-back: #0a0c1a;
   --color-highlight: #acc41e;
   --color-white: #ffffff;
   --color-border: #84847c;
@@ -134,12 +134,12 @@
   text-decoration: none;
   border: none;
   cursor: pointer;
-  transition: opacity 0.2s;
+  transition: background-color 0.2s;
   border-radius: 0.4em;
 }
 
 .btn--highlight:hover {
-  opacity: 0.85;
+  background: #6b7d13;
 }
 
 /* Larger button variant for call-to-action areas */
@@ -169,6 +169,12 @@
   stroke: var(--color-highlight);
   stroke-width: 1;
   vector-effect: non-scaling-stroke;
+}
+
+/* Full-bleed variant: spans full viewport width */
+.tech-line--full-bleed {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 /* Mirrored variant: right segment lower, left segment higher */
@@ -286,6 +292,21 @@
   grid-template-columns: minmax(0, 1fr);
 }
 
+/* Desktop: larger card text */
+@media (min-width: 769px) {
+  .card .text-T {
+    font-size: var(--font-size-md);
+  }
+
+  .card .text-s {
+    font-size: var(--font-size-base);
+  }
+
+  .card .text-d {
+    font-size: var(--font-size-base);
+  }
+}
+
 @media (max-width: 768px) {
   .card-grid {
     grid-template-columns: 1fr;
@@ -300,7 +321,23 @@
   }
 
   .card__image img {
-    height: 10rem;
+    height: clamp(10rem, 40vw, 14rem);
+  }
+
+  .card__image {
+    padding-right: 1.5rem;
+  }
+
+  .card__title {
+    font-size: var(--font-size-md);
+  }
+
+  .card__subtitle {
+    font-size: var(--font-size-base);
+  }
+
+  .card__text {
+    font-size: var(--font-size-base);
   }
 
   .text-H + .section-header {
@@ -338,7 +375,7 @@
 .home .inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1.5rem 3rem;
+  padding: 2rem 1.5rem 0;
 }
 
 .home__domains {
@@ -373,8 +410,8 @@
   gap: 0.1em 1em;
 }
 
-.home__reservation {
-  margin-top: 0.5rem;
+.reservation-action {
+  margin-top: 0;
   text-align: right;
 }
 
@@ -383,25 +420,25 @@
     grid-template-columns: 1fr;
   }
 
-  .home__reservation {
+  .reservation-action {
     text-align: center;
+    margin-top: 2em;
   }
 }
 
 /* --------------------------------------------------------------------------
    Machines Page
    -------------------------------------------------------------------------- */
+.machines .inner {
+  padding-bottom: 0;
+}
+
 .machines__intro-text {
   margin-bottom: 1.5rem;
 }
 
 .machines__footer {
   margin-top: 1.5rem;
-}
-
-.machines__footer-action {
-  text-align: right;
-  margin-top: 0.5rem;
 }
 
 /* --------------------------------------------------------------------------
@@ -550,6 +587,54 @@
   }
 }
 
+/* --------------------------------------------------------------------------
+   Subpage Layout (unified template for machines, projects, guides, workshops)
+   -------------------------------------------------------------------------- */
+.subpage {
+  background: var(--color-main);
+  padding: 2rem 0;
+}
+
+.subpage__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.subpage__header h1 {
+  margin: 0;
+}
+
+.subpage__meta {
+  width: 100%;
+  margin: 0.3em 0;
+}
+
+.subpage__content {
+  background: var(--color-main);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+  overflow-x: hidden;
+}
+
+.subpage__content img,
+.subpage__content video,
+.subpage__content iframe,
+.subpage__content embed,
+.subpage__content object {
+  max-width: 100%;
+  height: auto;
+}
+
+.subpage__hero {
+  margin-bottom: 1.5rem;
+}
+
+
 /* ==========================================================================
    Mobile Overrides (<=480px)
    ========================================================================== */
@@ -573,24 +658,4 @@
     transform: scaleY(-0.6);
   }
 
-  /* --- Card Container: taller images, shifted left, bigger text --- */
-  .card__image img {
-    height: clamp(10rem, 40vw, 14rem);
-  }
-
-  .card__image {
-    padding-right: 1.5rem;
-  }
-
-  .card__title {
-    font-size: var(--font-size-md);
-  }
-
-  .card__subtitle {
-    font-size: var(--font-size-base);
-  }
-
-  .card__text {
-    font-size: var(--font-size-base);
-  }
 }

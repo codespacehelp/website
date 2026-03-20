@@ -1,5 +1,5 @@
 ---
-layout: machine
+layout: subpage
 tags: machine
 name: 3D Printer
 machine_model: Ultimaker 2+ Connect

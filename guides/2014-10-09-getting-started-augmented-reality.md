@@ -1,5 +1,5 @@
 ---
-layout: guide
+layout: subpage
 tags: guide
 title: Getting Started with Augmented Reality
 subtitle: VR / AR

@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Image Generation using AI
 summary: From prompt to pixels

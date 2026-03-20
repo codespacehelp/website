@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Interactive spaces with Touch Designer
 summary: We'll design our own interactive installation with a depth camera.

@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Coding with AI
 summary: Strategies to be More Ambitious in What You Create

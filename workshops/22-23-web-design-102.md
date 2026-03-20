@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Intermediate Web Design
 summary: Go deeper with HTML and CSS

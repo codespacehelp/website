@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: An Introduction to IoT with Arduino
 summary: Introduction to the Internet of Things

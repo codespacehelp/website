@@ -1,5 +1,5 @@
 ---
-layout: guide
+layout: subpage
 tags: guide
 title: Decoding Matterport 3D Scenes
 subtitle: 3D scanning

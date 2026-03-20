@@ -5,11 +5,11 @@ layout: base
 <header class="site-header">
   <div class="inner">
     <a href="/" class="site-header__logo"><img src="/static/img/CSlogoWebWhite.png" alt="Code Space"></a>
-    {% render "tab-nav.liquid", navigation: navigation, page: page %}
+
   </div>
 </header>
 
-<div class="mobilemenu" id="mobilemenu">
+<div class="mobilemenu" id="mobilemenu" style="--card-total: {{ navigation.tabs.size }}">
   {% for tab in navigation.tabs %}
     {% assign is_active = false %}
     {% if page.url == tab.url %}
@@ -44,7 +44,7 @@ layout: base
 </div>
 
 <footer>
-  <div class="inner grid">
+  <div class="footer__left">
     <div class="footer__logos">
       <img src="/static/img/logo_sintlucasantwerpen_wit.png" alt="Sint Lucas Antwerpen">
       <img src="/static/img/EN-KdG-wit-horizontaal.png" alt="Karel de Grote">
@@ -52,6 +52,12 @@ layout: base
     <p>
       Code Space is an initiative of <a href="https://www.sintlucasantwerpen.be/" target="_blank">Sint Lucas Antwerpen</a>.
     </p>
+  </div>
+  <div class="footer__right">
+    <p>Contact us:</p>
+    <p><a href="mailto:frederik.debleser@kdg.be">frederik.debleser@kdg.be</a></p>
+    <p><a href="mailto:lieven.menschaert@kdg.be">lieven.menschaert@kdg.be</a></p>
+    <p><a href="mailto:jean-baptiste.gambier@kdg.be">jean-baptiste.gambier@kdg.be</a></p>
   </div>
 </footer>
 
@@ -149,5 +155,6 @@ layout: base
       closeMenu();
     }
   });
+
 })();
 </script>

@@ -1,5 +1,5 @@
 ---
-layout: guide
+layout: subpage
 tags: guide
 title: Arduino for Artists
 subtitle: Physical computing

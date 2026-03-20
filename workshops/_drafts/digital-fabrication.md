@@ -1,7 +1,7 @@
 ---
 title: Digital Fabrication
 summary: Learn about laser cutting and 3D printing.
-layout: workshop
+layout: subpage
 workshop_date: 2020-11-25
 duration: 3 hours
 room: K.02.04

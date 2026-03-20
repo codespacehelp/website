@@ -1,5 +1,5 @@
 ---
-layout: workshop
+layout: subpage
 tags: workshop
 title: Web Interactivity
 summary: Learn to create interaction with JavaScript.
