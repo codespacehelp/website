@@ -37,9 +37,4 @@ layout: default
     <p>{{ description }}</p>
   {% endif %}
   {{ content }}
-  {% if workshop_date %}
-    {% unless done %}
-      {% render "workshop-form.liquid", title: title, workshop_date: workshop_date, workshop_time: workshop_time, room: room %}
-    {% endunless %}
-  {% endif %}
 </div>

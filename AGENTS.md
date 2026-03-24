@@ -29,7 +29,7 @@ Deployment: Push to `master` branch auto-deploys to Netlify.
 
 - `_includes/` - Liquid layout templates and reusable partials
   - Layouts: `base.liquid`, `default.liquid`, `subpage.liquid`, `page.liquid`
-  - Partials: `card.liquid`, `tech-line.liquid`, `section-header.liquid`, `workshop-form.liquid`, `_workshopsTable.liquid`
+  - Partials: `card.liquid`, `tech-line.liquid`, `section-header.liquid`, `_workshopsTable.liquid`
 - `workshops/` - Workshop content as markdown files with YAML frontmatter
 - `guides/` - Technical guides and articles (formerly `posts/`)
 - `machines/` - Machine pages (laser cutter, 3D printer, PCs, plotter) with images
