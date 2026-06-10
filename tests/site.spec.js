@@ -149,7 +149,7 @@ test.describe('Machines Listing', () => {
 test.describe('Machine Subpages', () => {
   const machines = [
     { url: '/machines/laser-cutter/', name: 'Laser Cutter', model: 'Flux BeamBox Pro' },
-    { url: '/machines/3d-printer/', name: '3D Printer', model: 'Ultimaker 2+ Connect' },
+    { url: '/machines/3d-printer-UMC2/', name: '3D Printer', model: 'Ultimaker 2+ Connect' },
     { url: '/machines/plotter/', name: 'Plotter', model: 'Cricut Maker 3' },
     { url: '/machines/pc-computer-1/', name: 'Computer 1', model: 'Windows PC' },
     { url: '/machines/pc-computer-2/', name: 'Computer 2', model: 'Windows PC' },

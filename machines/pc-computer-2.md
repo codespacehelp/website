@@ -1,6 +1,7 @@
 ---
 layout: subpage
 tags: machine
+order: 6
 name: Computer 2
 machine_model: "Windows PC"
 description: "Desktop computer adapted to heavy rendering and general tasks, available anytime for students.<br>Available software: Adobe Photoshop, Illustrator, AfterEffects, Blender, Unreal Engine...<br>Specs: AMD 2920X, RTX 2080Ti, 32Gb RAM, 4k monitor sRGB98%"

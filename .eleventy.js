@@ -41,7 +41,10 @@ export default function (eleventyConfig) {
 	});
 
 	eleventyConfig.addCollection('machines', (api) => {
-		return api.getAll().filter((item) => hasTag(item, 'machine'));
+		return api
+			.getAll()
+			.filter((item) => hasTag(item, 'machine'))
+			.sort((a, b) => (a.data.order ?? 999) - (b.data.order ?? 999));
 	});
 
 	eleventyConfig.addCollection('guide', (api) => {

@@ -19,7 +19,12 @@
       "Bash(gh pr:*)",
       "Bash(gh.exe pr:*)",
       "Bash(where gh:*)",
-      "Bash(cmd.exe /c \"where gh\")"
+      "Bash(cmd.exe /c \"where gh\")",
+      "Bash(netlify status:*)",
+      "Bash(git rm *)",
+      "Bash(ls \"C:/Users/jbstuff/AppData/Local/Microsoft/Windows/Fonts\" 2>/dev/null | grep -i -E \"bbb|manifont|grotesk\" || echo \"none in user fonts\")",
+      "Bash(cp \"/c/Users/jbstuff/AppData/Local/Microsoft/Windows/Fonts/BBBManifontGrotesk-Book.otf\" \"static/fonts/\")",
+      "Bash(cp \"/c/Users/jbstuff/AppData/Local/Microsoft/Windows/Fonts/BBBManifontGrotesk-BookItalic.otf\" \"static/fonts/\")"
     ]
   }
 }

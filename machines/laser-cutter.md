@@ -1,6 +1,7 @@
 ---
 layout: subpage
 tags: machine
+order: 1
 name: Laser Cutter
 machine_model: Flux BeamBox Pro
 description: "Maximum format: 58 x 39 cm<br>Materials: MDF, Plexiglas, Leather, Rubber...<br>MDF available at €1,20 per sheet (3mm thick)<br>(!) Metal works but fades out by the time<br>File format: ideally 2D vector drawing, Illustrator files, PDF, SVG... <br>(!) JPG, PNG also works but will have to be converted."

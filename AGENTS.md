@@ -22,7 +22,7 @@ Deployment: Push to `master` branch auto-deploys to Netlify.
 
 - **Framework**: 11ty v3 with Liquid templating (ES modules)
 - **Styling**: Plain CSS in `static/css/` — design system + main + tabs
-- **Fonts**: Atkinson Hyperlegible Next (body), IBM Plex Mono (headings/code) via Google Fonts
+- **Fonts**: BBB Manifont Grotesk (body, local in `static/fonts/`), IBM Plex Mono (headings/code) via Google Fonts
 - **Hosting**: Netlify with Node 20
 
 ### Key Directories
@@ -65,7 +65,7 @@ The tab navigation uses a unified system (class prefix `tabmenu`) defined in `_i
 **Architecture**:
 - Each nav tab is a `.tabmenu__page` containing a `.tabmenu__tab` (parallelogram tab label) and a `.tabmenu__body` (content area)
 - The active page's body (`<main class="tabmenu__body tabmenu__body--active">`) IS the main content container — `{{ content }}` renders inside it
-- Active page detection uses `page.url == tab.url` or `page.url contains tab.url` (for sub-pages like `/machines/3d-printer/`)
+- Active page detection uses `page.url == tab.url` or `page.url contains tab.url` (for sub-pages like `/machines/3d-printer-UMC2/`)
 - Non-active pages are `position: absolute`, active page is `position: relative` (in flow)
 - The site header uses `height: 0; overflow: visible` so the logo floats over the card area without taking layout space
 

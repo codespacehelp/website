@@ -3,6 +3,19 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
+   Local Fonts
+   Only the Book weight is available — declared for both 400 and 700 so the
+   browser synthesizes bold when requested.
+   -------------------------------------------------------------------------- */
+@font-face {
+  font-family: 'BBB Manifont Grotesk';
+  src: url('/static/fonts/BBBManifontGrotesk-Book.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --------------------------------------------------------------------------
    Color Palette
    -------------------------------------------------------------------------- */
 :root {
@@ -19,7 +32,7 @@
    Swap these two variables to change fonts site-wide.
    -------------------------------------------------------------------------- */
 :root {
-  --font-main: 'Atkinson Hyperlegible Next', sans-serif;
+  --font-main: 'BBB Manifont Grotesk', sans-serif;
   --font-detail: 'IBM Plex Mono', monospace;
 }
 

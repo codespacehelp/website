@@ -1,9 +1,10 @@
 ---
 layout: subpage
 tags: machine
+order: 4
 name: Plotter
 machine_model: Cricut Maker 3
-description: "Max. size: 31 x 31 cm<br>Materials: Various types of paper, transfer, cardboard...<br>File format: ideally 2D vector drawing, Illustrator files, PDF, SVG... <br>(!) JPG, PNG also works but will have to be converted."
+description: "Max. size: 30,5 x 30,5 cm<br>Materials: Various types of paper, transfer, vinyl, stickers, cardboard...<br>File format: SVG or DXF is best. <br>(!) JPG, PNG also works but will be converted, artifacts may occur in your design."
 image_path: "/machines/Plotter_CodeSpaceSLA.jpg"
 ---
 
